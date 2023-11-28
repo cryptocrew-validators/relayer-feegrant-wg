@@ -4,15 +4,13 @@
 
 import axios from 'axios';
 import sqlite3 from 'sqlite3';
-
+import config from './config.js';
 
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
-const { Tx } = require('cosmjs-types/cosmos/tx/v1beta1/tx');
-const { PubKey } = require('cosmjs-types/cosmos/crypto/secp256k1/keys');
+const { Tx } = require('cosmjs-types/cosmos/tx/v1beta1/tx.js');
+const { PubKey } = require('cosmjs-types/cosmos/crypto/secp256k1/keys.js');
 const { pubkeyToAddress } = require('@cosmjs/amino');
-
-import config from './config.js';
 
 const sqlite = sqlite3.verbose();
 const db = new sqlite.Database('./relayerMetrics.db', (err) => {
@@ -97,7 +95,7 @@ async function saveTransactionData(blockHeight, blockTime, relayerAddress, msgAr
       feeAmount, 
       gasPrice
     ]);
-  console.log(`saved total_metrics:`);
+  console.log(`saved relayer_transactions:`);
   console.log(statementString);
   return;
 }
@@ -197,10 +195,6 @@ async function processTransaction(tx) {
           gasPrice
         );
 
-        // TODO: create sqlite db and save the gas & fee information of every tx for every relayer. 
-        // we need to also save the block height (and time) for later reference
-
-        // Update total metrics
         totalGasWanted += gasWanted;
         totalGasUsed += gasUsed;
         totalFee += parseInt(feeAmount, 10);
@@ -220,12 +214,12 @@ async function processBlock(blockData) {
   let blockHasRelayerTx = false;
   let isRelayerTx = false;
   if (txs) {
-    txs.forEach(async (tx) => {
+    for (const tx of txs) {
       isRelayerTx = await processTransaction(tx);
       if (isRelayerTx) {
         blockHasRelayerTx = true;
       }
-    });
+    };
   }
   if (blockHasRelayerTx) {
     await saveTotalMetricsData(
@@ -235,8 +229,14 @@ async function processBlock(blockData) {
       totalGasUsed,
       totalFee,
       transactionCount
-    )
+    );
+    
+    totalGasWanted = 0;
+    totalGasUsed = 0;
+    totalFee = 0;
+    transactionCount = 0;
   }
+  return;
 }
 
 async function updateLatestBlockHeight() {
@@ -249,7 +249,7 @@ async function updateLatestBlockHeight() {
   }
 }
 
-async function indexer() {
+export async function indexer() {
   let currentHeight = config.start_block_height;
 
   while (isCatchingUp) {
@@ -286,8 +286,6 @@ process.on('exit', () => {
     if (err) {
       console.error(err.message);
     }
-    console.log('Close the database connection.');
+    console.log('Close the database write connection.');
   });
 });
-
-indexer();

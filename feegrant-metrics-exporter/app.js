@@ -92,7 +92,7 @@ function parseDuration(duration) {
     const value = parseInt(match[1]);
     const unit = match[2];
 
-    switch(unit) {
+    switch (unit) {
         case 's': return value;
         case 'm': return value * 60;
         case 'h': return value * 3600;
@@ -126,7 +126,7 @@ async function fetchFeegrantData() {
             const grantee = allowance.grantee;
             const outerAllowance = allowance.allowance;
             const allowanceType = outerAllowance['@type'];
-            
+
             if (allowanceType.includes('AllowedMsgAllowance')) {
                 const innerAllowance = outerAllowance.allowance;
                 const innerAllowanceType = innerAllowance['@type'];
