@@ -1,7 +1,3 @@
-// using most of the code from https://github.com/cryptocrew-validators/relayer-metrics-exporter
-// needs to be extended for gas fee related information
-// save to db, prom exporter can read from there
-
 import axios from 'axios';
 import sqlite3 from 'sqlite3';
 import config from './config.js';
@@ -47,6 +43,11 @@ db.serialize(() => {
     total_gas_used INTEGER,
     total_fee INTEGER,
     transaction_count INTEGER
+  )`);
+
+  db.run(`CREATE TABLE IF NOT EXISTS last_block (
+    block_height INTEGER,
+    block_time TEXT
   )`);
 });
 
@@ -140,6 +141,40 @@ async function saveTotalMetricsData(blockHeight, blockTime, totalGasWanted, tota
   console.log(`saved total_metrics:`);
   console.log(statementString);
   return;
+}
+
+async function saveLastBlockData(blockHeight, blockTime) {
+  db.run(`INSERT INTO last_block (
+    block_height, 
+    block_time
+    ) VALUES (?, ?)`, 
+    [
+      blockHeight, 
+      blockTime
+    ], (err) => {
+      if (err) {
+        console.error(err.message);
+      }
+  });
+  return;
+}
+
+async function getLatestBlockHeightFromDB() {
+  try {
+    const row = await new Promise((resolve, reject) => {
+      db.get("SELECT MAX(block_height) as max_height FROM last_block", (err, row) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(row);
+        }
+      });
+    });
+    return row ? row.max_height : config.indexer_start_block_height;
+  } catch (error) {
+    console.error('Error fetching latest block height from database:', error);
+    return config.indexer_start_block_height;
+  }
 }
 
 async function getBlock(height) {
@@ -236,6 +271,7 @@ async function processBlock(blockData) {
     totalFee = 0;
     transactionCount = 0;
   }
+
   return;
 }
 
@@ -250,17 +286,26 @@ async function updateLatestBlockHeight() {
 }
 
 export async function indexer() {
-  let currentHeight = config.start_block_height;
+  let currentHeight = config.indexer_start_block_height;
 
   while (isCatchingUp) {
     await updateLatestBlockHeight();
     while (currentHeight <= latestBlockHeight) {
-      const block = await getBlock(currentHeight);
-      if (block) {
-        await processBlock(block.data);
+      if (currentHeight !== config.indexer_start_block_height) {
+        currentHeight = await getLatestBlockHeightFromDB() + 1;
       }
-      console.log('processed block: ' + currentHeight)
-      currentHeight++;
+
+      try {
+        const block = await getBlock(currentHeight);
+        if (block) {
+          await processBlock(block.data);
+        }
+        await saveLastBlockData(block.header.height, block.header.time);
+        console.log('processed block: ' + currentHeight)
+      } catch (e) {
+        console.error(e);
+      }
+      
     }
 
     if (currentHeight > latestBlockHeight) {
@@ -278,7 +323,7 @@ export async function indexer() {
       }
       currentHeight++;
     }
-  }, config.poll_frequency); 
+  }, config.indexer_poll_frequency); 
 }
 
 process.on('exit', () => {

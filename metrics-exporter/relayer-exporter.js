@@ -14,8 +14,18 @@ Object.values(metrics).forEach(metric => {
 
 // Function to update metrics
 export async function updateAllMetrics() {
-  const now = moment();
-  const yesterday = now.clone().subtract(24, 'hours').format('YYYY-MM-DD HH:mm:ss');
+  let lastBlockTime;
+  try {
+    const lastBlockRow = await db.get("SELECT MAX(block_time) as last_block_time FROM last_block");
+    lastBlockTime = lastBlockRow.last_block_time;
+  } catch (err) {
+    console.error('Error fetching last block time', err);
+    return;
+  }
+
+  // Calculate 'yesterday' based on lastBlockTime
+  const lastBlockMoment = moment(lastBlockTime);
+  const yesterday = lastBlockMoment.subtract(24, 'hours').format('YYYY-MM-DD HH:mm:ss');
 
   // Update granteeTotalTxs
   db.all("SELECT relayer_address, COUNT(*) as tx_count FROM relayer_transactions GROUP BY relayer_address", [], (err, rows) => {

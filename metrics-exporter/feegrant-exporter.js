@@ -1,14 +1,8 @@
 import axios from 'axios';
-// import WebSocket from 'ws';
 import prometheus from 'prom-client';
 import express from 'express';
 
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-const { Tx } = require('cosmjs-types/cosmos/tx/v1beta1/tx');
-
-const GRANTER_ADDRESS = process.env.GRANTER_ADDRESS ?? "cosmos1705swa2kgn9pvancafzl254f63a3jda9ngdnc7";
-const REST_URL = process.env.REST_URL ?? "https://rest.sentry-01.theta-testnet.polypore.xyz";
+import config from './config.js';
 
 const app = express();
 const Gauge = prometheus.Gauge;
@@ -103,7 +97,7 @@ function parseDuration(duration) {
 
 // Fetch granter balance
 async function fetchGranterBalance(granterAddress) {
-    const bankUrl = `${REST_URL}/cosmos/bank/v1beta1/balances/${granterAddress}`;
+    const bankUrl = `${config.rest_url}/cosmos/bank/v1beta1/balances/${granterAddress}`;
     try {
         const response = await axios.get(bankUrl);
         const balance = response.data.balances[0].amount; // assuming the balance is in the first object
@@ -115,8 +109,8 @@ async function fetchGranterBalance(granterAddress) {
 
 // Fetch and process feegrant data
 async function fetchFeegrantData() {
-    const granterAddress = GRANTER_ADDRESS;
-    const feegrantUrl = `${REST_URL}/cosmos/feegrant/v1beta1/issued/${granterAddress}`;
+    const granterAddress = config.granter_address;
+    const feegrantUrl = `${config.rest_url}/cosmos/feegrant/v1beta1/issued/${granterAddress}`;
     try {
         const response = await axios.get(feegrantUrl);
         const allowances = response.data.allowances;
@@ -179,7 +173,7 @@ app.get('/metrics', async (req, res) => {
     res.end(await register.metrics());
 });
 
-const port = 3000;
+const port = config.feegrant_exporter_port;
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });

@@ -1,5 +1,5 @@
 import { indexer } from "./indexer.js";
-import { updateAllMetrics } from "./exporter.js";
+import { updateAllMetrics } from "./relayer-exporter.js";
 import config from './config.js';
 
 import { createRequire } from "module";
@@ -13,7 +13,7 @@ app.get('/metrics', async (req, res) => {
     res.end(await register.metrics());
 });
 
-const port = config.port;
+const port = config.relayer_exporter_port;
 app.listen(port, () => console.log(`Server running on port ${port}`));
 
 indexer();
