@@ -41,7 +41,7 @@ def update_ibc_file(ibc_path, operator_data):
                 "address": operator_data.get('Cosmoshub Account', '')
             },
             other_chain_key: {
-                "address": operator_data.get('Other Chain Account', '')
+                "address": operator_data.get('Counterparty Account', '')
             },
             'memo': operator_data.get('Memo', ''),
             'name': operator_data.get('Operator Name', ''),
@@ -57,7 +57,7 @@ def update_ibc_file(ibc_path, operator_data):
 
 def validate_operator_data(operator_data):
     """Validate the operator data and return an error message if validation fails."""
-    required_fields = ['Cosmoshub Account', 'Other Chain Account', 'Operator Name']
+    required_fields = ['Cosmoshub Account', 'Counterparty Account', 'Operator Name']
     missing_fields = [field for field in required_fields if not operator_data.get(field, '').strip()]
     if missing_fields:
         return f"Missing required fields: {', '.join(missing_fields)}."
