@@ -25,7 +25,7 @@ jobs:
         pip install requests
 
     - name: Fetch and Sync Files
-      run: python sync_script.py
+      run: python ./scripts/sync_chain_registry.py
 
     - name: Commit and Push Changes
       run: |
