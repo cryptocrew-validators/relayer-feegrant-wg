@@ -98,7 +98,7 @@ def main():
         f"Input validation passed. Your changes have been committed to the branch `{branch_name}`.\n"
         "Please review the changes and [open a pull request](" + pr_url + 
         ") to merge them into the main branch. When creating the pull request, "
-        "make sure to include the issue number (`Closes #{issue_number}`) in the pull request description "
+        "make sure to include the issue number in the pull request description "
         "to link and close the issue when the pull request is merged."
     )
     post_comment(issue_number, success_message, token)
