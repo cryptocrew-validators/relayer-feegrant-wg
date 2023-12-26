@@ -1,5 +1,5 @@
 ---
-name: Sync Cosmoshub IBC Files from Chain Registry
+name: Sync Chain Registry & Update Operators
 
 on:
   schedule:
