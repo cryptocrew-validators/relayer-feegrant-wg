@@ -92,11 +92,14 @@ def main():
     print(f"Updated {ibc_path}.json with new operator data.")
 
     branch_name = f"operator-onboarding-{issue_number}"
-    repo_full_name = os.environ['GITHUB_REPOSITORY']
-    pr_url = f"https://github.com/{repo_full_name}/compare/main...{branch_name}?expand=1&template=operator_onboarding.md"
+    repo_full_name = os.environ['GITHUB_REPOSITORY']  # "owner/repo"
+    pr_url = f"https://github.com/{repo_full_name}/compare/main...{branch_name}?expand=1&template=operator-onboarding.md"
     success_message = (
         f"Input validation passed. Your changes have been committed to the branch `{branch_name}`.\n"
-        "Please review the changes and [open a pull request](" + pr_url + ") to merge them into the main branch."
+        "Please review the changes and [open a pull request](" + pr_url + 
+        ") to merge them into the main branch. When creating the pull request, "
+        "make sure to include the issue number (`Closes #{issue_number}`) in the pull request description "
+        "to link and close the issue when the pull request is merged."
     )
     post_comment(issue_number, success_message, token)
 
