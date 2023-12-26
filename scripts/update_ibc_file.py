@@ -93,7 +93,7 @@ def main():
 
     branch_name = f"operator-onboarding-{issue_number}"
     repo_full_name = os.environ['GITHUB_REPOSITORY']  # "owner/repo"
-    pr_url = f"https://github.com/{repo_full_name}/compare/main...{branch_name}?expand=1&template=operator-onboarding.md"
+    pr_url = f"https://github.com/{repo_full_name}/compare/main...{branch_name}?expand=1&template=operator_onboarding.md"
     success_message = (
         f"Input validation passed. Your changes have been committed to the branch `{branch_name}`.\n"
         "Please review the changes and [open a pull request](" + pr_url + 
