@@ -9,12 +9,9 @@ Add your account addresses and contact information in the correct format to the 
 ## Operator Information
 
 - Operator Name: 
-- Cosmoshub Account Address:
-```
-cosmosrelayeraddress 
-```
+- Cosmoshub Account Address: `cosmosrelayeraddress `
 
-Closes #{issue_number}
+Closes #issue_number
 
 ## Checklist
 
