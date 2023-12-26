@@ -29,7 +29,7 @@ jobs:
 
       - name: Update IBC file and create PR
         if: env.LABEL_FOUND == 'true'
-        run: python .github/scripts/update_ibc_file.py ${{ github.event.issue.number }}
+        run: python ./scripts/update_ibc_file.py ${{ github.event.issue.number }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
