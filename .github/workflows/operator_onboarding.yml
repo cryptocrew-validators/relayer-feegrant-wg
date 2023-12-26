@@ -22,13 +22,14 @@ jobs:
           LABELS_JSON='${{ toJson(github.event.issue.labels) }}'
           LABEL=$(echo $LABELS_JSON | jq -r '.[] | select(.name == "operator-onboarding").name')
           if [ "$LABEL" == "operator-onboarding" ]; then
-            echo "::set-output name=has_label::true"
+            echo "LABEL_FOUND=true" >> $GITHUB_ENV
           else
-            echo "::set-output name=has_label::false"
+            echo "LABEL_FOUND=false" >> $GITHUB_ENV
           fi
 
       - name: Update IBC file and create PR
-        if: steps.label-check.outputs.has_label == 'true'
+        if: env.LABEL_FOUND == 'true'
         run: python .github/scripts/update_ibc_file.py ${{ github.event.issue.number }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
