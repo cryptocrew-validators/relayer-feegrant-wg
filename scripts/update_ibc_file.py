@@ -25,7 +25,6 @@ def parse_issue_content(issue_content):
     return data
 
 def update_ibc_file(ibc_path, operator_data):
-    """Update the respective JSON file in the _IBC folder."""
     file_path = f'./_IBC/{ibc_path}.json'
     with open(file_path, 'r') as file:
         data = json.load(file)
@@ -36,9 +35,13 @@ def update_ibc_file(ibc_path, operator_data):
                           None
 
     if cosmoshub_chain_key:
+        other_chain_key = 'chain_2' if cosmoshub_chain_key == 'chain_1' else 'chain_1'
         new_operator = {
             cosmoshub_chain_key: {
-                "address": operator_data['Cosmoshub Account']
+                "address": operator_data.get('Cosmoshub Account', '')
+            },
+            other_chain_key: {
+                "address": operator_data.get('Other Chain Account', '')
             },
             'memo': operator_data.get('Memo', ''),
             'name': operator_data.get('Operator Name', ''),
@@ -52,14 +55,45 @@ def update_ibc_file(ibc_path, operator_data):
     with open(file_path, 'w') as file:
         json.dump(data, file, indent=2)
 
+def validate_operator_data(operator_data):
+    """Validate the operator data and return an error message if validation fails."""
+    required_fields = ['Cosmoshub Account', 'Other Chain Account', 'Operator Name']
+    missing_fields = [field for field in required_fields if not operator_data.get(field, '').strip()]
+    if missing_fields:
+        return f"Missing required fields: {', '.join(missing_fields)}."
+
+    if not (operator_data.get('Discord Handle', '').strip() or operator_data.get('Telegram Handle', '').strip()):
+        return "At least one contact method (Discord Handle or Telegram Handle) is required."
+
+    return ""
+
+def post_comment(issue_number, message, token):
+    """Post a comment on the GitHub issue."""
+    url = f"https://api.github.com/repos/{os.environ['GITHUB_REPOSITORY']}/issues/{issue_number}/comments"
+    headers = {"Authorization": f"token {token}"}
+    response = requests.post(url, json={"body": message}, headers=headers)
+    if response.status_code not in [200, 201]:
+        raise Exception(f"Failed to post comment: {response.status_code}, {response.text}")
+
 def main():
     issue_number = sys.argv[1]
     token = os.environ['GITHUB_TOKEN']
     issue_content = get_issue_content(issue_number, token)
     operator_data = parse_issue_content(issue_content)
+
+    validation_error = validate_operator_data(operator_data)
+    if validation_error:
+        print(validation_error)
+        post_comment(issue_number, validation_error, token)
+        sys.exit(1) 
+
     ibc_path = operator_data.pop('IBC Path')
     update_ibc_file(ibc_path, operator_data)
     print(f"Updated {ibc_path}.json with new operator data.")
+
+if __name__ == "__main__":
+    main()
+
 
 if __name__ == "__main__":
     main()
