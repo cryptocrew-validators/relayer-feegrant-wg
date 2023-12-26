@@ -26,7 +26,7 @@ def parse_issue_content(issue_content):
 
 def update_ibc_file(ibc_path, operator_data):
     """Update the respective JSON file in the _IBC folder."""
-    file_path = f'../_IBC/{ibc_path}.json'
+    file_path = f'./_IBC/{ibc_path}.json'
     with open(file_path, 'r') as file:
         data = json.load(file)
     
