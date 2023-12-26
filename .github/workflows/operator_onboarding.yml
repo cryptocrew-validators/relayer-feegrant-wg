@@ -21,9 +21,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Create Necessary Directories
-        run: mkdir -p ../_IBC || true
-
       - name: Check if issue has operator-onboarding label
         id: label-check
         run: |
@@ -35,9 +32,35 @@ jobs:
             echo "LABEL_FOUND=false" >> $GITHUB_ENV
           fi
 
-      - name: Update IBC file and create PR
+      - name: Update IBC file
         if: env.LABEL_FOUND == 'true'
         run: python ./scripts/update_ibc_file.py ${{ github.event.issue.number }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  
+
+      - name: Create and switch to a new branch
+        if: env.LABEL_FOUND == 'true'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git checkout -b operator-onboarding-${{ github.event.issue.number }}
+      
+      - name: Commit changes
+        if: env.LABEL_FOUND == 'true'
+        run: |
+          git add -A
+          git commit -m "Update IBC file for operator onboarding"
+      
+      - name: Push changes
+        if: env.LABEL_FOUND == 'true'
+        run: |
+          git push --set-upstream origin operator-onboarding-${{ github.event.issue.number }}
+
+      - name: Create pull request
+        if: env.LABEL_FOUND == 'true'
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: operator-onboarding-${{ github.event.issue.number }}
+          title: "Operator Onboarding for Issue #${{ github.event.issue.number }}"
+          body: "This PR updates the IBC file as part of the operator onboarding process for Issue #${{ github.event.issue.number }}"
