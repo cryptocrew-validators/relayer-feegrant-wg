@@ -9,11 +9,11 @@ Please fill in your details below. Add your account addresses and contact inform
 ## Operator Information
 
 - Operator Name:
-- Account Addresses:
+- Cosmoshub Account Addresses:
 ```
-address 1
-address 2
-address N
+cosmosrelayeraddress 1
+cosmosrelayeraddress 2
+cosmosrelayeraddress N
 ```
 
 ## Checklist
