@@ -54,7 +54,7 @@ jobs:
       - name: Push changes
         if: env.LABEL_FOUND == 'true'
         run: |
-          git push --set-upstream origin operator-onboarding-${{ github.event.issue.number }}
+          git push --force --set-upstream origin operator-onboarding-${{ github.event.issue.number }}
 
       # - name: Create pull request
       #   if: env.LABEL_FOUND == 'true'
