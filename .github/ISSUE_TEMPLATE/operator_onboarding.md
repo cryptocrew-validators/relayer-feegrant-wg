@@ -7,19 +7,19 @@ labels: operator-onboarding
 
 ## Operator name & memo
 Plase set your relayer name (required) and optionally memo.
-- Operator Name:
-- Memo:
+- Operator Name: 
+- Memo: 
 
 ## IBC Path Selection
 Please specify the IBC path (e.g., `cosmoshub-osmosis`) you want to be added to:
-- IBC Path:
+- IBC Path: 
 
 ## Chain Account Information
 Please provide your account information for each chain in the selected IBC path:
-- Cosmoshub Account:
-- Counterparty Account:
+- Cosmoshub Account: 
+- Counterparty Account: 
 
 ## Contact Information
 Please provide at least one of the following for contact purposes:
-- Discord Handle:
-- Telegram Handle:
+- Discord Handle: 
+- Telegram Handle: 
