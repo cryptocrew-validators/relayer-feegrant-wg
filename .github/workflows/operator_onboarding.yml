@@ -7,8 +7,6 @@ on:
 jobs:
   update-ibc-file:
     runs-on: ubuntu-latest
-    outputs:
-      has_label: ${{ steps.label-check.outputs.has_label }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -21,7 +19,8 @@ jobs:
       - name: Check if issue has operator-onboarding label
         id: label-check
         run: |
-          LABEL=$(echo '${{ github.event.issue.labels }}' | jq -r '.[] | select(.name == "operator-onboarding").name')
+          LABELS_JSON='${{ toJson(github.event.issue.labels) }}'
+          LABEL=$(echo $LABELS_JSON | jq -r '.[] | select(.name == "operator-onboarding").name')
           if [ "$LABEL" == "operator-onboarding" ]; then
             echo "::set-output name=has_label::true"
           else
