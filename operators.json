@@ -1,0 +1,15 @@
+{
+  "operators": [
+    {
+      "address": "cosmos1f269n4mrg0s8tqveny9huulyamvdv97n094dgm",
+      "memo": "Relayed by CryptoCrew Validators",
+      "name": "CryptoCrew",
+      "discord": {
+        "handle": "ccclaimens"
+      },
+      "telegram": {
+        "handle": "clemensg"
+      }
+    }
+  ]
+}
