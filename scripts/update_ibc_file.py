@@ -85,11 +85,18 @@ def main():
     if validation_error:
         print(validation_error)
         post_comment(issue_number, validation_error, token)
-        sys.exit(1) 
+        sys.exit(1)
 
     ibc_path = operator_data.pop('IBC Path')
     update_ibc_file(ibc_path, operator_data)
     print(f"Updated {ibc_path}.json with new operator data.")
+
+    branch_name = f"operator-onboarding-{issue_number}"
+    success_message = (
+        f"Input validation passed. Your changes have been committed to the branch `{branch_name}`.\n"
+        "Please review the changes and open a pull request to merge them into the main branch."
+    )
+    post_comment(issue_number, success_message, token)
 
 if __name__ == "__main__":
     main()
