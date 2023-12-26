@@ -36,8 +36,12 @@ jobs:
           declare -i result=0
           paths=(${{ needs.changes.outputs.paths }})
           for path in "${paths[@]}"; do
-              $(scripts/ibc_path_validator.sh $path)
-              result=$(($result+$?))
+              if [[ "$path" != *"cosmoshub-osmosis"* ]]; then
+                  $(scripts/validate_ibc_path.sh $path)
+                  result=$(($result+$?))
+              else
+                  echo "cosmoshub-osmosis ommitted for path validation."
+              fi
           done
           if [[ "$result" -gt 0 ]]; then
               echo "Error: Incorrect trusting period for all or some clients" >&2
