@@ -14,10 +14,13 @@ Add your account addresses and contact information in the correct format to the 
 cosmosrelayeraddress 
 ```
 
+Closes #{issue_number}
+
 ## Checklist
 
 - [ ] I have read the onboarding documentation & contribution guidelines.
 - [ ] I have added my Account Addresses and Operator Information to the correct path file in the `_IBC` folder.
 - [ ] I have ensured my changes follow the required format.
+- [ ] I have linked the related onboarding issue (if one was created).
 
 ---
