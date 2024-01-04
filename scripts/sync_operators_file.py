@@ -1,43 +1,50 @@
 import json
 import os
 
+# Define the base directory
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def load_existing_operators(filename):
     if os.path.exists(filename):
         with open(filename, 'r') as file:
-            return json.load(file)
-    return []
+            try:
+                return json.load(file)
+            except json.JSONDecodeError:
+                return {}
+    return {}
 
-def update_or_add_operator(existing_operators, new_operator, ibc_path):
-    for operator in existing_operators:
-        if operator['ibc_path'] == ibc_path and operator['name'] == new_operator['name']:
+def update_or_add_operator(operators_by_path, new_operator, ibc_path):
+    if not isinstance(new_operator, dict):
+        return  # Skip if new_operator is not a dict
+
+    for operator in operators_by_path.get(ibc_path, []):
+        if isinstance(operator, dict) and operator.get('name') == new_operator.get('name'):
             # Update existing operator without overriding feegrant
-            if 'feegrant' not in new_operator:
-                new_operator['feegrant'] = operator.get('feegrant', {
-                    'enabled': True,
-                    'period_spend_limit': 0  # Default value
-                })
-            return False
-    return True
+            if 'feegrant' not in new_operator and 'feegrant' in operator:
+                new_operator['feegrant'] = operator['feegrant']
+            return
+    # Add new operator if not found
+    operators_by_path.setdefault(ibc_path, []).append(new_operator)
 
 operators_file = os.path.join(base_dir, 'operators.json')
-existing_operators = load_existing_operators(operators_file)
+operators_by_path = load_existing_operators(operators_file)
 
 ibc_dir = os.path.join(base_dir, '_IBC')
 for filename in os.listdir(ibc_dir):
     if filename.endswith('.json'):
         with open(os.path.join(ibc_dir, filename), 'r') as file:
-            data = json.load(file)
+            try:
+                data = json.load(file)
+            except json.JSONDecodeError:
+                continue
+
             ibc_path = filename.replace('.json', '')
 
-            if 'operators' in data:
+            if 'operators' in data and isinstance(data['operators'], list):
                 for new_operator in data['operators']:
-                    new_operator['ibc_path'] = ibc_path
-                    # Update or add the new operator
-                    if update_or_add_operator(existing_operators, new_operator, ibc_path):
-                        existing_operators.append(new_operator)
+                    if isinstance(new_operator, dict):
+                        update_or_add_operator(operators_by_path, new_operator, ibc_path)
 
 # Write to the operators file
 with open(operators_file, 'w') as outfile:
-    json.dump(existing_operators, outfile, indent=4)
+    json.dump(operators_by_path, outfile, indent=2)
