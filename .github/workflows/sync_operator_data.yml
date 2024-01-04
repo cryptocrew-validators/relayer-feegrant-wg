@@ -10,6 +10,7 @@ on:
     types: [closed]
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   aggregate:
