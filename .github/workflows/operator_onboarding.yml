@@ -49,7 +49,7 @@ jobs:
         if: env.LABEL_FOUND == 'true'
         run: |
           git add -A
-          git commit -m "Update IBC file for operator onboarding"
+          git commit -m "Add Operator d"
       
       - name: Push changes
         if: env.LABEL_FOUND == 'true'
