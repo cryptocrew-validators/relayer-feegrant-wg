@@ -1,7 +1,12 @@
 {
-  "operators": [
+  "cosmoshub-osmosis": [
     {
-      "address": "cosmos1f269n4mrg0s8tqveny9huulyamvdv97n094dgm",
+      "chain_1": {
+        "address": "cosmos1f269n4mrg0s8tqveny9huulyamvdv97n094dgm"
+      },
+      "chain_2": {
+        "address": "osmo1f269n4mrg0s8tqveny9huulyamvdv97n87xa7f"
+      },
       "memo": "Relayed by CryptoCrew Validators",
       "name": "CryptoCrew",
       "discord": {
