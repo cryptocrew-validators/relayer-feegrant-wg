@@ -24,8 +24,13 @@ def parse_issue_content(issue_content):
             data[key.strip()] = value.strip()
     return data
 
-def update_ibc_file(ibc_path, operator_data):
+def update_ibc_file(ibc_path, operator_data, token, issue_number):
     file_path = f'./_IBC/{ibc_path}.json'
+    if not os.path.exists(file_path):
+        error_message = f"IBC path '{ibc_path}' not found! Please review your input."
+        post_comment(issue_number, error_message, token)
+        return False
+
     with open(file_path, 'r') as file:
         data = json.load(file)
     
@@ -54,6 +59,7 @@ def update_ibc_file(ibc_path, operator_data):
 
     with open(file_path, 'w') as file:
         json.dump(data, file, indent=2)
+    return True
 
 def validate_operator_data(operator_data):
     """Validate the operator data and return an error message if validation fails."""
@@ -88,7 +94,8 @@ def main():
         sys.exit(1)
 
     ibc_path = operator_data.pop('IBC Path')
-    update_ibc_file(ibc_path, operator_data)
+    if not update_ibc_file(ibc_path, operator_data, token, issue_number):
+        sys.exit(1)
     print(f"Updated {ibc_path}.json with new operator data.")
 
     branch_name = f"operator-onboarding-{issue_number}"
