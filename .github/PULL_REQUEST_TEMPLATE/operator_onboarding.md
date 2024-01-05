@@ -4,12 +4,7 @@ Thank you for your IBC relaying efforts for the Cosmos Hub. This pull request is
 
 ## Instructions
 
-Add your account addresses and contact information in the correct format to the specified JSON file in the `_IBC` folder. Ensure that your submission follows the provided format. Optionally fill in your details below. 
-
-## Operator Information
-
-- Operator Name: 
-- Cosmoshub Account Address: `cosmosrelayeraddress `
+Add your account addresses and contact information in the correct format to the specified JSON file in the `_IBC` folder. Ensure that your submission follows the provided format. If you have opened this pull request through a related issue, please link the issue number below:
 
 Closes #issue_number
 
