@@ -28,7 +28,6 @@ def fetch_account_data(granter_account):
         raise Exception(f"Failed to fetch account data for {granter_account}")
 
 def generate_feegrant_command(granter, grantee, expiration, period, period_limit, flags):
-    print(f"Debug period: {period} period limit {period_limit}")
     command = f"{daemon_name} tx feegrant grant {granter} {grantee} "
     if expiration:
         command += f"--expiration '{expiration}' "
@@ -45,16 +44,15 @@ def is_expiration_past(expiration):
 def main():
     account_number, sequence = fetch_account_data(granter_account)
     sequence = int(sequence)
-    sequence += 1  # Increment the sequence, but consider if this is needed at the start
+    sequence += 1
+    all_messages = []
+    final_tx = None
 
     with open(operators_file, 'r') as file:
         operators_by_path = json.load(file)
 
-    feegrant_messages = []
-
     for ibc_path, operators in operators_by_path.items():
         for operator in operators:
-            print(f"Debug: running operator: {operator}")
             feegrant = operator.get('feegrant', {})
             expiration = feegrant.get('expiration')
             active_period_limit = feegrant.get('active_period_spend_limit')
@@ -63,15 +61,21 @@ def main():
             update_needed = feegrant.get('enabled') and (is_expiration_past(expiration) or active_period_limit != current_period_limit)
 
             if update_needed:
-                flags = f"--home '{daemon_home}' --from '{granter_account}' --allowed-messages '{allowed_messages}' --chain-id '{chain_id}' --gas 200000 --gas-prices '{gas_prices}' --node '{rpc}' --offline --output json --yes --generate-only --sequence {sequence} --account-number {account_number}"
-                command = generate_feegrant_command(granter_account, operator['address'], expiration, period_duration, current_period_limit, flags)
+                total_gas_limit = 80000 + 40000 * (len(all_messages) + 1)
+                flags = f"--home '{daemon_home}' --from '{granter_account}' --chain-id '{chain_id}' --gas {total_gas_limit} --gas-prices '{gas_prices}' --node '{rpc}' --offline --output json --yes --generate-only --sequence {sequence} --account-number {account_number}"
+                command = generate_feegrant_command(granter_account, operator['address'], expiration, "86400", current_period_limit, flags)
                 print(f"Running command: {command}")
 
                 try:
                     result = subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
                     command_output = json.loads(result.stdout.strip())
                     messages = command_output.get("body", {}).get("messages", [])
-                    feegrant_messages.extend(messages)  # Append all messages
+                    all_messages.extend(messages)
+
+                    # Save the last transaction fields, excluding the messages
+                    last_tx_fields = command_output
+                    last_tx_fields['body'].pop('messages', None)
+
                 except subprocess.CalledProcessError as e:
                     print(f"Error running command: {e.stderr}")
                     continue
@@ -79,8 +83,21 @@ def main():
                     print(f"Error parsing JSON from command output: {e.msg}")
                     continue
 
-    print("Generated Feegrant Messages:")
-    print(json.dumps(feegrant_messages, indent=2))
+    if last_tx_fields and all_messages:
+        final_tx = {
+            "body": {
+                "messages": all_messages,
+                **last_tx_fields['body']
+            },
+            "auth_info": last_tx_fields['auth_info'],
+            "signatures": last_tx_fields['signatures']
+        }
+
+    if final_tx:
+        print("Final Transaction with all messages:")
+        print(json.dumps(final_tx, indent=2))
+    else:
+        print("No final transaction generated.")
 
 if __name__ == "__main__":
     main()
