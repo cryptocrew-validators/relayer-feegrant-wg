@@ -13,27 +13,38 @@ def load_existing_operators(filename):
                 return {}
     return {}
 
+def get_cosmoshub_address(operator, ibc_path):
+    if ibc_path.startswith("cosmoshub-"):
+        return operator.get("chain_1", {}).get("address")
+    elif ibc_path.endswith("-cosmoshub"):
+        return operator.get("chain_2", {}).get("address")
+    return None
+
+def create_operator_object(new_operator, ibc_path):
+    cosmoshub_address = get_cosmoshub_address(new_operator, ibc_path)
+    return {
+        "name": new_operator.get("name", ""),
+        "memo": new_operator.get("memo", ""),
+        "address": cosmoshub_address,
+        "discord": new_operator.get("discord", {}).get("handle", ""),
+        "telegram": new_operator.get("telegram", {}).get("handle", ""),
+        "feegrant": new_operator.get("feegrant", {"enabled": False, "period_spend_limit": 0})
+    }
+
 def update_or_add_operator(operators_by_path, new_operator, ibc_path):
     if not isinstance(new_operator, dict):
         return  # Skip if new_operator is not a dict
 
-    # Set default feegrant values if not present in the new operator
-    if 'feegrant' not in new_operator:
-        new_operator['feegrant'] = {
-            'enabled': False,
-            'period_spend_limit': 0
-        }
+    cosmoshub_address = get_cosmoshub_address(new_operator, ibc_path)
 
+    # Check if an operator with the same cosmoshub address already exists
     for operator in operators_by_path.get(ibc_path, []):
-        if isinstance(operator, dict) and operator.get('name') == new_operator.get('name'):
-            # Update existing operator without overriding feegrant
-            if 'feegrant' not in operator:
-                operator['feegrant'] = new_operator['feegrant']
-            else:
-                new_operator['feegrant'] = operator['feegrant']
-            return
-    # Add new operator if not found
-    operators_by_path.setdefault(ibc_path, []).append(new_operator)
+        if operator.get("address") == cosmoshub_address:
+            return  # Skip if cosmoshub address is already used by another operator
+
+    # Create and add new operator object with ordered properties
+    operator_object = create_operator_object(new_operator, ibc_path)
+    operators_by_path.setdefault(ibc_path, []).append(operator_object)
 
 operators_file = os.path.join(base_dir, 'operators.json')
 operators_by_path = load_existing_operators(operators_file)

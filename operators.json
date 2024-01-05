@@ -1,20 +1,33 @@
 {
   "cosmoshub-osmosis": [
     {
-      "chain_1": {
-        "address": "cosmos1f269n4mrg0s8tqveny9huulyamvdv97n094dgm"
-      },
-      "chain_2": {
-        "address": "osmo1f269n4mrg0s8tqveny9huulyamvdv97n87xa7f"
-      },
-      "memo": "Relayed by CryptoCrew Validators",
       "name": "CryptoCrew",
-      "discord": {
-        "handle": "ccclaimens"
-      },
-      "telegram": {
-        "handle": "clemensg"
-      },
+      "memo": "Relayed by CryptoCrew Validators",
+      "address": "cosmos1f269n4mrg0s8tqveny9huulyamvdv97n094dgm",
+      "discord": "ccclaimens",
+      "telegram": "clemensg",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0
+      }
+    },
+    {
+      "name": "CryptoCrew",
+      "memo": "relayed by CryptoCrew Validators",
+      "address": "cosmos19l3pq6kg07fa4x7t88urx45t6gk2hl83gppe02",
+      "discord": "ccclaimens",
+      "telegram": "clemensg",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0
+      }
+    },
+    {
+      "name": "CryptoCrew",
+      "memo": "Relayed by CryptoCrew Validators",
+      "address": "cosmos19c5dtp3kxl92wpeqpk8pf06rsqqggz935nlrpy",
+      "discord": "ccclaimens",
+      "telegram": "clemensg",
       "feegrant": {
         "enabled": false,
         "period_spend_limit": 0
