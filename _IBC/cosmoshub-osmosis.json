@@ -61,6 +61,22 @@
       "telegram": {
         "handle": "clemensg"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos19c5dtp3kxl92wpeqpk8pf06rsqqggz935nlrpy"
+      },
+      "chain_2": {
+        "address": "osmo19c5dtp3kxl92wpeqpk8pf06rsqqggz93ugvnhk"
+      },
+      "memo": "Relayed by CryptoCrew Validators",
+      "name": "CryptoCrew",
+      "discord": {
+        "handle": "ccclaimens"
+      },
+      "telegram": {
+        "handle": "clemensg"
+      }
     }
   ]
 }
