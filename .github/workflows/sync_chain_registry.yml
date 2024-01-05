@@ -30,9 +30,6 @@ jobs:
     - name: Fetch and Sync Files
       run: python ./scripts/sync_chain_registry.py
 
-    - name: Update operators.json File
-      run: python ./scripts/update_operators_file.py
-
     - name: Commit and Push Changes
       run: |
         git config user.name 'github-actions[bot]'
