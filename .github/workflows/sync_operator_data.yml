@@ -24,6 +24,11 @@ jobs:
       with:
         python-version: '3.9'
 
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
     - name: Sync Operators Data
       run: python ./scripts/sync_operators_file.py
 
