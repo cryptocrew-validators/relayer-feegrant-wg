@@ -27,6 +27,9 @@ jobs:
     - name: Sync Operators Data
       run: python ./scripts/sync_operators_file.py
 
+    - name: Update Feegrant Data
+      run: python ./scripts/update_feegrant_data.py
+
     - name: Commit and Push Changes
       run: |
         git config user.name 'github-actions[bot]'
