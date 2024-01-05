@@ -74,6 +74,10 @@ def update_feegrant_info(operators_by_path, allowances):
 
                 print(f"Updated feegrant info for operator {operator.get('name')} on {ibc_path}")
             else:
+                operator['feegrant'] = {
+                    "enabled": False,
+                    "period_spend_limit": 0
+                }
                 print(f"No feegrant info found for operator {operator.get('name')} on {ibc_path}")
 
 def main():
