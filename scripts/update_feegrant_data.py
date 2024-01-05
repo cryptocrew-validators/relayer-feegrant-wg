@@ -51,7 +51,6 @@ def fetch_feegrant_info():
 
 def update_feegrant_info(operators_by_path, allowances):
     allowances_by_grantee = {allowance['grantee']: allowance for allowance in allowances}
-    print(f"Allowances by grantee: {allowances_by_grantee}")
 
     for ibc_path, operators in operators_by_path.items():
         for operator in operators:
@@ -67,11 +66,12 @@ def update_feegrant_info(operators_by_path, allowances):
                 period_spend_limit = allowance_details.get('period_spend_limit', [])
                 spend_limit_amount = sum(int(limit.get('amount', '0')) for limit in period_spend_limit if limit.get('denom') == 'uatom')
 
-                operator['feegrant'] = {
-                    'expiration': expiration if expiration_date else None,
-                    'active_period_spend_limit': spend_limit_amount if is_active else 0,
-                    'enabled': is_active
-                }
+                operator['feegrant']['enabled'] = is_active
+                operator['feegrant']['expiration'] = expiration if expiration_date else operator['feegrant'].get('expiration')
+
+                if is_active:
+                    operator['feegrant']['active_period_spend_limit'] = spend_limit_amount
+
                 print(f"Updated feegrant info for operator {operator.get('name')} on {ibc_path}")
             else:
                 print(f"No feegrant info found for operator {operator.get('name')} on {ibc_path}")
