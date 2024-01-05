@@ -17,10 +17,19 @@ def update_or_add_operator(operators_by_path, new_operator, ibc_path):
     if not isinstance(new_operator, dict):
         return  # Skip if new_operator is not a dict
 
+    # Set default feegrant values if not present in the new operator
+    if 'feegrant' not in new_operator:
+        new_operator['feegrant'] = {
+            'enabled': False,
+            'period_spend_limit': 0
+        }
+
     for operator in operators_by_path.get(ibc_path, []):
         if isinstance(operator, dict) and operator.get('name') == new_operator.get('name'):
             # Update existing operator without overriding feegrant
-            if 'feegrant' not in new_operator and 'feegrant' in operator:
+            if 'feegrant' not in operator:
+                operator['feegrant'] = new_operator['feegrant']
+            else:
                 new_operator['feegrant'] = operator['feegrant']
             return
     # Add new operator if not found

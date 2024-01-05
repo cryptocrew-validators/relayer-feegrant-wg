@@ -14,6 +14,10 @@
       },
       "telegram": {
         "handle": "clemensg"
+      },
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0
       }
     }
   ]
