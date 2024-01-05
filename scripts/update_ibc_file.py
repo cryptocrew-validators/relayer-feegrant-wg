@@ -109,7 +109,9 @@ def main():
         ibc_path = operator_data['IBC Path']
         if update_ibc_file(ibc_path, operator_data, token, issue_number):
             print(f"Updated {ibc_path}.json with new operator data.")
-            branch_name = f"operator-onboarding-{issue_number}"
+
+            operator_name = operator_data.get('Operator Name').replace(" ", "_")
+            branch_name = f"operator-onboarding-{issue_number}-{operator_name}"
             repo_full_name = os.environ['GITHUB_REPOSITORY']  # "owner/repo"
             pr_url = f"https://github.com/{repo_full_name}/compare/main...{branch_name}?expand=1&template=operator_onboarding.md"
             success_message = (
