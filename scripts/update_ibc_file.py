@@ -22,15 +22,11 @@ def parse_issue_content(issue_content):
         if line.startswith('- '):
             key, value = line[2:].split(':', 1)
             data[key.strip()] = value.strip()
+
     return data
 
 def update_ibc_file(ibc_path, operator_data, token, issue_number):
     file_path = f'./_IBC/{ibc_path}.json'
-    if not os.path.exists(file_path):
-        error_message = f"IBC path '{ibc_path}' not found! Please review your input."
-        post_comment(issue_number, error_message, token)
-        return False
-
     with open(file_path, 'r') as file:
         data = json.load(file)
     
@@ -59,11 +55,12 @@ def update_ibc_file(ibc_path, operator_data, token, issue_number):
 
     with open(file_path, 'w') as file:
         json.dump(data, file, indent=2)
+
     return True
 
-def validate_operator_data(operator_data):
+def validate_operator_data(operator_data, token, issue_number):
     """Validate the operator data and return an error message if validation fails."""
-    required_fields = ['Cosmoshub Account', 'Counterparty Account', 'Operator Name']
+    required_fields = ['Cosmoshub Account', 'Counterparty Account', 'Operator Name', 'IBC Path']
     missing_fields = [field for field in required_fields if not operator_data.get(field, '').strip()]
     if missing_fields:
         return f"Missing required fields: {', '.join(missing_fields)}."
@@ -71,6 +68,13 @@ def validate_operator_data(operator_data):
     if not (operator_data.get('Discord Handle', '').strip() or operator_data.get('Telegram Handle', '').strip()):
         return "At least one contact method (Discord Handle or Telegram Handle) is required."
 
+    ibc_path = operator_data.get('IBC Path')
+    file_path = f'./_IBC/{ibc_path}.json'
+    if not os.path.exists(file_path):
+        error_message = f"IBC path '{ibc_path}' not found! Please review your input."
+        post_comment(issue_number, error_message, token)
+        return error_message
+    
     return ""
 
 def post_comment(issue_number, message, token):
@@ -82,33 +86,46 @@ def post_comment(issue_number, message, token):
         raise Exception(f"Failed to post comment: {response.status_code}, {response.text}")
 
 def main():
-    issue_number = sys.argv[1]
-    token = os.environ['GITHUB_TOKEN']
-    issue_content = get_issue_content(issue_number, token)
-    operator_data = parse_issue_content(issue_content)
+    print("Starting script execution...")
+    try:
+        issue_number = sys.argv[1]
+        token = os.environ.get('GITHUB_TOKEN')
+        if not token:
+            print("GitHub token not found.")
+            sys.exit(1)
 
-    validation_error = validate_operator_data(operator_data)
-    if validation_error:
-        print(validation_error)
-        post_comment(issue_number, validation_error, token)
+        print(f"Issue number: {issue_number}")
+        issue_content = get_issue_content(issue_number, token)
+        print("Issue content fetched successfully.")
+
+        operator_data = parse_issue_content(issue_content)
+        print(f"Operator data parsed: {operator_data}")
+
+        validation_error = validate_operator_data(operator_data, token, issue_number)
+        if validation_error:
+            print(f"Validation error: {validation_error}")
+            sys.exit(1)
+
+        ibc_path = operator_data['IBC Path']
+        update_ibc_file(ibc_path, operator_data)
+
+        print(f"Updated {ibc_path}.json with new operator data.")
+
+        branch_name = f"operator-onboarding-{issue_number}"
+        repo_full_name = os.environ['GITHUB_REPOSITORY']  # "owner/repo"
+        pr_url = f"https://github.com/{repo_full_name}/compare/main...{branch_name}?expand=1&template=operator_onboarding.md"
+        success_message = (
+            f"Input validation passed. Your changes have been committed to the branch `{branch_name}`.\n"
+            "Please review the changes and [open a pull request](" + pr_url + 
+            ") to merge them into the main branch. When creating the pull request, "
+            "make sure to include the issue number in the pull request description "
+            "to link and close the issue when the pull request is merged."
+        )
+        post_comment(issue_number, success_message, token)
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
         sys.exit(1)
-
-    ibc_path = operator_data.pop('IBC Path')
-    if not update_ibc_file(ibc_path, operator_data, token, issue_number):
-        sys.exit(1)
-    print(f"Updated {ibc_path}.json with new operator data.")
-
-    branch_name = f"operator-onboarding-{issue_number}"
-    repo_full_name = os.environ['GITHUB_REPOSITORY']  # "owner/repo"
-    pr_url = f"https://github.com/{repo_full_name}/compare/main...{branch_name}?expand=1&template=operator_onboarding.md"
-    success_message = (
-        f"Input validation passed. Your changes have been committed to the branch `{branch_name}`.\n"
-        "Please review the changes and [open a pull request](" + pr_url + 
-        ") to merge them into the main branch. When creating the pull request, "
-        "make sure to include the issue number in the pull request description "
-        "to link and close the issue when the pull request is merged."
-    )
-    post_comment(issue_number, success_message, token)
 
 if __name__ == "__main__":
     main()
