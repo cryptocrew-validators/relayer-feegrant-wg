@@ -13,6 +13,8 @@ max_retries = 10
 retry_delay = 1  # in seconds
 
 def parse_date(date_string):
+    if not date_string:
+        return None
     try:
         return datetime.fromisoformat(date_string.rstrip('Z'))
     except ValueError:
@@ -58,25 +60,33 @@ def update_feegrant_info(operators_by_path, allowances):
             allowance = allowances_by_grantee.get(operator_address)
 
             if allowance:
-                allowance_details = allowance.get('allowance', {}).get('allowance', {})
+                allowance_details = allowance.get('allowance', {})
                 expiration = allowance_details.get('basic', {}).get('expiration')
                 expiration_date = parse_date(expiration)
-                is_active = expiration_date and expiration_date > datetime.now()
+                is_active = expiration_date is None or expiration_date > datetime.now()
 
                 period_spend_limit = allowance_details.get('period_spend_limit', [])
-                spend_limit_amount = sum(int(limit.get('amount', '0')) for limit in period_spend_limit if limit.get('denom') == 'uatom')
+
+                spend_limit_amount = 0
+                for limit in period_spend_limit:
+                    if limit.get('denom') == 'uatom':
+                        amount = int(limit.get('amount', '0'))
+                        spend_limit_amount = amount
 
                 operator['feegrant']['enabled'] = is_active
-                operator['feegrant']['expiration'] = expiration if expiration_date else operator['feegrant'].get('expiration')
+                operator['feegrant']['expiration'] = expiration if expiration_date else None
 
                 if is_active:
                     operator['feegrant']['active_period_spend_limit'] = spend_limit_amount
+                else:
+                    operator['feegrant']['active_period_spend_limit'] = 0
 
-                print(f"Updated feegrant info for operator {operator.get('name')} on {ibc_path}")
+                print(f"Updated feegrant info for operator {operator.get('name')} on {ibc_path}: {operator['feegrant']}")
             else:
                 operator['feegrant'] = {
                     "enabled": False,
-                    "period_spend_limit": 0
+                    "period_spend_limit": 0,
+                    "active_period_spend_limit": 0
                 }
                 print(f"No feegrant info found for operator {operator.get('name')} on {ibc_path}")
 
