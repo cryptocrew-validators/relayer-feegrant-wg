@@ -11,11 +11,11 @@ operators_file = os.path.join(base_dir, 'operators.json')
 # Gaia-related constants
 granter_account = 'cosmos1705swa2kgn9pvancafzl254f63a3jda9ngdnc7'
 daemon_name = "gaiad"
-daemon_home = "$HOME/.gaia"
+daemon_home = "../.gaia"
 chain_id = "cosmoshub-4"
 gas_prices = "0.005uatom"
 allowed_messages = "/ibc.core.client.v1.MsgCreateClient,/ibc.core.client.v1.MsgUpdateClient,/ibc.core.client.v1.MsgUpgradeClient,/ibc.core.client.v1.MsgSubmitMisbehaviour,/ibc.core.client.v1.MsgRecoverClient,/ibc.core.client.v1.MsgIBCSoftwareUpgrade,/ibc.core.client.v1.MsgUpdateClientParams,/ibc.core.connection.v1.MsgConnectionOpenInit,/ibc.core.connection.v1.MsgConnectionOpenTry,/ibc.core.connection.v1.MsgConnectionOpenAck,/ibc.core.connection.v1.MsgConnectionOpenConfirm,/ibc.core.connection.v1.MsgUpdateConnectionParams,/ibc.core.channel.v1.MsgChannelOpenInit,/ibc.core.channel.v1.MsgChannelOpenTry,/ibc.core.channel.v1.MsgChannelOpenAck,/ibc.core.channel.v1.MsgChannelOpenConfirm,/ibc.core.channel.v1.MsgChannelCloseInit,/ibc.core.channel.v1.MsgChannelCloseConfirm,/ibc.core.channel.v1.MsgRecvPacket,/ibc.core.channel.v1.MsgTimeout,/ibc.core.channel.v1.MsgTimeoutOnClose,/ibc.core.channel.v1.MsgAcknowledgement,/ibc.applications.transfer.v1.MsgTransfer,/ibc.applications.transfer.v1.MsgUpdateParams"
-rpc = "https://cosmos-rpc.publicnode.com:443"
+rpc = "https://rpc.cosmos.directory:443/cosmoshub"
 period_duration = "86400"
 
 def fetch_account_data(granter_account):
@@ -26,6 +26,17 @@ def fetch_account_data(granter_account):
         return account_data.get('account_number'), account_data.get('sequence')
     else:
         raise Exception(f"Failed to fetch account data for {granter_account}")
+
+def generate_feegrant_command(granter, grantee, expiration, period, period_limit, flags, revoke=False):
+    if revoke:
+        return f"{daemon_name} tx feegrant revoke {granter} {grantee} {flags}"
+    else:
+        command = f"{daemon_name} tx feegrant grant {granter} {grantee} "
+        if expiration:
+            command += f"--expiration '{expiration}' "
+        if period and period_limit:
+            command += f"--period {period} --period-limit '{period_limit}uatom' "
+        return command + flags
 
 def generate_feegrant_command(granter, grantee, expiration, period, period_limit, flags):
     command = f"{daemon_name} tx feegrant grant {granter} {grantee} "
