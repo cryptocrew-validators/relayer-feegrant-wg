@@ -1,2 +1,4 @@
 *node_modules*
-relayerMetrics.db
+*relayerMetrics.db*
+*$HOME*
+*.gaia*
