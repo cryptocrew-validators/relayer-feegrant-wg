@@ -55,12 +55,3 @@ jobs:
         if: env.LABEL_FOUND == 'true'
         run: |
           git push --force --set-upstream origin operator-onboarding-${{ github.event.issue.number }}
-
-      # - name: Create pull request
-      #   if: env.LABEL_FOUND == 'true'
-      #   uses: peter-evans/create-pull-request@v3
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #     branch: operator-onboarding-${{ github.event.issue.number }}
-      #     title: "Operator Onboarding for Issue #${{ github.event.issue.number }}"
-      #     body: "This PR updates the IBC file as part of the operator onboarding process for Issue #${{ github.event.issue.number }}"
