@@ -1,5 +1,5 @@
 ---
-name: Sync Chain Registry & Update Operators
+name: Sync Chain Registry
 
 on:
   schedule:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  sync:
+  sync-chain-registry:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,7 +17,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: '3.9'
 
     - name: Install Dependencies
       run: |
