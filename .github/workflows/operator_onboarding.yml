@@ -32,9 +32,9 @@ jobs:
             echo "LABEL_FOUND=false" >> $GITHUB_ENV
           fi
 
-      - name: Validate & Update IBC file
+      - name: Validate Input & Add operator to IBC path file
         if: env.LABEL_FOUND == 'true'
-        run: python ./scripts/update_ibc_file.py ${{ github.event.issue.number }}
+        run: python ./scripts/add_operator_to_path.py ${{ github.event.issue.number }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
