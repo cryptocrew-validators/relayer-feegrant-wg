@@ -1,22 +1,27 @@
+import dotenv
 import json
 import os
 import requests
 import subprocess
 from datetime import datetime
 
-# Setup constants
+# Load environment
+dotenv.load_dotenv()
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-operators_file = os.path.join(base_dir, 'operators.json')
+operators_file_name = os.getenv('OPERATORS_FILE_PATH', 'operators.json')
+operators_file = os.path.join(base_dir, operators_file_name)
 
-# Gaia-related constants
-granter_account = 'cosmos1705swa2kgn9pvancafzl254f63a3jda9ngdnc7'
-daemon_name = "gaiad"
-daemon_home = "../utils/.gaia"
-chain_id = "cosmoshub-4"
-gas_prices = "0.005uatom"
-allowed_messages = "/ibc.core.client.v1.MsgCreateClient,/ibc.core.client.v1.MsgUpdateClient,/ibc.core.client.v1.MsgUpgradeClient,/ibc.core.client.v1.MsgSubmitMisbehaviour,/ibc.core.client.v1.MsgRecoverClient,/ibc.core.client.v1.MsgIBCSoftwareUpgrade,/ibc.core.client.v1.MsgUpdateClientParams,/ibc.core.connection.v1.MsgConnectionOpenInit,/ibc.core.connection.v1.MsgConnectionOpenTry,/ibc.core.connection.v1.MsgConnectionOpenAck,/ibc.core.connection.v1.MsgConnectionOpenConfirm,/ibc.core.connection.v1.MsgUpdateConnectionParams,/ibc.core.channel.v1.MsgChannelOpenInit,/ibc.core.channel.v1.MsgChannelOpenTry,/ibc.core.channel.v1.MsgChannelOpenAck,/ibc.core.channel.v1.MsgChannelOpenConfirm,/ibc.core.channel.v1.MsgChannelCloseInit,/ibc.core.channel.v1.MsgChannelCloseConfirm,/ibc.core.channel.v1.MsgRecvPacket,/ibc.core.channel.v1.MsgTimeout,/ibc.core.channel.v1.MsgTimeoutOnClose,/ibc.core.channel.v1.MsgAcknowledgement,/ibc.applications.transfer.v1.MsgTransfer,/ibc.applications.transfer.v1.MsgUpdateParams"
-rpc = "https://rpc.cosmos.directory:443/cosmoshub"
-period_duration = "86400"
+granter_account = os.getenv('GRANTER_ACCOUNT', None)
+if granter_account is None or granter_account =='':
+    raise ValueError("Error: GRANTER_ACCOUNT environment variable is not set or empty.")
+
+daemon_name = os.getenv('DAEMON_NAME', 'gaiad')
+daemon_home = os.getenv('DAEMON_HOME', '../utils/.gaia')
+chain_id = os.getenv('CHAIN_ID', 'cosmoshub-4')
+gas_prices = os.getenv('GAS_PRICES', '0.005uatom')
+allowed_messages = os.getenv('ALLOWED_MESSAGES', '')
+rpc = os.getenv('RPC_URL', 'https://rpc.cosmos.directory:443/cosmoshub')
+period_duration = os.getenv('PERIOD_DURATION', '86400')
 
 def fetch_account_data(granter_account):
     url = f"https://rest.cosmos.directory/cosmoshub/cosmos/auth/v1beta1/accounts/{granter_account}"

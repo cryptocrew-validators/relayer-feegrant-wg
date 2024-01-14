@@ -1,7 +1,15 @@
+import dotenv
 import os
 import json
 import sys
 import requests
+
+# Load environment
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+dotenv.load_dotenv()
+
+ibc_folder_name = os.getenv('IBC_FOLDER_PATH', '_IBC')
+ibc_folder_path = os.path.join(base_dir, ibc_folder_name)
 
 def get_issue_content(issue_number, token):
     """Fetch the content of the issue from GitHub."""
@@ -26,7 +34,7 @@ def parse_issue_content(issue_content):
     return data
 
 def update_ibc_file(ibc_path, operator_data, token, issue_number):
-    file_path = f'./_IBC/{ibc_path}.json'
+    file_path = f'{ibc_folder_path}/{ibc_path}.json'
     with open(file_path, 'r') as file:
         data = json.load(file)
     
@@ -69,7 +77,7 @@ def validate_operator_data(operator_data, token, issue_number):
         return "At least one contact method (Discord Handle or Telegram Handle) is required."
 
     ibc_path = operator_data.get('IBC Path')
-    file_path = f'./_IBC/{ibc_path}.json'
+    file_path = f'{ibc_folder_path}/{ibc_path}.json'
     if not os.path.exists(file_path):
         error_message = f"IBC path `{ibc_path}` not found! Please review your input."
         post_comment(issue_number, error_message, token)

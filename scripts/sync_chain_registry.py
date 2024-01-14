@@ -1,21 +1,28 @@
+import dotenv
 import requests
 import re
 import os
 import json
 
-# Constants
-REPO_OWNER = 'cosmos'
-REPO_NAME = 'chain-registry'
-FOLDER_PATH = '_IBC'
-FILE_PATTERN = r'.*cosmoshub.*\.json'
-GITHUB_API = 'https://api.github.com'
-LOCAL_FOLDER = '../_IBC'
+# Load environment
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+dotenv.load_dotenv()
+
+chain_name = os.getenv('CR_CHAIN_NAME', 'cosmoshub')
+cr_repo_owner = os.getenv('CR_REPO_OWNER', 'cosmos')
+cr_repo_name = os.getenv('CR_REPO_NAME', 'chain-registry')
+cr_folder_path = os.getenv('CR_FOLDER_PATH', '_IBC')
+ibc_folder_name = os.getenv('IBC_FOLDER_PATH', '_IBC')
+ibc_folder_path = os.path.join(base_dir, ibc_folder_name)
+
+file_pattern = rf'.*{chain_name}.*\.json'
+github_api_url = 'https://api.github.com'
 
 def get_files_from_github():
     """
     Fetches the file list from the specified GitHub repository and directory.
     """
-    api_url = f'{GITHUB_API}/repos/{REPO_OWNER}/{REPO_NAME}/contents/{FOLDER_PATH}'
+    api_url = f'{github_api_url}/repos/{cr_repo_owner}/{cr_repo_name}/contents/{cr_folder_path}'
     response = requests.get(api_url)
     if response.status_code == 200:
         return response.json()
@@ -60,11 +67,11 @@ def merge_files(downloaded_content, existing_content):
 def main():
     files = get_files_from_github()
     for file in files:
-        if re.match(FILE_PATTERN, file['name']):
+        if re.match(file_pattern, file['name']):
             print(f"Processing file: {file['name']}")
             downloaded_content = download_file(file['download_url'])
             if downloaded_content is not None:
-                existing_file_path = os.path.join(LOCAL_FOLDER, file['name'])
+                existing_file_path = os.path.join(ibc_folder_path, file['name'])
                 if os.path.exists(existing_file_path):
                     with open(existing_file_path, 'r') as existing_file:
                         existing_content = existing_file.read()

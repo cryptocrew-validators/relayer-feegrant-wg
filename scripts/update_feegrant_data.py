@@ -1,13 +1,18 @@
+import dotenv
 import json
 import os
 import requests
 import time
 from datetime import datetime
 
-granter_account = 'cosmos1705swa2kgn9pvancafzl254f63a3jda9ngdnc7'
-
+# Load environment
+dotenv.load_dotenv()
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-operators_file = os.path.join(base_dir, 'operators.json')
+operators_file_name = os.getenv('OPERATORS_FILE_PATH', 'operators.json')
+operators_file = os.path.join(base_dir, operators_file_name)
+granter_account = os.getenv('GRANTER_ACCOUNT', None)
+if granter_account is None or granter_account =='':
+    raise ValueError("Error: GRANTER_ACCOUNT environment variable is not set or empty.")
 
 max_retries = 10
 retry_delay = 1  # in seconds
