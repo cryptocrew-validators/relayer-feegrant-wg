@@ -8,7 +8,7 @@
       "telegram": "clemensg",
       "feegrant": {
         "enabled": true,
-        "period_spend_limit": 0,
+        "period_spend_limit": 10000000,
         "active_period_spend_limit": 0
       }
     }
