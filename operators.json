@@ -7,10 +7,9 @@
       "discord": "ccclaimens",
       "telegram": "clemensg",
       "feegrant": {
-        "enabled": true,
-        "period_spend_limit": 10000000,
-        "expiration": null,
-        "active_period_spend_limit": 10000000
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
       }
     },
     {
@@ -20,10 +19,9 @@
       "discord": "ccclaimens",
       "telegram": "clemensg",
       "feegrant": {
-        "enabled": true,
-        "period_spend_limit": 10000000,
-        "expiration": null,
-        "active_period_spend_limit": 10000000
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
       }
     },
     {
@@ -33,10 +31,9 @@
       "discord": "ccclaimens",
       "telegram": "clemensg",
       "feegrant": {
-        "enabled": true,
-        "period_spend_limit": 10000000,
-        "expiration": null,
-        "active_period_spend_limit": 10000000
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
       }
     }
   ]
