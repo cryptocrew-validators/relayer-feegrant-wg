@@ -96,8 +96,7 @@ async function saveTransactionData(blockHeight, blockTime, relayerAddress, msgAr
       feeAmount, 
       gasPrice
     ]);
-  console.log(`saved relayer_transactions:`);
-  console.log(statementString);
+  console.log(`[DEBUG] saved relayer_transaction for: ${relayerAddress}`);
   return;
 }
 
@@ -138,8 +137,7 @@ async function saveTotalMetricsData(blockHeight, blockTime, totalGasWanted, tota
       totalFee, 
       transactionCount
     ]);
-  console.log(`saved total_metrics:`);
-  console.log(statementString);
+  console.log(`[DEBUG] saved total_metrics`);
   return;
 }
 
@@ -173,7 +171,7 @@ async function getLatestBlockHeightFromDB() {
     return row ? row.max_height : config.indexer_start_block_height;
   } catch (error) {
     console.error('Error fetching latest block height from database:', error);
-    return config.indexer_start_block_height;
+    return false;
   }
 }
 
@@ -211,9 +209,9 @@ async function processTransaction(tx) {
     });
 
     if (isRelayerTx) {
-//      if (txDecoded.authInfo.fee.granter == config.granter_address) {
+      if (txDecoded.authInfo.fee.granter == config.granter_address) {
         const gasWanted = parseInt(txDecoded.authInfo.fee.gasLimit || '0', 10);
-        const gasUsed = parseInt(txDecoded.authInfo.fee.gasUsed || '0', 10); // this doesn't work: how do we correctly get the gas used for the tx?
+        const gasUsed = parseInt(txDecoded.authInfo.fee.gasUsed || '0', 10); // this always returns zero: how do we correctly get the gas used for the tx?
         const feeAmount = parseInt(txDecoded.authInfo.fee.amount?.[0]?.amount || '0');
         const gasPrice = feeAmount / gasWanted;
 
@@ -236,7 +234,7 @@ async function processTransaction(tx) {
         transactionCount++;
         return true;
       }
-//    }
+    }
 
   } catch (error) {
     console.error('Error processing transaction:', error);
@@ -278,7 +276,7 @@ async function processBlock(blockData) {
 async function updateLatestBlockHeight() {
   try {
     const response = await axios.get(`${config.rpc_url}/block`);
-    latestBlockHeight = response.data.result.block.header.height;
+    latestBlockHeight = parseInt(response.data.result.block.header.height);
     latestBlockTime = response.data.result.block.header.time;
   } catch (error) {
     console.error('Error fetching latest block height:', error);
@@ -286,31 +284,31 @@ async function updateLatestBlockHeight() {
 }
 
 export async function indexer() {
-  let currentHeight = config.indexer_start_block_height;
+  let currentHeight = await getLatestBlockHeightFromDB();
+  if (!currentHeight || currentHeight == 0) {
+    console.log('Starting indexer from start height: ' + config.indexer_start_block_height);
+    currentHeight = parseInt(config.indexer_start_block_height);
+  } else {
+    console.log('Found db entry with height ' + currentHeight + '. Starting indexer.');
+    currentHeight++;
+  }
 
   while (isCatchingUp) {
+    try {
+      const block = await getBlock(currentHeight);
+      if (block) {
+        await processBlock(block.data);
+      }
+      await saveLastBlockData(block.header.height, block.header.time);
+      console.log('processed block: ' + block.header.height + ', header_time: ' + block.header.time);
+    } catch (e) {
+      console.error(e);
+    }
     await updateLatestBlockHeight();
-    while (currentHeight <= latestBlockHeight) {
-      if (currentHeight !== config.indexer_start_block_height) {
-        currentHeight = await getLatestBlockHeightFromDB() + 1;
-      }
-
-      try {
-        const block = await getBlock(currentHeight);
-        if (block) {
-          await processBlock(block.data);
-        }
-        await saveLastBlockData(block.header.height, block.header.time);
-        console.log('processed block: ' + currentHeight)
-      } catch (e) {
-        console.error(e);
-      }
-      
-    }
-
-    if (currentHeight > latestBlockHeight) {
+    if (currentHeight == latestBlockHeight) {
       isCatchingUp = false;
-    }
+    }  
+    currentHeight++;  
   }
 
   // Polling for new blocks
@@ -320,7 +318,9 @@ export async function indexer() {
       const block = await getBlock(currentHeight);
       if (block) {
         await processBlock(block.data);
-      }
+      }   
+      await saveLastBlockData(block.header.height, block.header.time);
+      console.log('processed block: ' + block.header.height + ', header_time: ' + block.header.time);
       currentHeight++;
     }
   }, config.indexer_poll_frequency); 
