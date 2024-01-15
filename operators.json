@@ -1,2 +1,16 @@
 {
+  "cosmoshub-osmosis": [
+    {
+      "name": "CryptoCrew",
+      "memo": "Relayed by CryptoCrew Validators",
+      "address": "cosmos1f269n4mrg0s8tqveny9huulyamvdv97n094dgm",
+      "discord": "ccclaimens",
+      "telegram": "clemensg",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ]
 }
