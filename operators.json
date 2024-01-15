@@ -7,7 +7,7 @@
       "discord": "ccclaimens",
       "telegram": "clemensg",
       "feegrant": {
-        "enabled": false,
+        "enabled": true,
         "period_spend_limit": 0,
         "active_period_spend_limit": 0
       }
