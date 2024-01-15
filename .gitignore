@@ -2,3 +2,4 @@
 *relayerMetrics.db*
 *$HOME*
 *.gaia*
+.env-test
