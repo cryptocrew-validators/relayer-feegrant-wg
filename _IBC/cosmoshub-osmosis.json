@@ -45,6 +45,22 @@
       "telegram": {
         "handle": "clemensg"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv"
+      },
+      "chain_2": {
+        "address": "osmo1cx82d7pm4dgffy7a93rl6ul5g84vjgxk0a4n97"
+      },
+      "memo": "Relayed by Architect Nodes! ",
+      "name": "Architect Nodes",
+      "discord": {
+        "handle": "architectnodes"
+      },
+      "telegram": {
+        "handle": "social244305_Architect_Nodes"
+      }
     }
   ]
 }
