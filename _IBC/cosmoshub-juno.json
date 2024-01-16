@@ -27,5 +27,23 @@
         "preferred": true
       }
     }
+  ],
+  "operators": [
+    {
+      "chain_1": {
+        "address": "cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff"
+      },
+      "chain_2": {
+        "address": "juno19pjtx7dah2fquf7udyxjv94h0eraha78nyj9w4"
+      },
+      "memo": "Relayed by Crosnest.",
+      "name": "Crosnest",
+      "discord": {
+        "handle": "galadrin_crosnest"
+      },
+      "telegram": {
+        "handle": "crosnest_com"
+      }
+    }
   ]
 }

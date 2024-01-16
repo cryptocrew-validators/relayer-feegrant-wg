@@ -28,5 +28,23 @@
         "dex": "osmosis"
       }
     }
+  ],
+  "operators": [
+    {
+      "chain_1": {
+        "address": "cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt"
+      },
+      "chain_2": {
+        "address": "inj1lagtgtck8627009uw39rlmsa6ty5dhwwuujq3m"
+      },
+      "memo": "Relayed by Crosnest.",
+      "name": "Crosnest",
+      "discord": {
+        "handle": "galadrin_crosnest"
+      },
+      "telegram": {
+        "handle": "crosnest_com"
+      }
+    }
   ]
 }
