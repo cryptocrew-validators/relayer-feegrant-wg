@@ -28,5 +28,23 @@
         "dex": "crescent"
       }
     }
+  ],
+  "operators": [
+    {
+      "chain_1": {
+        "address": "cosmos1w8kzcqk25vr0fx0k7yxn2vjw49qerut2tfv8up"
+      },
+      "chain_2": {
+        "address": "cre1cx82d7pm4dgffy7a93rl6ul5g84vjgxkrw4xxp"
+      },
+      "memo": "Relayed by Architect Nodes! ",
+      "name": "Architect Nodes",
+      "discord": {
+        "handle": "architectnodes"
+      },
+      "telegram": {
+        "handle": "social244305_Architect_Nodes"
+      }
+    }
   ]
 }
