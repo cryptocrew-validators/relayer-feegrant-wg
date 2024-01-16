@@ -44,6 +44,22 @@
       "telegram": {
         "handle": "crosnest_com"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv"
+      },
+      "chain_2": {
+        "address": "omniflix1cx82d7pm4dgffy7a93rl6ul5g84vjgxk6ch6yj"
+      },
+      "memo": "Relayed by Architect Nodes! ",
+      "name": "Architect Nodes",
+      "discord": {
+        "handle": "architectnodes"
+      },
+      "telegram": {
+        "handle": "social244305_Architect_Nodes"
+      }
     }
   ]
 }

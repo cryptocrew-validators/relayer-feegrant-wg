@@ -27,5 +27,23 @@
         "preferred": true
       }
     }
+  ],
+  "operators": [
+    {
+      "chain_1": {
+        "address": "bitsong16arskkjeeq9jnvwfe78n8m9y06jkj9kp2vc6vn"
+      },
+      "chain_2": {
+        "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv"
+      },
+      "memo": "Relayed by Architect Nodes! ",
+      "name": "Architect Nodes",
+      "discord": {
+        "handle": "architectnodes"
+      },
+      "telegram": {
+        "handle": "social244305_Architect_Nodes"
+      }
+    }
   ]
 }

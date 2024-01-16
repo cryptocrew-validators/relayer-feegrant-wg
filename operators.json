@@ -7,8 +7,146 @@
       "discord": "ccclaimens",
       "telegram": "clemensg",
       "feegrant": {
-        "enabled": true,
-        "period_spend_limit": 10000000,
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    },
+    {
+      "name": "Architect Nodes",
+      "memo": "Relayed by Architect Nodes! ",
+      "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv",
+      "discord": "architectnodes",
+      "telegram": "social244305_Architect_Nodes",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-evmos": [
+    {
+      "name": "Architect Nodes",
+      "memo": "Relayed by Architect Nodes! ",
+      "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv",
+      "discord": "architectnodes",
+      "telegram": "social244305_Architect_Nodes",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-persistence": [
+    {
+      "name": "Architect Nodes",
+      "memo": "Relayed by Architect Nodes! ",
+      "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv",
+      "discord": "architectnodes",
+      "telegram": "social244305_Architect_Nodes",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-quicksilver": [
+    {
+      "name": "Architect Nodes",
+      "memo": "Relayed by Architect Nodes! ",
+      "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv",
+      "discord": "architectnodes",
+      "telegram": "social244305_Architect_Nodes",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-crescent": [
+    {
+      "name": "Architect Nodes",
+      "memo": "Relayed by Architect Nodes! ",
+      "address": "cosmos1w8kzcqk25vr0fx0k7yxn2vjw49qerut2tfv8up",
+      "discord": "architectnodes",
+      "telegram": "social244305_Architect_Nodes",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-umee": [
+    {
+      "name": "Architect Nodes",
+      "memo": "Relayed by Architect Nodes! ",
+      "address": "cosmos1ln3l6waaqdjcskt3ztzqlzkpvmzp7zw4ky2xgp",
+      "discord": "architectnodes",
+      "telegram": "social244305_Architect_Nodes",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-omniflixhub": [
+    {
+      "name": "Architect Nodes",
+      "memo": "Relayed by Architect Nodes! ",
+      "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv",
+      "discord": "architectnodes",
+      "telegram": "social244305_Architect_Nodes",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-stride": [
+    {
+      "name": "Architect Nodes",
+      "memo": "Relayed by Architect Nodes! ",
+      "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv",
+      "discord": "architectnodes",
+      "telegram": "social244305_Architect_Nodes",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "bitsong-cosmoshub": [
+    {
+      "name": "Architect Nodes",
+      "memo": "Relayed by Architect Nodes! ",
+      "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv",
+      "discord": "architectnodes",
+      "telegram": "social244305_Architect_Nodes",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-juno": [
+    {
+      "name": "Architect Nodes",
+      "memo": "Relayed by Architect Nodes! ",
+      "address": "cosmos1w8kzcqk25vr0fx0k7yxn2vjw49qerut2tfv8up",
+      "discord": "architectnodes",
+      "telegram": "social244305_Architect_Nodes",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
         "active_period_spend_limit": 0
       }
     }
