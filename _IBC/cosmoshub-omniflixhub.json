@@ -31,6 +31,22 @@
   "operators": [
     {
       "chain_1": {
+        "address": "cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y"
+      },
+      "chain_2": {
+        "address": "omniflix19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqmk5qa6"
+      },
+      "memo": "Relayed by Crosnest.",
+      "name": "Crosnest",
+      "discord": {
+        "handle": "galadrin_crosnest"
+      },
+      "telegram": {
+        "handle": "crosnest_com"
+      }
+    },
+    {
+      "chain_1": {
         "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv"
       },
       "chain_2": {

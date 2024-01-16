@@ -48,6 +48,22 @@
     },
     {
       "chain_1": {
+        "address": "cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff"
+      },
+      "chain_2": {
+        "address": "osmo19pjtx7dah2fquf7udyxjv94h0eraha78ddzwlm"
+      },
+      "memo": "Relayed by Crosnest.",
+      "name": "Crosnest",
+      "discord": {
+        "handle": "galadrin_crosnest"
+      },
+      "telegram": {
+        "handle": "crosnest_com"
+      }
+    },
+    {
+      "chain_1": {
         "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv"
       },
       "chain_2": {
