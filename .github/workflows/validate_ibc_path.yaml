@@ -30,6 +30,8 @@ jobs:
           repo: cosmos/relayer
           tag: v2.4.2
           binaries-location: Cosmos Relayer_2.4.2_linux_amd64
+      - name: Set execute permission for the script
+        run: chmod +x scripts/validate_ibc_path.sh
       - name: Validate trusting period
         shell: bash {0}
         run: |
