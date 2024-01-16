@@ -23,6 +23,18 @@
         "period_spend_limit": 0,
         "active_period_spend_limit": 0
       }
+    },
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
     }
   ],
   "cosmoshub-evmos": [
@@ -51,6 +63,18 @@
         "period_spend_limit": 0,
         "active_period_spend_limit": 0
       }
+    },
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
     }
   ],
   "cosmoshub-quicksilver": [
@@ -60,6 +84,18 @@
       "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv",
       "discord": "architectnodes",
       "telegram": "social244305_Architect_Nodes",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    },
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
       "feegrant": {
         "enabled": false,
         "period_spend_limit": 0,
@@ -107,6 +143,18 @@
         "period_spend_limit": 0,
         "active_period_spend_limit": 0
       }
+    },
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
     }
   ],
   "cosmoshub-stride": [
@@ -116,6 +164,18 @@
       "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv",
       "discord": "architectnodes",
       "telegram": "social244305_Architect_Nodes",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    },
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
       "feegrant": {
         "enabled": false,
         "period_spend_limit": 0,
@@ -144,6 +204,186 @@
       "address": "cosmos1w8kzcqk25vr0fx0k7yxn2vjw49qerut2tfv8up",
       "discord": "architectnodes",
       "telegram": "social244305_Architect_Nodes",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    },
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-teritori": [
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-lumnetwork": [
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "axelar-cosmoshub": [
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "aura-cosmoshub": [
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-kujira": [
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-terra2": [
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "archway-cosmoshub": [
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-cryptoorgchain": [
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-emoney": [
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-kava": [
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-kichain": [
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
+    }
+  ],
+  "cosmoshub-injective": [
+    {
+      "name": "Crosnest",
+      "memo": "Relayed by Crosnest.",
+      "address": "cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt",
+      "discord": "galadrin_crosnest",
+      "telegram": "crosnest_com",
       "feegrant": {
         "enabled": false,
         "period_spend_limit": 0,
