@@ -30,7 +30,7 @@ jobs:
 
       - name: Validate JSON files
         run: |
-          ajv compile -s ../../ibc_data.schema.json -r ../../ibc_data.schema.json
+          ajv compile -s ../ibc_data.schema.json -r ../ibc_data.schema.json
           for file in _IBC/*.json; do
             output=$(ajv test -s ../../ibc_data.schema.json -d "$file" --all-errors --json)
             if [ $? -ne 0 ]; then
