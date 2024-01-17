@@ -130,6 +130,7 @@ def main():
                 "to link and close the issue when the pull request is merged."
             )
             post_comment(issue_number, success_message, token)
+            print(operator_name)
         else:
             sys.exit(1)
 
