@@ -53,7 +53,7 @@
       "chain_2": {
         "address": "cre1nna7k5lywn99cd63elcfqm6p8c5c4qcuvawuue"
       },
-      "memo": "Relayed by IcyCRO 🧊",
+      "memo": "Relayed by IcyCRO \ud83e\uddca",
       "name": "IcyCRO",
       "discord": {
         "handle": "zanglang"
@@ -62,6 +62,5 @@
         "handle": "zanglang"
       }
     }
-
   ]
 }
