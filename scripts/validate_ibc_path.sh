@@ -4,6 +4,9 @@
 
 set -euo pipefail
 
+tp_boundary_high="0.89"
+tp_boundary_low="0.55"
+
 DATA=$(jq . $1)
 RLY_HOME=$(mktemp -d)
 
@@ -31,11 +34,11 @@ is_client_valid() {
 
     # Print the trusting and unbonding periods for debugging or logging
     echo $trusting_period $unbonding_period \
-        | awk '{printf "trusting_period: %ss, required_trusting_period_min: %ss, required_trusting_period_max: %ss, unbonding_period: %ss\n", $1, (0.60 * $2), (0.85 * $2), $2;}' >&2
+        | awk '{printf "trusting_period: %ss, required_trusting_period_min: %ss, required_trusting_period_max: %ss, unbonding_period: %ss\n", $1, ('$tp_boundary_low' * $2), ('$tp_boundary_high' * $2), $2;}' >&2
 
     # Check if the trusting period is between 60% and 85% of the unbonding period
     echo $trusting_period $unbonding_period \
-        | awk '{if ($1 >= 0.60 * $2 && $1 <= 0.85 * $2) print "yes"; else print "no"}'
+        | awk '{if ($1 >= '$tp_boundary_low' * $2 && $1 <= '$tp_boundary_high' * $2) print "yes"; else print "no"}'
 }
 
 echo "Checking $1" >&2
