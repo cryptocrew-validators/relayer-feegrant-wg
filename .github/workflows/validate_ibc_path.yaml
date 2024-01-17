@@ -1,9 +1,9 @@
 ---
 name: Validate IBC path
 on:
-#  pull_request:
-#    branches:
-#      - main
+  pull_request:
+    paths:
+      - '_IBC/*.json'
   workflow_dispatch:
 
 jobs:
@@ -19,37 +19,57 @@ jobs:
           filters: |
             ibc:
               - added|modified: '(_IBC|testnets/_IBC)/*.json'
-  Validation:
-    needs: changes
+  validate-json:
     runs-on: ubuntu-latest
-    if: ${{ needs.changes.outputs.paths != null }}
     steps:
       - uses: actions/checkout@v4
-      - name: Install rly
-        uses: jaxxstorm/action-install-gh-release@v1
-        with:
-          repo: cosmos/relayer
-          tag: v2.4.2
-          binaries-location: Cosmos Relayer_2.4.2_linux_amd64
-      - name: Set execute permission for the script
-        run: chmod +x $GITHUB_WORKSPACE/scripts/validate_ibc_path.sh
-      - name: List files in the script directory
-        run: ls -l $GITHUB_WORKSPACE/scripts/
-      - name: Validate trusting period
-        shell: bash {0}
+        name: Checkout code
+
+      - name: Install JSON Schema Validator
+        run: sudo npm install -g ajv-cli
+
+      - name: Validate JSON files
         run: |
-          declare -i result=0
-          paths=(${{ needs.changes.outputs.paths }})
-          for path in "${paths[@]}"; do
-              if [[ "$path" != *"cosmoshub-osmosis"* ]]; then
-                  $GITHUB_WORKSPACE/scripts/validate_ibc_path.sh $path
-                  result=$(($result+$?))
-              else
-                  echo "cosmoshub-osmosis ommitted for path validation."
-              fi
-          done
-          if [[ "$result" -gt 0 ]]; then
-              echo "Error: Incorrect trusting period for all or some clients" >&2
+          ajv compile -s /ibc_data.schema.json -r /ibc_data.schema.json
+          for file in _IBC/*.json; do
+            output=$(ajv test -s /ibc_data.schema.json -d "$file" --all-errors --json)
+            if [ $? -ne 0 ]; then
+              echo "Validation failed for $file"
+              echo "$output"
               exit 1
-          fi
+            fi
+          done
+  # validate-client-states:
+  #   needs: changes
+  #   runs-on: ubuntu-latest
+  #   if: ${{ needs.changes.outputs.paths != null }}
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Install rly
+  #       uses: jaxxstorm/action-install-gh-release@v1
+  #       with:
+  #         repo: cosmos/relayer
+  #         tag: v2.4.2
+  #         binaries-location: Cosmos Relayer_2.4.2_linux_amd64
+  #     - name: Set execute permission for the script
+  #       run: chmod +x $GITHUB_WORKSPACE/scripts/validate_ibc_path.sh
+  #     - name: List files in the script directory
+  #       run: ls -l $GITHUB_WORKSPACE/scripts/
+  #     - name: Validate trusting period
+  #       shell: bash {0}
+  #       run: |
+  #         declare -i result=0
+  #         paths=(${{ needs.changes.outputs.paths }})
+  #         for path in "${paths[@]}"; do
+  #             if [[ "$path" != *"cosmoshub-osmosis"* ]]; then
+  #                 $GITHUB_WORKSPACE/scripts/validate_ibc_path.sh $path
+  #                 result=$(($result+$?))
+  #             else
+  #                 echo "cosmoshub-osmosis ommitted for trusting period validation."
+  #             fi
+  #         done
+  #         if [[ "$result" -gt 0 ]]; then
+  #             echo "Error: Incorrect trusting period for all or some clients" >&2
+  #             exit 1
+  #         fi
               
