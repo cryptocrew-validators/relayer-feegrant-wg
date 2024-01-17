@@ -27,5 +27,23 @@
         "preferred": true
       }
     }
+  ],
+  "operators": [
+    {
+      "chain_1": {
+        "address": "cosmos1nna7k5lywn99cd63elcfqm6p8c5c4qcug4aef5"
+      },
+      "chain_2": {
+        "address": "neutron1nna7k5lywn99cd63elcfqm6p8c5c4qcuv25mnn"
+      },
+      "memo": "Relayed by IcyCRO 🧊",
+      "name": "IcyCRO",
+      "discord": {
+        "handle": "zanglang"
+      },
+      "telegram": {
+        "handle": "zanglang"
+      }
+    }
   ]
 }
