@@ -33,9 +33,11 @@ jobs:
           fi
 
       - name: Validate Input & Add operator to IBC path file
-        id: add_operator 
+        id: add_operator
         if: env.LABEL_FOUND == 'true'
-        run: echo "OPERATOR_NAME=$(python ./scripts/add_operator_to_path.py ${{ github.event.issue.number }})" >> $GITHUB_ENV
+        run: |
+          OPERATOR_NAME=$(python ./scripts/add_operator_to_path.py ${{ github.event.issue.number }} | tail -n 1)
+          echo "OPERATOR_NAME=$OPERATOR_NAME" >> $GITHUB_ENV
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
