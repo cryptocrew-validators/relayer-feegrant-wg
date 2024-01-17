@@ -16,8 +16,10 @@ jobs:
   sync-operators-update-feegrant:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout Repository and Switch to Main
         uses: actions/checkout@v2
+        with:
+          ref: main  
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -39,7 +41,6 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git checkout main 
           git add -A
           git commit -m "Automated data updates" || echo "No changes to commit"
           git push origin main  # Push to the main branch
