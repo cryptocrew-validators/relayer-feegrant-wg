@@ -80,7 +80,6 @@ def validate_operator_data(operator_data, token, issue_number):
     file_path = f'{ibc_folder_path}/{ibc_path}.json'
     if not os.path.exists(file_path):
         error_message = f"IBC path `{ibc_path}` not found! Please review your input."
-        post_comment(issue_number, error_message, token)
         return error_message
     
     return ""
