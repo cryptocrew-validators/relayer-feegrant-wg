@@ -112,6 +112,7 @@ def main():
         validation_error = validate_operator_data(operator_data, token, issue_number)
         if validation_error:
             print(f"Validation error: {validation_error}")
+            post_comment(issue_number, validation_error, token)
             sys.exit(1)
 
         ibc_path = operator_data['IBC Path']
@@ -135,6 +136,7 @@ def main():
 
     except Exception as e:
         print(f"An error occurred: {e}")
+        post_comment(issue_number, f"An error occurred: {e}", token)
         sys.exit(1)
 
 if __name__ == "__main__":
