@@ -27,9 +27,8 @@
         "preferred": true
       }
     }
-  ]
-},
-"operators": [
+  ],
+  "operators": [
     {
       "chain_1": {
         "address": "centauri1ks0qeq9vyt9l7vgasaajd49ff0k8kluras573q"
