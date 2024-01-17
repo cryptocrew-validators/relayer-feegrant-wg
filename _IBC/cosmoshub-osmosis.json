@@ -48,10 +48,10 @@
     },
     {
    "chain_1": {
-        "address": "cosmos1ks0qeq9vyt9l7vgasaajd49ff0k8klure6ez4n"
+        "address": "cosmos1kgs9ml9hc085k6pm36z6wlnjc3c8zv99myau2w"
       },
       "chain_2": {
-        "address": "osmo1ks0qeq9vyt9l7vgasaajd49ff0k8klur3p2jrp"
+        "address": "osmo1kgs9ml9hc085k6pm36z6wlnjc3c8zv99nlwvuu"
       },
       "memo": "Relayed by Cosmos Spaces",
       "name": "Cosmos Spaces",
