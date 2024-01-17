@@ -28,5 +28,23 @@
         "dex": "osmosis"
       }
     }
+  ],
+  "operators": [
+    {
+      "chain_1": {
+        "address": "cosmos1ks0qeq9vyt9l7vgasaajd49ff0k8klure6ez4n"
+      },
+      "chain_2": {
+        "address": "inj146sl9u5kgsa86mxk6zjhmwlnlxa7l7cwvyea4r"
+      },
+      "memo": "Relayed by Cosmos Spaces",
+      "name": "Cosmos Spaces",
+      "discord": {
+        "handle": ".tricky_."
+      },
+      "telegram": {
+        "handle": "Char1esBark1ey"
+      }
+    }
   ]
 }
