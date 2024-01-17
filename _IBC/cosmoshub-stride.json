@@ -44,6 +44,22 @@
       "telegram": {
         "handle": "Char1esBark1ey"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos126pkrcvytfvsvrdm7x4wme5y780amvwwarzezc"
+      },
+      "chain_2": {
+        "address": "stride126pkrcvytfvsvrdm7x4wme5y780amvww7gz9k5"
+      },
+      "memo": "Relayed by Cosmos Spaces",
+      "name": "Cosmos “Spaces",
+      "discord": {
+        "handle": ".tricky_."
+      },
+      "telegram": {
+        "handle": "Char1esBark1ey" 
+      }
     }
   ]
 }
