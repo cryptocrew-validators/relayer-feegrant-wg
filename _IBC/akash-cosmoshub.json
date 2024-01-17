@@ -24,9 +24,8 @@
       "version": "ics20-1",
       "tags": {}
     }
-  ]
-},
-"operators": [
+  ],
+  "operators": [
     {
       "chain_1": {
         "address": "akash1ks0qeq9vyt9l7vgasaajd49ff0k8klur5p59vf"
