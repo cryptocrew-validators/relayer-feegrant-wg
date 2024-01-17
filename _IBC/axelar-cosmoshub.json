@@ -31,10 +31,10 @@
   "operators": [
     {
       "chain_1": {
-        "address": "axelar1ks0qeq9vyt9l7vgasaajd49ff0k8klura5027j"
+        "address": "cosmos1558hpgzv2jt6rkuccaklxhgtj8mcleq0s2zcsl"
       },
       "chain_2": {
-        "address": "cosmos1ks0qeq9vyt9l7vgasaajd49ff0k8klure6ez4n"
+        "address": "axelar1558hpgzv2jt6rkuccaklxhgtj8mcleq05y5sm7"
       },
       "memo": "Relayed by Cosmos Spaces",
       "name": "Cosmos Spaces",
