@@ -120,7 +120,7 @@ def main():
 
             operator_name = operator_data.get('Operator Name').replace(" ", "_")
             branch_name = f"operator-onboarding-{issue_number}-{operator_name}"
-            repo_full_name = os.environ['GITHUB_REPOSITORY']  # "owner/repo"
+            repo_full_name = os.environ['GITHUB_REPOSITORY'] 
             pr_url = f"https://github.com/{repo_full_name}/compare/main...{branch_name}?expand=1"
             success_message = (
                 f"Input validation passed. Your changes have been committed to the branch `{branch_name}`.\n"
