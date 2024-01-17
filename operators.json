@@ -475,6 +475,18 @@
         "period_spend_limit": 0,
         "active_period_spend_limit": 0
       }
+    },
+    {
+      "name": "CryptoCrew",
+      "memo": "relayed by CryptoCrew Validators",
+      "address": "cosmos1yghndrffay859ma2ue4pa2cltw640vtayerdla",
+      "discord": "@ccclaimens",
+      "telegram": "@clemensg",
+      "feegrant": {
+        "enabled": false,
+        "period_spend_limit": 0,
+        "active_period_spend_limit": 0
+      }
     }
   ]
 }
