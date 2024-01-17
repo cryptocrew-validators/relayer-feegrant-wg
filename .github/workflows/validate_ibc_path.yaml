@@ -31,7 +31,7 @@ jobs:
       - name: Validate JSON files
         run: |
           for file in _IBC/*.json; do
-            output=$(ajv test -s ./ibc_data.schema.json -d "$file")
+            output=$(ajv test -s ./ibc_data.schema.json -d "$file" --valid)
             if [ $? -ne 0 ]; then
               echo "Validation failed for $file"
               echo "$output"
