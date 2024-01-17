@@ -44,6 +44,22 @@
       "telegram": {
         "handle": "zanglang"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1yghndrffay859ma2ue4pa2cltw640vtayerdla"
+      },
+      "chain_2": {
+        "address": "neutron1yghndrffay859ma2ue4pa2cltw640vtaqx2096"
+      },
+      "memo": "relayed by CryptoCrew Validators",
+      "name": "CryptoCrew",
+      "discord": {
+        "handle": "@ccclaimens"
+      },
+      "telegram": {
+        "handle": "@clemensg"
+      }
     }
   ]
 }
