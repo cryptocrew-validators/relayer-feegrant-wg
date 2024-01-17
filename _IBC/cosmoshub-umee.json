@@ -24,5 +24,23 @@
       "version": "ics20-1",
       "tags": {}
     }
+  ],
+  "operators": [
+    {
+      "chain_1": {
+        "address": "cosmos1ks0qeq9vyt9l7vgasaajd49ff0k8klure6ez4n"
+      },
+      "chain_2": {
+        "address": "umee1ks0qeq9vyt9l7vgasaajd49ff0k8klurtvya3p"
+      },
+      "memo": "Relayed by Cosmos Spaces",
+      "name": "Cosmos Spaces",
+      "discord": {
+        "handle": ".tricky_."
+      },
+      "telegram": {
+        "handle": "Char1esBark1ey"
+      }
+    }
   ]
 }
