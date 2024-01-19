@@ -2,6 +2,9 @@ import dotenv
 import json
 import os
 
+added_logs = []
+removed_logs = []
+
 # Load environment
 dotenv.load_dotenv()
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,6 +23,7 @@ def load_existing_operators(filename):
     return {}
 
 operators_by_path = load_existing_operators(operators_file)
+all_operators_in_sources = set()
 
 def get_cosmoshub_address(operator, ibc_path):
     if ibc_path.startswith("cosmoshub-"):
@@ -44,16 +48,21 @@ def update_or_add_operator(operators_by_path, new_operator, ibc_path):
         return  # Skip if new_operator is not a dict
 
     cosmoshub_address = get_cosmoshub_address(new_operator, ibc_path)
-    print(f'{new_operator.get("name")}: {cosmoshub_address}')
+    unique_key = (ibc_path, cosmoshub_address)
+    all_operators_in_sources.add(unique_key)
 
-    # Check if an operator with the same cosmoshub address already exists
-    for operator in operators_by_path.get(ibc_path, []):
+    # Check if an operator with the same unique key already exists
+    existing_operators = operators_by_path.get(ibc_path, [])
+    for operator in existing_operators:
         if operator.get("address") == cosmoshub_address:
             print(f'Skipping {new_operator.get("name")}. Address already set for {ibc_path} operator: {operator.get("name")}')
-            return  # Skip if cosmoshub address is already used by another operator
+            return
 
+    # No existing operator with the same address found in this path, add new operator
     operator_object = create_operator_object(new_operator, ibc_path)
     operators_by_path.setdefault(ibc_path, []).append(operator_object)
+    added_logs.append(f'Added {new_operator.get("name")} for {ibc_path}')
+
 
 for filename in os.listdir(ibc_folder_path):
     if filename.endswith('.json'):
@@ -74,6 +83,29 @@ for filename in os.listdir(ibc_folder_path):
                     else:
                         print(f'Invalid operator format in {filename}: {new_operator}')
 
+# Clear operators that are no longer in source files
+for ibc_path, operators in list(operators_by_path.items()):
+    original_operators = operators.copy()
+    operators_by_path[ibc_path] = [op for op in operators if (ibc_path, op.get('address')) in all_operators_in_sources]
+    removed_operators = [op for op in original_operators if (ibc_path, op.get('address')) not in all_operators_in_sources]
+
+    if removed_operators:
+        removed_logs.append(f"Removed from {ibc_path}: {[op['name'] for op in removed_operators]}")
+
 # Write to the operators file
 with open(operators_file, 'w') as outfile:
     json.dump(operators_by_path, outfile, indent=2)
+
+# Print removal & addition logs at the end
+print("---------------")
+changes_made = False
+if added_logs:
+    changes_made = True
+    for log in added_logs:
+        print(log)
+if removed_logs:
+    changes_made = True
+    for log in removed_logs:
+        print(log)
+if not changes_made:
+    print("No changes")
