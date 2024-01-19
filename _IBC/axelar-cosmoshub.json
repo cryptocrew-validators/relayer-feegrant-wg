@@ -45,5 +45,37 @@
         "handle": "Char1esBark1ey"
       }
     },
+    {
+      "chain_1": {
+        "address": "axelar19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqzxn3p9"
+      },
+      "chain_2": {
+        "address": "cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y"
+      },
+      "memo": "Relayed by Crosnest.",
+      "name": "Crosnest",
+      "discord": {
+        "handle": "galadrin_crosnest"
+      },
+      "telegram": {
+        "handle": "crosnest_com"
+      }
+    },
+    {
+      "chain_1": {
+        "address": "axelar1nna7k5lywn99cd63elcfqm6p8c5c4qcuvmt3z4"
+      },
+      "chain_2": {
+        "address": "cosmos1nna7k5lywn99cd63elcfqm6p8c5c4qcug4aef5"
+      },
+      "memo": "Relayed by IcyCRO \ud83e\uddca",
+      "name": "IcyCRO",
+      "discord": {
+        "handle": "zanglang"
+      },
+      "telegram": {
+        "handle": "zanglang"
+      }
+    }
   ]
 }

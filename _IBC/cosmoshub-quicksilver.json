@@ -40,6 +40,38 @@
       "telegram": {
         "handle": "Char1esBark1ey"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt"
+      },
+      "chain_2": {
+        "address": "quick1l267dmlmprhu4p5aqslf50f495vjqlg3ks6kte"
+      },
+      "memo": "Relayed by Crosnest.",
+      "name": "Crosnest",
+      "discord": {
+        "handle": "galadrin_crosnest"
+      },
+      "telegram": {
+        "handle": "crosnest_com"
+      }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv"
+      },
+      "chain_2": {
+        "address": "quick1cx82d7pm4dgffy7a93rl6ul5g84vjgxkvzk327"
+      },
+      "memo": "Relayed by Architect Nodes! ",
+      "name": "Architect Nodes",
+      "discord": {
+        "handle": "architectnodes"
+      },
+      "telegram": {
+        "handle": "social244305_Architect_Nodes"
+      }
     }
   ]
 }

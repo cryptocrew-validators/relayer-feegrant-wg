@@ -80,7 +80,6 @@ def validate_operator_data(operator_data, token, issue_number):
     file_path = f'{ibc_folder_path}/{ibc_path}.json'
     if not os.path.exists(file_path):
         error_message = f"IBC path `{ibc_path}` not found! Please review your input."
-        post_comment(issue_number, error_message, token)
         return error_message
     
     return ""
@@ -112,6 +111,7 @@ def main():
         validation_error = validate_operator_data(operator_data, token, issue_number)
         if validation_error:
             print(f"Validation error: {validation_error}")
+            post_comment(issue_number, validation_error, token)
             sys.exit(1)
 
         ibc_path = operator_data['IBC Path']
@@ -120,8 +120,8 @@ def main():
 
             operator_name = operator_data.get('Operator Name').replace(" ", "_")
             branch_name = f"operator-onboarding-{issue_number}-{operator_name}"
-            repo_full_name = os.environ['GITHUB_REPOSITORY']  # "owner/repo"
-            pr_url = f"https://github.com/{repo_full_name}/compare/main...{branch_name}?expand=1&template=operator_onboarding.md"
+            repo_full_name = os.environ['GITHUB_REPOSITORY'] 
+            pr_url = f"https://github.com/{repo_full_name}/compare/main...{branch_name}?expand=1"
             success_message = (
                 f"Input validation passed. Your changes have been committed to the branch `{branch_name}`.\n"
                 "Please review the changes and [open a pull request](" + pr_url + 
@@ -130,11 +130,13 @@ def main():
                 "to link and close the issue when the pull request is merged."
             )
             post_comment(issue_number, success_message, token)
+            print(operator_name)
         else:
             sys.exit(1)
 
     except Exception as e:
         print(f"An error occurred: {e}")
+        post_comment(issue_number, f"An error occurred: {e}", token)
         sys.exit(1)
 
 if __name__ == "__main__":

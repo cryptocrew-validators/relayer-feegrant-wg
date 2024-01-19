@@ -23,6 +23,48 @@ allowed_messages = os.getenv('ALLOWED_MESSAGES', '')
 rpc = os.getenv('RPC_URL', 'https://rpc.cosmos.directory:443/cosmoshub')
 period_duration = os.getenv('PERIOD_DURATION', '86400')
 
+total_signers_str = os.getenv('TOTAL_SIGNERS', '5')
+multisig_threshold_str = os.getenv('MULTISIG_THRESHOLD', '3')
+
+try:
+    total_signers = int(total_signers_str)
+    multisig_threshold = int(multisig_threshold_str)
+except ValueError:
+    raise ValueError("Error: Invalid values for TOTAL_SIGNERS or MULTISIG_THRESHOLD in the environment variables.")
+
+signer_pubkeys = [
+    os.getenv(f"SIGNER_{i}_PUBKEY") for i in range(1, total_signers + 1)
+]
+
+if None in signer_pubkeys:
+    raise ValueError("Error: Not all signer public keys are provided.")
+
+# Check if the local key named multisig-relayer-feegrant exists
+def check_if_key_exists():
+    command = f"{daemon_name} --home {daemon_home} keys list --output json"
+    try:
+        result = subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        keys_list = json.loads(result.stdout)
+        return any(key.get("name") == "multisig-relayer-feegrant" for key in keys_list)
+    except subprocess.CalledProcessError as e:
+        print(f"Error running command: {e.stderr}")
+        return False
+    except json.JSONDecodeError as e:
+        print(f"Error parsing JSON from command output: {e.msg}")
+        return False
+
+if not check_if_key_exists():
+    # Add individual signer keys to the keyring
+    for i, signer_pubkey in enumerate(signer_pubkeys, start=1):
+        signer_pubkey_json = f'{{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"{signer_pubkey}"}}'
+        add_signer_key_command = f"{daemon_name} --home {daemon_home} keys add ms{i} --pubkey '{signer_pubkey_json}'"
+        subprocess.run(add_signer_key_command, shell=True, check=True)
+
+    # Add the multisig key
+    multisig_pubkeys = ",".join([f"ms{i}" for i in range(1, total_signers + 1)])  # Adjust for the number of signers
+    add_multisig_key_command = f"{daemon_name} --home {daemon_home} keys add multisig-relayer-feegrant --multisig {multisig_pubkeys} --multisig-threshold {multisig_threshold}"
+    subprocess.run(add_multisig_key_command, shell=True, check=True)
+
 def fetch_account_data(granter_account):
     url = f"https://rest.cosmos.directory/cosmoshub/cosmos/auth/v1beta1/accounts/{granter_account}"
     response = requests.get(url)
@@ -69,9 +111,9 @@ def main():
             current_period_limit = feegrant.get('period_spend_limit')
             enabled = feegrant.get('enabled')
 
-            grant_needed = enabled and current_period_limit > 0 and active_period_limit != current_period_limit
-            renew_needed = enabled and (is_expiration_past(expiration) or current_period_limit != active_period_limit)
-            revoke_needed = not enabled or current_period_limit == 0 or renew_needed
+            grant_needed = enabled and current_period_limit > 0 and active_period_limit == 0
+            renew_needed = enabled and (is_expiration_past(expiration) or (current_period_limit != active_period_limit and active_period_limit != 0))
+            revoke_needed = (not enabled and active_period_limit != 0) or (current_period_limit == 0 and active_period_limit != 0) or renew_needed
 
             if grant_needed or renew_needed or revoke_needed:
                 update_actions = []
@@ -91,7 +133,7 @@ def main():
                     print(f"  - Revocation due to either disabled status or renewal requirement.")
 
                 total_gas_limit = 80000 + 40000 * (len(all_messages) + 1)
-                flags = f"--home '{daemon_home}' --from '{granter_account}' --chain-id '{chain_id}' --gas {total_gas_limit} --gas-prices '{gas_prices}' --node '{rpc}' --offline --output json --yes --generate-only --sequence {sequence} --account-number {account_number}"
+                flags = f"--home '{daemon_home}' --from multisig-relayer-feegrant --chain-id '{chain_id}' --gas {total_gas_limit} --gas-prices '{gas_prices}' --node '{rpc}' --offline --output json --yes --generate-only --sequence {sequence} --account-number {account_number}"
 
                 if renew_needed or revoke_needed:
                     revoke_command = generate_feegrant_command(granter_account, operator['address'], None, None, None, flags, revoke=True)
@@ -124,6 +166,7 @@ def main():
 def run_subprocess_command(command, all_messages):
     global last_tx_fields
     try:
+        print(f"[DEBUG] running command: {command}")
         result = subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         command_output = json.loads(result.stdout.strip())
         messages = command_output.get("body", {}).get("messages", [])

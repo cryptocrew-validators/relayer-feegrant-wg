@@ -44,6 +44,54 @@
       "telegram": {
         "handle": "Char1esBark1ey"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff"
+      },
+      "chain_2": {
+        "address": "juno19pjtx7dah2fquf7udyxjv94h0eraha78nyj9w4"
+      },
+      "memo": "Relayed by Crosnest.",
+      "name": "Crosnest",
+      "discord": {
+        "handle": "galadrin_crosnest"
+      },
+      "telegram": {
+        "handle": "crosnest_com"
+      }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1w8kzcqk25vr0fx0k7yxn2vjw49qerut2tfv8up"
+      },
+      "chain_2": {
+        "address": "juno1w8kzcqk25vr0fx0k7yxn2vjw49qerut2am0uma"
+      },
+      "memo": "Relayed by Architect Nodes! ",
+      "name": "Architect Nodes",
+      "discord": {
+        "handle": "architectnodes"
+      },
+      "telegram": {
+        "handle": "social244305_Architect_Nodes"
+      }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1p7d8mnjttcszv34pk2a5yyug3474mhffasa7tg"
+      },
+      "chain_2": {
+        "address": "juno1nna7k5lywn99cd63elcfqm6p8c5c4qcu787zwg"
+      },
+      "memo": "Relayed by IcyCRO \ud83e\uddca",
+      "name": "IcyCRO",
+      "discord": {
+        "handle": "zanglang"
+      },
+      "telegram": {
+        "handle": "zanglang"
+      }
     }
   ]
 }

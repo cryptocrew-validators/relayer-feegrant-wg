@@ -44,6 +44,38 @@
       "telegram": {
         "handle": "Char1esBark1ey"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv"
+      },
+      "chain_2": {
+        "address": "evmos1tusg5d35w03v0s2u5tefvf5yclguye09ctw6zu"
+      },
+      "memo": "Relayed by Architect Nodes! ",
+      "name": "Architect Nodes",
+      "discord": {
+        "handle": "architectnodes"
+      },
+      "telegram": {
+        "handle": "social244305_Architect_Nodes"
+      }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1p7d8mnjttcszv34pk2a5yyug3474mhffasa7tg"
+      },
+      "chain_2": {
+        "address": "evmos1lldjhjnn32e8vek7cxe9g05nf8j74y0xa6dt3p"
+      },
+      "memo": "Relayed by IcyCRO \ud83e\uddca",
+      "name": "IcyCRO",
+      "discord": {
+        "handle": "zanglang"
+      },
+      "telegram": {
+        "handle": "zanglang"
+      }
     }
   ]
 }

@@ -47,7 +47,7 @@
       }
     },
     {
-   "chain_1": {
+      "chain_1": {
         "address": "cosmos1kgs9ml9hc085k6pm36z6wlnjc3c8zv99myau2w"
       },
       "chain_2": {
@@ -60,6 +60,38 @@
       },
       "telegram": {
         "handle": "Char1esBark1ey"
+      }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff"
+      },
+      "chain_2": {
+        "address": "osmo19pjtx7dah2fquf7udyxjv94h0eraha78ddzwlm"
+      },
+      "memo": "Relayed by Crosnest.",
+      "name": "Crosnest",
+      "discord": {
+        "handle": "galadrin_crosnest"
+      },
+      "telegram": {
+        "handle": "crosnest_com"
+      }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv"
+      },
+      "chain_2": {
+        "address": "osmo1cx82d7pm4dgffy7a93rl6ul5g84vjgxk0a4n97"
+      },
+      "memo": "Relayed by Architect Nodes! ",
+      "name": "Architect Nodes",
+      "discord": {
+        "handle": "architectnodes"
+      },
+      "telegram": {
+        "handle": "social244305_Architect_Nodes"
       }
     }
   ]
