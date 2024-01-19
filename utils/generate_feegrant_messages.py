@@ -3,6 +3,7 @@ import json
 import os
 import requests
 import subprocess
+import shutil
 from datetime import datetime
 
 # Load environment
@@ -41,7 +42,7 @@ if None in signer_pubkeys:
 
 # Check if the local key named multisig-relayer-feegrant exists
 def check_if_key_exists():
-    command = f"{daemon_name} --home {daemon_home} keys list --output json"
+    command = f"{daemon_name} --home {daemon_home} keys list --keyring-backend test --keyring-dir {daemon_home} --keyring-dir {daemon_home} --output json"
     try:
         result = subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         keys_list = json.loads(result.stdout)
@@ -57,12 +58,12 @@ if not check_if_key_exists():
     # Add individual signer keys to the keyring
     for i, signer_pubkey in enumerate(signer_pubkeys, start=1):
         signer_pubkey_json = f'{{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"{signer_pubkey}"}}'
-        add_signer_key_command = f"{daemon_name} --home {daemon_home} keys add ms{i} --pubkey '{signer_pubkey_json}'"
+        add_signer_key_command = f"{daemon_name} --home {daemon_home} keys add ms{i} --pubkey '{signer_pubkey_json}' --keyring-backend test --keyring-dir {daemon_home}"
         subprocess.run(add_signer_key_command, shell=True, check=True)
 
     # Add the multisig key
     multisig_pubkeys = ",".join([f"ms{i}" for i in range(1, total_signers + 1)])  # Adjust for the number of signers
-    add_multisig_key_command = f"{daemon_name} --home {daemon_home} keys add multisig-relayer-feegrant --multisig {multisig_pubkeys} --multisig-threshold {multisig_threshold}"
+    add_multisig_key_command = f"{daemon_name} --home {daemon_home} keys add multisig-relayer-feegrant --keyring-backend test --keyring-dir {daemon_home} --multisig {multisig_pubkeys} --multisig-threshold {multisig_threshold}"
     subprocess.run(add_multisig_key_command, shell=True, check=True)
 
 def fetch_account_data(granter_account):
@@ -131,9 +132,8 @@ def main():
 
     processed_addresses = set()
 
-    # Define the flags variable here
-    total_gas_limit = 80000  # Initial gas limit, adjust as needed
-    flags = f"--home '{daemon_home}' --from multisig-relayer-feegrant --chain-id '{chain_id}' --gas {total_gas_limit} --gas-prices '{gas_prices}' --node '{rpc}' --offline --output json --yes --generate-only --sequence {sequence} --account-number {account_number}"
+    total_gas_limit = 80000 
+    flags = f"--home '{daemon_home}' --from multisig-relayer-feegrant --keyring-backend test --keyring-dir {daemon_home} --chain-id '{chain_id}' --gas {total_gas_limit} --gas-prices '{gas_prices}' --node '{rpc}' --offline --output json --yes --generate-only --sequence {sequence} --account-number {account_number}"
 
     for ibc_path, operators in operators_by_path.items():
         for operator in operators:
@@ -187,6 +187,9 @@ def main():
 
     with open(operators_file, 'w') as file:
         json.dump(operators_by_path, file, indent=2)
+
+    # Clean up and remove daemon_home
+    shutil.rmtree(daemon_home)
 
     print("Updated operators file with consistent feegrant settings.")
 
