@@ -111,9 +111,9 @@ def main():
             current_period_limit = feegrant.get('period_spend_limit')
             enabled = feegrant.get('enabled')
 
-            grant_needed = enabled and current_period_limit > 0 and active_period_limit != current_period_limit
-            renew_needed = enabled and (is_expiration_past(expiration) or current_period_limit != active_period_limit)
-            revoke_needed = not enabled or current_period_limit == 0 or renew_needed
+            grant_needed = enabled and current_period_limit > 0 and active_period_limit == 0
+            renew_needed = enabled and (is_expiration_past(expiration) or (current_period_limit != active_period_limit and active_period_limit != 0))
+            revoke_needed = (not enabled and active_period_limit != 0) or (current_period_limit == 0 and active_period_limit != 0) or renew_needed
 
             if grant_needed or renew_needed or revoke_needed:
                 update_actions = []
@@ -166,6 +166,7 @@ def main():
 def run_subprocess_command(command, all_messages):
     global last_tx_fields
     try:
+        print(f"[DEBUG] running command: {command}")
         result = subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         command_output = json.loads(result.stdout.strip())
         messages = command_output.get("body", {}).get("messages", [])
