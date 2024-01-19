@@ -31,6 +31,22 @@
   "operators": [
     {
       "chain_1": {
+        "address": "cosmos1ks0qeq9vyt9l7vgasaajd49ff0k8klure6ez4n"
+      },
+      "chain_2": {
+        "address": "terra1ks0qeq9vyt9l7vgasaajd49ff0k8klurl7rzhn"
+      },
+      "memo": "Relayed by Cosmos Spaces",
+      "name": "Cosmos Spaces",
+      "discord": {
+        "handle": ".tricky_."
+      },
+      "telegram": {
+        "handle": "Char1esBark1ey"
+      }
+    },
+    {
+      "chain_1": {
         "address": "cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff"
       },
       "chain_2": {

@@ -48,6 +48,22 @@
     },
     {
       "chain_1": {
+        "address": "cosmos1kgs9ml9hc085k6pm36z6wlnjc3c8zv99myau2w"
+      },
+      "chain_2": {
+        "address": "osmo1kgs9ml9hc085k6pm36z6wlnjc3c8zv99nlwvuu"
+      },
+      "memo": "Relayed by Cosmos Spaces",
+      "name": "Cosmos Spaces",
+      "discord": {
+        "handle": ".tricky_."
+      },
+      "telegram": {
+        "handle": "Char1esBark1ey"
+      }
+    },
+    {
+      "chain_1": {
         "address": "cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff"
       },
       "chain_2": {

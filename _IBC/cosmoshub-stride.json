@@ -31,6 +31,22 @@
   "operators": [
     {
       "chain_1": {
+        "address": "cosmos1ks0qeq9vyt9l7vgasaajd49ff0k8klure6ez4n"
+      },
+      "chain_2": {
+        "address": "stride1ks0qeq9vyt9l7vgasaajd49ff0k8klur63e7pl"
+      },
+      "memo": "Relayed by Cosmos Spaces",
+      "name": "Cosmos Spaces",
+      "discord": {
+        "handle": ".tricky_."
+      },
+      "telegram": {
+        "handle": "Char1esBark1ey"
+        }
+    },
+    {
+      "chain_1": {
         "address": "cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt"
       },
       "chain_2": {
@@ -43,6 +59,22 @@
       },
       "telegram": {
         "handle": "crosnest_com"
+      }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos126pkrcvytfvsvrdm7x4wme5y780amvwwarzezc"
+      },
+      "chain_2": {
+        "address": "stride1558hpgzv2jt6rkuccaklxhgtj8mcleq0npzyyn"
+      },
+      "memo": "Relayed by Cosmos Spaces",
+      "name": "Cosmos Spaces",
+      "discord": {
+        "handle": ".tricky_."
+      },
+      "telegram": {
+        "handle": "Char1esBark1ey" 
       }
     },
     {
