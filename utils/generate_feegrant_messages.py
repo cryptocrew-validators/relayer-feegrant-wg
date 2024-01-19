@@ -91,6 +91,29 @@ def is_expiration_past(expiration):
     expiration_date = datetime.fromisoformat(expiration.rstrip("Z"))
     return expiration_date < datetime.now()
 
+def group_operators_by_address(operators_by_path):
+    grouped_operators = {}
+    for ibc_path, operators in operators_by_path.items():
+        for operator in operators:
+            address = operator.get('address')
+            if address not in grouped_operators:
+                grouped_operators[address] = []
+            grouped_operators[address].append((ibc_path, operator))
+    return grouped_operators
+
+def resolve_conflicts_and_update_operators(grouped_operators, operators_by_path):
+    for address, operators_info in grouped_operators.items():
+        highest_limit = max(op_info[1].get('feegrant', {}).get('period_spend_limit', 0) for op_info in operators_info)
+        enabled_anywhere = any(op_info[1].get('feegrant', {}).get('enabled', False) for op_info in operators_info)
+
+        for ibc_path, operator in operators_info:
+            operator['feegrant']['period_spend_limit'] = highest_limit
+            operator['feegrant']['enabled'] = enabled_anywhere
+            # Update the operator in the original operators_by_path
+            for op in operators_by_path[ibc_path]:
+                if op['address'] == address:
+                    op['feegrant'] = operator['feegrant']
+
 def main():
     account_number, sequence = fetch_account_data(granter_account)
     sequence = int(sequence)
@@ -103,17 +126,40 @@ def main():
     with open(operators_file, 'r') as file:
         operators_by_path = json.load(file)
 
+    grouped_operators = group_operators_by_address(operators_by_path)
+    resolve_conflicts_and_update_operators(grouped_operators, operators_by_path)
+
+    processed_addresses = set()
+
+    # Define the flags variable here
+    total_gas_limit = 80000  # Initial gas limit, adjust as needed
+    flags = f"--home '{daemon_home}' --from multisig-relayer-feegrant --chain-id '{chain_id}' --gas {total_gas_limit} --gas-prices '{gas_prices}' --node '{rpc}' --offline --output json --yes --generate-only --sequence {sequence} --account-number {account_number}"
+
     for ibc_path, operators in operators_by_path.items():
         for operator in operators:
+            address = operator.get('address')
             feegrant = operator.get('feegrant', {})
-            expiration = feegrant.get('expiration')
             active_period_limit = feegrant.get('active_period_spend_limit')
             current_period_limit = feegrant.get('period_spend_limit')
             enabled = feegrant.get('enabled')
+            expiration = feegrant.get('expiration')
 
             grant_needed = enabled and current_period_limit > 0 and active_period_limit == 0
             renew_needed = enabled and (is_expiration_past(expiration) or (current_period_limit != active_period_limit and active_period_limit != 0))
             revoke_needed = (not enabled and active_period_limit != 0) or (current_period_limit == 0 and active_period_limit != 0) or renew_needed
+
+            if address in processed_addresses:
+                continue
+
+            processed_addresses.add(address)
+
+            if renew_needed or revoke_needed:
+                revoke_command = generate_feegrant_command(granter_account, operator['address'], None, None, None, flags, revoke=True)
+                run_subprocess_command(revoke_command, all_messages)
+
+            if grant_needed or renew_needed:
+                command = generate_feegrant_command(granter_account, operator['address'], expiration, "86400", current_period_limit, flags)
+                run_subprocess_command(command, all_messages)
 
             if grant_needed or renew_needed or revoke_needed:
                 update_actions = []
@@ -132,18 +178,17 @@ def main():
                 if revoke_needed:
                     print(f"  - Revocation due to either disabled status or renewal requirement.")
 
+                # Update total_gas_limit for each new command
                 total_gas_limit = 80000 + 40000 * (len(all_messages) + 1)
                 flags = f"--home '{daemon_home}' --from multisig-relayer-feegrant --chain-id '{chain_id}' --gas {total_gas_limit} --gas-prices '{gas_prices}' --node '{rpc}' --offline --output json --yes --generate-only --sequence {sequence} --account-number {account_number}"
 
-                if renew_needed or revoke_needed:
-                    revoke_command = generate_feegrant_command(granter_account, operator['address'], None, None, None, flags, revoke=True)
-                    run_subprocess_command(revoke_command, all_messages)
-
-                if renew_needed or grant_needed:
-                    command = generate_feegrant_command(granter_account, operator['address'], expiration, "86400", current_period_limit, flags)
-                    run_subprocess_command(command, all_messages)
             else:
                 print(f"No Update needed for operator {operator['name']} with address {operator['address']}")
+
+    with open(operators_file, 'w') as file:
+        json.dump(operators_by_path, file, indent=2)
+
+    print("Updated operators file with consistent feegrant settings.")
 
     # Construct final transaction if there are messages to include
     if all_messages:
