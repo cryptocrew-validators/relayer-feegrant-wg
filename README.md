@@ -1,6 +1,8 @@
 # IBC Relayer Feegrant Working Group
 
-This repo contains tools for handling feegrants for ibc relayers on cosmos chains.
+This repository is the implementation of [Cosmoshub Proposal #862](https://www.mintscan.io/cosmos/proposals/862): Cosmos Hub IBC Relayer gas cost restitution using FeeGrants
+
+It hosts automation to maintain IBC Relayer `feegrant` allowances my a multisig account.
 
 ## Onboarding steps
 - Add your operator account to all official paths that you relay on. You can either do this completing a new [onboarding issue](https://github.com/clemensgg/ibc-relayer-dao/issues/new?assignees=&labels=operator-onboarding&projects=&template=operator_onboarding.md&title=Operator+Onboarding%3A+%5BYour+Name%5D) or by [directly opening a PR](https://github.com/clemensgg/ibc-relayer-dao/compare)
