@@ -22,13 +22,13 @@ The Governance Committee, composed of feegrant multisig members, holds the autho
 
 The Governance Committee consists of:
 
-Clemens (CryptoCrew): `cosmos1705swa2kgn9pvancafzl254f63a3jda9ngdnc7`
-Ghazni (StakeCito): `cosmos1qm5agp78atuf9pyalsq4w30mzc3lxtj0vgq2qe`
-luisqa (Interbloc): `cosmos1ze09kc5ackut7wc4pf38lysu45kfz3ms86w3em`
-tricky (CosmosSpaces): `cosmos1a8x3fn37gjnglcr25fsfyr6c5m4ed5euwvae2n`
-Ertemann (Lavender.Five Nodes): `cosmos1xfl6qve3plepgk7wlgxypem5ngntavrnkng3vz`
+- Clemens (CryptoCrew): `cosmos1705swa2kgn9pvancafzl254f63a3jda9ngdnc7`
+- Ghazni (StakeCito): `cosmos1qm5agp78atuf9pyalsq4w30mzc3lxtj0vgq2qe`
+- luisqa (Interbloc): `cosmos1ze09kc5ackut7wc4pf38lysu45kfz3ms86w3em`
+- tricky (CosmosSpaces): `cosmos1a8x3fn37gjnglcr25fsfyr6c5m4ed5euwvae2n`
+- Ertemann (Lavender.Five Nodes): `cosmos1xfl6qve3plepgk7wlgxypem5ngntavrnkng3vz`
 
-** Feegrant Multisig Address: `cosmos14r8ff03jkyac2fukjtfrfgaj8ehjlhds5ec2zp`**
+**Feegrant Multisig Address:** `cosmos14r8ff03jkyac2fukjtfrfgaj8ehjlhds5ec2zp`
 
 ## Operators
 
