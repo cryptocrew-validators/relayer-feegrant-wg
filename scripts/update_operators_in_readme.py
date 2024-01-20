@@ -62,7 +62,7 @@ def update_readme(new_content):
 def main():
     operators = load_operators()
     operators_table = generate_operators_table(operators)
-    new_content = "\n## Operators" + operators_table + "\n"
+    new_content = "\n" + operators_table + "\n"
     
     new_content += "## Paths\n"
     
