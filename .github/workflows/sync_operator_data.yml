@@ -31,11 +31,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests python-dotenv
 
-      - name: Sync Operators File
-        run: python ./scripts/sync_operators_file.py
+      - name: Update operators
+        run: python ./scripts/update_operators.py
 
       - name: Update Feegrant Data
         run: python ./scripts/update_feegrant_data.py
+
+      - name: Update Operators Table in README
+        run: python ./scripts/update_operators_in_readme.py
 
       - name: Commit and Push Changes
         run: |
