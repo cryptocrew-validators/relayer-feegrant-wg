@@ -1,4 +1,4 @@
-# IBC relayer DAO
+# IBC Relayer Feegrant Working Group
 
 This repo contains tools for handling feegrants for ibc relayers on cosmos chains.
 
