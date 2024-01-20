@@ -25,9 +25,11 @@ def load_operators():
         return json.load(file)
 
 def generate_operators_table(operators):
+    sorted_operators = sorted(operators, key=lambda operator: len(operator.get('paths', [])), reverse=True)
+
     table = "| Name | Address | Total Paths | Discord | Telegram | Period Spend Limit | Active Period Spend Limit |\n"
     table += "|------|---------|-------------|---------|----------|--------------------|---------------------------|\n"
-    for operator in operators:
+    for operator in sorted_operators:
         total_paths = len(operator.get('paths', []))
         discord_link = format_address_link(operator.get('discord', ''), 'discord')
         telegram_link = format_address_link(operator.get('telegram', ''), 'telegram')
