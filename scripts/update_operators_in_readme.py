@@ -41,7 +41,7 @@ def update_readme(new_content):
     with open(readme_file_path, 'r') as file:
         readme_content = file.read()
 
-    pattern = r"## Operators Overview\n.*?(?=\n## |\Z)"
+    pattern = r"## Operators\n.*?(?=\n## |\Z)"
     compiled_pattern = re.compile(pattern, re.DOTALL)
     updated_content = compiled_pattern.sub(new_content, readme_content)
 
