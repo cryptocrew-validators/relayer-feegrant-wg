@@ -39,22 +39,32 @@ def generate_operators_table(operators):
 
 def update_readme(new_content):
     with open(readme_file_path, 'r') as file:
-        readme_content = file.read()
+        readme_lines = file.readlines()
 
-    pattern = r"## Operators\n.*?(?=\n## |\Z)"
-    compiled_pattern = re.compile(pattern, re.DOTALL)
-    updated_content = compiled_pattern.sub(new_content, readme_content)
+    found_operators = False
+    updated_lines = []
+
+    for line in readme_lines:
+        if line.startswith("## Operators"):
+            if not found_operators:
+                found_operators = True
+                updated_lines.append(line) 
+        elif found_operators:
+            continue
+        else:
+            updated_lines.append(line)
+
+    updated_content = ''.join(updated_lines)
 
     with open(readme_file_path, 'w', encoding='utf-8') as readme_file:
-        readme_file.write(updated_content)
+        readme_file.write(updated_content + new_content)
 
 def main():
     operators = load_operators()
     operators_table = generate_operators_table(operators)
-    new_content = "## Operators\n" + operators_table + "\n"
+    new_content = "\n" + operators_table + "\n"
     
-    # New section for Paths
-    new_content += "\n## Paths\n"
+    new_content += "## Paths\n"
     
     ibc_paths_data = {}
     for filename in os.listdir(ibc_folder_path):
