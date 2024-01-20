@@ -1,0 +1,250 @@
+[
+  {
+    "name": "Crosnest",
+    "memo": "Relayed by Crosnest.",
+    "address": "cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt",
+    "discord": "galadrin_crosnest",
+    "telegram": "crosnest_com",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-teritori",
+      "cosmoshub-persistence",
+      "cosmoshub-kujira",
+      "cosmoshub-quicksilver",
+      "archway-cosmoshub",
+      "cosmoshub-stride",
+      "cosmoshub-injective"
+    ]
+  },
+  {
+    "name": "Crosnest",
+    "memo": "Relayed by Crosnest.",
+    "address": "cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y",
+    "discord": "galadrin_crosnest",
+    "telegram": "crosnest_com",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-lumnetwork",
+      "axelar-cosmoshub",
+      "cosmoshub-omniflixhub",
+      "cosmoshub-cryptoorgchain",
+      "cosmoshub-emoney",
+      "cosmoshub-kichain"
+    ]
+  },
+  {
+    "name": "Cosmos Spaces",
+    "memo": "Relayed by Cosmos Spaces",
+    "address": "cosmos1ks0qeq9vyt9l7vgasaajd49ff0k8klure6ez4n",
+    "discord": ".tricky_.",
+    "telegram": "Char1esBark1ey",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-evmos",
+      "cosmoshub-quicksilver",
+      "cosmoshub-crescent",
+      "cosmoshub-terra2",
+      "cosmoshub-noble",
+      "cosmoshub-neutron",
+      "cosmoshub-stride",
+      "composable-cosmoshub",
+      "cosmoshub-juno",
+      "cosmoshub-injective",
+      "akash-cosmoshub"
+    ]
+  },
+  {
+    "name": "Architect Nodes",
+    "memo": "Relayed by Architect Nodes! ",
+    "address": "cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv",
+    "discord": "architectnodes",
+    "telegram": "social244305_Architect_Nodes",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-evmos",
+      "cosmoshub-persistence",
+      "cosmoshub-osmosis",
+      "cosmoshub-quicksilver",
+      "cosmoshub-omniflixhub",
+      "cosmoshub-stride",
+      "bitsong-cosmoshub"
+    ]
+  },
+  {
+    "name": "IcyCRO",
+    "memo": "Relayed by IcyCRO \ud83e\uddca",
+    "address": "cosmos1p7d8mnjttcszv34pk2a5yyug3474mhffasa7tg",
+    "discord": "zanglang",
+    "telegram": "zanglang",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-evmos",
+      "cosmoshub-stride",
+      "cosmoshub-juno"
+    ]
+  },
+  {
+    "name": "Cosmos Spaces",
+    "memo": "Relayed by Cosmos Spaces",
+    "address": "cosmos1558hpgzv2jt6rkuccaklxhgtj8mcleq0s2zcsl",
+    "discord": ".tricky_.",
+    "telegram": "Char1esBark1ey",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "axelar-cosmoshub",
+      "cosmoshub-kujira"
+    ]
+  },
+  {
+    "name": "IcyCRO",
+    "memo": "Relayed by IcyCRO \ud83e\uddca",
+    "address": "cosmos1nna7k5lywn99cd63elcfqm6p8c5c4qcug4aef5",
+    "discord": "zanglang",
+    "telegram": "zanglang",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "axelar-cosmoshub",
+      "cosmoshub-kujira",
+      "cosmoshub-crescent",
+      "cosmoshub-neutron"
+    ]
+  },
+  {
+    "name": "Crosnest",
+    "memo": "Relayed by Crosnest.",
+    "address": "cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff",
+    "discord": "galadrin_crosnest",
+    "telegram": "crosnest_com",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "aura-cosmoshub",
+      "cosmoshub-osmosis",
+      "cosmoshub-terra2",
+      "cosmoshub-kava",
+      "cosmoshub-juno"
+    ]
+  },
+  {
+    "name": "CryptoCrew",
+    "memo": "Relayed by CryptoCrew Validators",
+    "address": "cosmos1f269n4mrg0s8tqveny9huulyamvdv97n094dgm",
+    "discord": "ccclaimens",
+    "telegram": "clemensg",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-osmosis"
+    ]
+  },
+  {
+    "name": "Cosmos Spaces",
+    "memo": "Relayed by Cosmos Spaces",
+    "address": "cosmos1kgs9ml9hc085k6pm36z6wlnjc3c8zv99myau2w",
+    "discord": ".tricky_.",
+    "telegram": "Char1esBark1ey",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-osmosis"
+    ]
+  },
+  {
+    "name": "Architect Nodes",
+    "memo": "Relayed by Architect Nodes! ",
+    "address": "cosmos1w8kzcqk25vr0fx0k7yxn2vjw49qerut2tfv8up",
+    "discord": "architectnodes",
+    "telegram": "social244305_Architect_Nodes",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-crescent",
+      "cosmoshub-juno"
+    ]
+  },
+  {
+    "name": "Architect Nodes",
+    "memo": "Relayed by Architect Nodes! ",
+    "address": "cosmos1ln3l6waaqdjcskt3ztzqlzkpvmzp7zw4ky2xgp",
+    "discord": "architectnodes",
+    "telegram": "social244305_Architect_Nodes",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-umee"
+    ]
+  },
+  {
+    "name": "CryptoCrew",
+    "memo": "relayed by CryptoCrew Validators",
+    "address": "cosmos1yghndrffay859ma2ue4pa2cltw640vtayerdla",
+    "discord": "@ccclaimens",
+    "telegram": "@clemensg",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-neutron"
+    ]
+  },
+  {
+    "name": "Cosmos Spaces",
+    "memo": "Relayed by Cosmos Spaces",
+    "address": "cosmos126pkrcvytfvsvrdm7x4wme5y780amvwwarzezc",
+    "discord": ".tricky_.",
+    "telegram": "Char1esBark1ey",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-stride"
+    ]
+  }
+]
