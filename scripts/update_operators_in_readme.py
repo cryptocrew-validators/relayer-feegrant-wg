@@ -1,6 +1,6 @@
-import dotenv
 import json
 import os
+import dotenv
 
 # Load environment variables
 dotenv.load_dotenv()
@@ -13,10 +13,10 @@ decimals = int(os.getenv('DECIMALS', 6))
 
 def format_address_link(address, platform):
     if platform.lower() == 'discord':
-        return f"[{address}](https://discordapp.com/users/{address})"
+        return f"[`{address}`](https://discordapp.com/users/{address})"
     elif platform.lower() == 'telegram':
-        return f"[{address}](https://t.me/{address})"
-    return address
+        return f"[`{address}`](https://t.me/{address})"
+    return f"`{address}`"
 
 def load_operators():
     with open(operators_file, 'r') as file:
@@ -32,12 +32,12 @@ def generate_operators_table(operators):
         contact = f"Discord: {discord_link}, Telegram: {telegram_link}"
         period_spend_limit = operator.get('feegrant', {}).get('period_spend_limit', 0) / (10 ** decimals)
         active_period_spend_limit = operator.get('feegrant', {}).get('active_period_spend_limit', 0) / (10 ** decimals)
-        address = operator.get('address', '')
+        address = format_address_link(operator.get('address', ''), '')
         table += f"| {operator.get('name')} | {address} | {total_paths} | {contact} | {period_spend_limit} | {active_period_spend_limit} |\n"
     return table
 
 def append_to_readme(content):
-    with open("README.md", "a") as readme_file:
+    with open(os.path.join(base_dir, "README.md"), "a") as readme_file:
         readme_file.write(content)
 
 def main():
@@ -60,8 +60,8 @@ def main():
         append_to_readme("|------|-----------------|-----------------|--------------------|---------------------------|\n")
         for operator in operators:
             operator_data = next((op for op in operators if op.get('address') == operator.get('address')), {})
-            chain_1_address = operator.get('chain_1', {}).get('address', '')
-            chain_2_address = operator.get('chain_2', {}).get('address', '')
+            chain_1_address = format_address_link(operator.get('chain_1', {}).get('address', ''), '')
+            chain_2_address = format_address_link(operator.get('chain_2', {}).get('address', ''), '')
             period_spend_limit = operator_data.get('feegrant', {}).get('period_spend_limit', 0) / (10 ** decimals)
             active_period_spend_limit = operator_data.get('feegrant', {}).get('active_period_spend_limit', 0) / (10 ** decimals)
             append_to_readme(f"| {operator.get('name')} | {chain_1_address} | {chain_2_address} | {period_spend_limit} | {active_period_spend_limit} |\n")
