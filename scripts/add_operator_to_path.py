@@ -10,6 +10,7 @@ dotenv.load_dotenv()
 
 ibc_folder_name = os.getenv('IBC_FOLDER_PATH', '_IBC')
 ibc_folder_path = os.path.join(base_dir, ibc_folder_name)
+chain_name = os.getenv('CR_CHAIN_NAME', 'cosmoshub')
 
 def get_issue_content(issue_number, token):
     """Fetch the content of the issue from GitHub."""
@@ -38,15 +39,15 @@ def update_ibc_file(ibc_path, operator_data, token, issue_number):
     with open(file_path, 'r') as file:
         data = json.load(file)
     
-    # Determine which chain is 'cosmoshub'
-    cosmoshub_chain_key = 'chain_1' if data.get('chain_1', {}).get('chain_name', '') == 'cosmoshub' else \
-                          'chain_2' if data.get('chain_2', {}).get('chain_name', '') == 'cosmoshub' else \
+    # Determine which chain is chain_name
+    chain_name_chain_key = 'chain_1' if data.get('chain_1', {}).get('chain_name', '') == chain_name else \
+                          'chain_2' if data.get('chain_2', {}).get('chain_name', '') == chain_name else \
                           None
 
-    if cosmoshub_chain_key:
-        other_chain_key = 'chain_2' if cosmoshub_chain_key == 'chain_1' else 'chain_1'
+    if chain_name_chain_key:
+        other_chain_key = 'chain_2' if chain_name_chain_key == 'chain_1' else 'chain_1'
         new_operator = {
-            cosmoshub_chain_key: {
+            chain_name_chain_key: {
                 "address": operator_data.get('Cosmoshub Account', '')
             },
             other_chain_key: {
