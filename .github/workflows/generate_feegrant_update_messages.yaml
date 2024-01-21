@@ -1,0 +1,30 @@
+---
+name: Generate feegrant update messages
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-feegrant-messages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install gaiad
+        uses: jaxxstorm/action-install-gh-release@v1
+        with:
+          repo: cosmos/gaia
+          tag: v14.1.0
+          binaries-location: gaiad-v14.1.0-linux-amd64
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests python-dotenv
+
+      - name: Generate feegrant messages
+        run: python ./scripts/update_operators.py
