@@ -61,6 +61,22 @@
       "telegram": {
         "handle": "crosnest_com"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1w0f29w3hst8hzhr2cv30cfjvqp70yyp9wgr3pv"
+      },
+      "chain_2": {
+        "address": "inj1n2wzhz0zvrpzjvwfjva6shq0lxyy0d8atf4f5f"
+      },
+      "memo": "Relayed by Decentrio",
+      "name": "Decentrio",
+      "discord": {
+        "handle": "dunguyen29"
+      },
+      "telegram": {
+        "handle": "dunguyen_29"
+      }
     }
   ]
 }
