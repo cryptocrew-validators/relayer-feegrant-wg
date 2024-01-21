@@ -246,5 +246,37 @@
     "paths": [
       "cosmoshub-stride"
     ]
+  },
+  {
+    "name": "Decentrio",
+    "memo": "Relayed by Decentrio",
+    "address": "cosmos1w0f29w3hst8hzhr2cv30cfjvqp70yyp9wgr3pv",
+    "discord": "dunguyen29",
+    "telegram": "dunguyen_29",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-osmosis",
+      "cosmoshub-stride",
+      "cosmoshub-injective"
+    ]
+  },
+  {
+    "name": "Decentrio",
+    "memo": "Relayed by Decentrio",
+    "address": "cosmos1sk76c20mkypkm8mmrza09nnkq9vkqn4atn60qj",
+    "discord": "dunguyen29",
+    "telegram": "dunguyen_29",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-osmosis"
+    ]
   }
 ]
