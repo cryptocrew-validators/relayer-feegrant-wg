@@ -163,8 +163,8 @@
     "discord": "ccclaimens",
     "telegram": "clemensg",
     "feegrant": {
-      "enabled": false,
-      "period_spend_limit": 0,
+      "enabled": true,
+      "period_spend_limit": 50000000,
       "active_period_spend_limit": 0
     },
     "paths": [
