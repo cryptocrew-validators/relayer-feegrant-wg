@@ -8,13 +8,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
+      - name: Download gaiad binary
+        run: |
+          wget https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-linux-amd64 -O gaiad
 
-      - name: Install gaiad
-        uses: jaxxstorm/action-install-gh-release@v1
-        with:
-          repo: cosmos/gaia
-          tag: v14.1.0
-          binaries-location: gaiad-v14.1.0-linux-amd64
+      - name: Make gaiad executable
+        run: chmod +x gaiad
+
+      - name: Move gaiad to bin
+        run: sudo mv gaiad /usr/local/bin/
+
+      - name: Verify gaiad installation
+        run: gaiad version
 
       - name: Set up Python
         uses: actions/setup-python@v2
