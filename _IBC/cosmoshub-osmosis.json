@@ -93,6 +93,38 @@
       "telegram": {
         "handle": "social244305_Architect_Nodes"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1w0f29w3hst8hzhr2cv30cfjvqp70yyp9wgr3pv"
+      },
+      "chain_2": {
+        "address": "osmo1w0f29w3hst8hzhr2cv30cfjvqp70yyp9xnsph7"
+      },
+      "memo": "Relayed by Decentrio",
+      "name": "Decentrio",
+      "discord": {
+        "handle": "dunguyen29"
+      },
+      "telegram": {
+        "handle": "dunguyen_29"
+      }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1sk76c20mkypkm8mmrza09nnkq9vkqn4atn60qj"
+      },
+      "chain_2": {
+        "address": "osmo1sk76c20mkypkm8mmrza09nnkq9vkqn4argflkq"
+      },
+      "memo": "Relayed by Decentrio",
+      "name": "Decentrio",
+      "discord": {
+        "handle": "dunguyen29"
+      },
+      "telegram": {
+        "handle": "dunguyen_29"
+      }
     }
   ]
 }

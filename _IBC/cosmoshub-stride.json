@@ -108,6 +108,22 @@
       "telegram": {
         "handle": "zanglang"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1w0f29w3hst8hzhr2cv30cfjvqp70yyp9wgr3pv"
+      },
+      "chain_2": {
+        "address": "stride1w0f29w3hst8hzhr2cv30cfjvqp70yyp9drrd4q"
+      },
+      "memo": "Relayed by Decentrio",
+      "name": "Decentrio",
+      "discord": {
+        "handle": "dunguyen29"
+      },
+      "telegram": {
+        "handle": "dunguyen_29"
+      }
     }
   ]
 }
