@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Download gaiad binary
         run: |
           wget https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-linux-amd64 -O gaiad
@@ -33,4 +33,4 @@ jobs:
           pip install requests python-dotenv
 
       - name: Generate feegrant messages
-        run: python ./scripts/update_operators.py
+        run: python ./utils/generate_feegrant_messages.py
