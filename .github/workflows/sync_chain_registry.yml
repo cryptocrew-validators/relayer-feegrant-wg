@@ -6,6 +6,9 @@ on:
     - cron: '*/15 * * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write  
+
 jobs:
   sync-chain-registry:
     runs-on: ubuntu-latest

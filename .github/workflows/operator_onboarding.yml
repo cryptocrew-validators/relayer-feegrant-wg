@@ -4,6 +4,9 @@ on:
   issues:
     types: [opened, edited]
 
+permissions:
+  contents: write  
+
 jobs:
   update-ibc-file:
     runs-on: ubuntu-latest
