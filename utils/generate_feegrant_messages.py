@@ -3,7 +3,6 @@ import json
 import os
 import requests
 import subprocess
-import shutil
 from datetime import datetime
 
 # Load environment
