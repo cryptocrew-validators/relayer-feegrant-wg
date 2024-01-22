@@ -105,7 +105,7 @@ async function fetchGranterBalance(granterAddress) {
         const balance = response.data.balances[0].amount; 
         granterBalanceGauge.labels(granterAddress).set(parseInt(balance));
     } catch (error) {
-        console.error('Error fetching granter balance:', error);
+        console.error('[ERR] Error fetching granter balance:', error);
     }
 }
 
@@ -122,7 +122,7 @@ export async function fetchFeegrantData() {
 
             allowances.forEach(allowance => {
                 const grantee = allowance.grantee;
-                console.log(`Processing allowance for grantee: ${grantee}`);
+                console.log(`[INFO] Processing allowance for grantee: ${grantee}`);
 
                 const allowanceData = allowance.allowance;
                 const allowanceType = allowanceData['@type'];
@@ -138,9 +138,9 @@ export async function fetchFeegrantData() {
             });
 
             fetchGranterBalance(granterAddress);
-            console.log('Updated feegrant data.');
+            console.log('[INFO] Updated feegrant data.');
         } catch (error) {
-            console.error('Error fetching feegrant data:', error);
+            console.error('[ERR] Error fetching feegrant data:', error);
             break;
         }
     } while (nextKey);
@@ -149,27 +149,33 @@ export async function fetchFeegrantData() {
 
 function processAllowance(grantee, allowance) {
     const allowanceType = allowance['@type'];
-
+    let spendLimit = 0;
+    let totalExpirationTimestamp = 0;
+    let periodSpendLimit = 0;
+    let periodCanSpend = 0;
+    let periodSpent = 0;
+    let expirationTimestamp = 0;
+    let periodDurationSeconds = 0;
+    
     // Handle BasicAllowance
     if (allowanceType.includes('BasicAllowance')) {
-        const spendLimit = allowance.spend_limit?.[0]?.amount || 0;
-        const totalExpirationTimestamp = allowance.expiration ? new Date(allowance.expiration).getTime() : 0;
-
-        granteeTotalLimitGauge.labels(grantee).set(parseInt(spendLimit));
-        granteeTotalExpirationTimestampGauge.labels(grantee).set(totalExpirationTimestamp);
+        spendLimit = allowance.spend_limit?.[0]?.amount || 0;
+        totalExpirationTimestamp = allowance.expiration ? new Date(allowance.expiration).getTime() : 0;
     }
 
     // Handle PeriodicAllowance
     if (allowanceType.includes('PeriodicAllowance')) {
-        const periodSpendLimit = allowance.period_spend_limit?.[0]?.amount || 0;
-        const periodCanSpend = allowance.period_can_spend?.[0]?.amount || 0;
-        const periodSpent = parseInt(periodSpendLimit) - parseInt(periodCanSpend);
-        const expirationTimestamp = allowance.period_reset ? new Date(allowance.period_reset).getTime() : 0;
-        const periodDurationSeconds = parseDuration(allowance.period);
-
-        granteePeriodLimitGauge.labels(grantee).set(parseInt(periodSpendLimit));
-        granteePeriodSpentGauge.labels(grantee).set(periodSpent);
-        granteePeriodExpirationTimestampGauge.labels(grantee).set(expirationTimestamp);
-        granteePeriodDurationGauge.labels(grantee).set(periodDurationSeconds);
+        periodSpendLimit = allowance.period_spend_limit?.[0]?.amount || 0;
+        periodCanSpend = allowance.period_can_spend?.[0]?.amount || 0;
+        periodSpent = parseInt(periodSpendLimit) - parseInt(periodCanSpend);
+        expirationTimestamp = allowance.period_reset ? new Date(allowance.period_reset).getTime() : 0;
+        periodDurationSeconds = parseDuration(allowance.period);
     }
+
+    granteeTotalLimitGauge.labels(grantee).set(parseInt(spendLimit));
+    granteeTotalExpirationTimestampGauge.labels(grantee).set(totalExpirationTimestamp);
+    granteePeriodLimitGauge.labels(grantee).set(parseInt(periodSpendLimit));
+    granteePeriodSpentGauge.labels(grantee).set(periodSpent);
+    granteePeriodExpirationTimestampGauge.labels(grantee).set(expirationTimestamp);
+    granteePeriodDurationGauge.labels(grantee).set(periodDurationSeconds);
 }
