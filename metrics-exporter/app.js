@@ -10,6 +10,10 @@ const require = createRequire(import.meta.url);
 const express = require('express');
 const app = express();
 
+// Segfault handler
+const SegfaultHandler = require('segfault-handler');
+SegfaultHandler.registerHandler('crash.log');
+
 await fetchFeegrantData();
 setInterval(fetchFeegrantData, 10000); // every 10 seconds
 
