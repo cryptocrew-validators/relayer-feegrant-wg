@@ -19,7 +19,7 @@ export async function updateAllMetrics() {
     const lastBlockRow = await db.get("SELECT MAX(block_time) as last_block_time FROM last_block");
     lastBlockTime = lastBlockRow.last_block_time;
   } catch (err) {
-    console.error('Error fetching last block time', err);
+    console.error('[ERR] Error fetching last block time', err.message);
     return;
   }
 
@@ -30,7 +30,7 @@ export async function updateAllMetrics() {
   // Update granteeTotalTxs
   db.all("SELECT relayer_address, COUNT(*) as tx_count FROM relayer_transactions GROUP BY relayer_address", [], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -41,7 +41,7 @@ export async function updateAllMetrics() {
   // Update granteeTotalTxs24h
   db.all(`SELECT relayer_address, COUNT(*) as tx_count FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address`, [yesterday], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -52,7 +52,7 @@ export async function updateAllMetrics() {
   // Update granteeAvgGasWanted
   db.all("SELECT relayer_address, AVG(gas_wanted) as avg_gas_wanted FROM relayer_transactions GROUP BY relayer_address", [], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -63,7 +63,7 @@ export async function updateAllMetrics() {
   // Update granteeAvgGasWanted24h
   db.all(`SELECT relayer_address, AVG(gas_wanted) as avg_gas_wanted FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address`, [yesterday], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -71,32 +71,32 @@ export async function updateAllMetrics() {
     });
   });
 
-  // Update granteeTopGasWanted
+  // Update granteeMaxGasWanted
   db.all("SELECT relayer_address, MAX(gas_wanted) as top_gas_wanted FROM relayer_transactions GROUP BY relayer_address", [], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeTopGasWantedGauge.labels(row.relayer_address).set(row.top_gas_wanted);
+      metrics.granteeMaxGasWantedGauge.labels(row.relayer_address).set(row.top_gas_wanted);
     });
   });
 
-  // Update granteeTopGasWanted24h
+  // Update granteeMaxGasWanted24h
   db.all(`SELECT relayer_address, MAX(gas_wanted) as top_gas_wanted FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address`, [yesterday], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeTopGasWanted24hGauge.labels(row.relayer_address).set(row.top_gas_wanted);
+      metrics.granteeMaxGasWanted24hGauge.labels(row.relayer_address).set(row.top_gas_wanted);
     });
   });
 
   // Update granteeAvgGasUsed
   db.all("SELECT relayer_address, AVG(gas_used) as avg_gas_used FROM relayer_transactions GROUP BY relayer_address", [], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -107,7 +107,7 @@ export async function updateAllMetrics() {
   // Update granteeAvgGasUsed24h
   db.all(`SELECT relayer_address, AVG(gas_used) as avg_gas_used FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address`, [yesterday], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -115,32 +115,32 @@ export async function updateAllMetrics() {
     });
   });
 
-  // Update granteeTopGasUsed
+  // Update granteeMaxGasUsed
   db.all("SELECT relayer_address, MAX(gas_used) as top_gas_used FROM relayer_transactions GROUP BY relayer_address", [], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeTopGasUsedGauge.labels(row.relayer_address).set(row.top_gas_used);
+      metrics.granteeMaxGasUsedGauge.labels(row.relayer_address).set(row.top_gas_used);
     });
   });
 
-  // Update granteeTopGasUsed24h
+  // Update granteeMaxGasUsed24h
   db.all(`SELECT relayer_address, MAX(gas_used) as top_gas_used FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address`, [yesterday], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeTopGasUsed24hGauge.labels(row.relayer_address).set(row.top_gas_used);
+      metrics.granteeMaxGasUsed24hGauge.labels(row.relayer_address).set(row.top_gas_used);
     });
   });
 
   // Update granteeAvgFeeSpent
   db.all("SELECT relayer_address, AVG(fee_amount) as avg_fee_spent FROM relayer_transactions GROUP BY relayer_address", [], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -151,7 +151,7 @@ export async function updateAllMetrics() {
   // Update granteeAvgFeeSpent24h
   db.all(`SELECT relayer_address, AVG(fee_amount) as avg_fee_spent FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address`, [yesterday], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -159,32 +159,32 @@ export async function updateAllMetrics() {
     });
   });
 
-  // Update granteeTopFeeSpent
+  // Update granteeMaxFeeSpent
   db.all("SELECT relayer_address, MAX(fee_amount) as top_fee_spent FROM relayer_transactions GROUP BY relayer_address", [], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeTopFeeSpentGauge.labels(row.relayer_address).set(row.top_fee_spent);
+      metrics.granteeMaxFeeSpentGauge.labels(row.relayer_address).set(row.top_fee_spent);
     });
   });
 
-  // Update granteeTopFeeSpent24h
+  // Update granteeMaxFeeSpent24h
   db.all(`SELECT relayer_address, MAX(fee_amount) as top_fee_spent FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address`, [yesterday], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeTopFeeSpent24hGauge.labels(row.relayer_address).set(row.top_fee_spent);
+      metrics.granteeMaxFeeSpent24hGauge.labels(row.relayer_address).set(row.top_fee_spent);
     });
   });
 
   // Update avgGasWantedGauge
   db.all("SELECT AVG(gas_wanted) as avg_gas_wanted FROM relayer_transactions", [], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -195,7 +195,7 @@ export async function updateAllMetrics() {
   // Update avgGasWanted24hGauge
   db.all("SELECT AVG(gas_wanted) as avg_gas_wanted FROM relayer_transactions WHERE block_time > ?", [yesterday], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -206,7 +206,7 @@ export async function updateAllMetrics() {
   // Update totalGasWantedGauge
   db.all("SELECT SUM(gas_wanted) as total_gas_wanted FROM relayer_transactions", [], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -217,7 +217,7 @@ export async function updateAllMetrics() {
   // Update totalGasWanted24hGauge
   db.all("SELECT SUM(gas_wanted) as total_gas_wanted FROM relayer_transactions WHERE block_time > ?", [yesterday], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -228,7 +228,7 @@ export async function updateAllMetrics() {
   // Update avgGasUsedGauge
   db.all("SELECT AVG(gas_used) as avg_gas_used FROM relayer_transactions", [], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -239,7 +239,7 @@ export async function updateAllMetrics() {
   // Update avgGasUsed24hGauge
   db.all("SELECT AVG(gas_used) as avg_gas_used FROM relayer_transactions WHERE block_time > ?", [yesterday], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -250,7 +250,7 @@ export async function updateAllMetrics() {
   // Update totalGasUsedGauge
   db.all("SELECT SUM(gas_used) as total_gas_used FROM relayer_transactions", [], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -261,7 +261,7 @@ export async function updateAllMetrics() {
   // Update totalGasUsed24hGauge
   db.all("SELECT SUM(gas_used) as total_gas_used FROM relayer_transactions WHERE block_time > ?", [yesterday], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -272,7 +272,7 @@ export async function updateAllMetrics() {
   // Update avgFeeSpentGauge
   db.all("SELECT AVG(fee_amount) as avg_fee_spent FROM relayer_transactions", [], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -283,7 +283,7 @@ export async function updateAllMetrics() {
   // Update avgFeeSpent24hGauge
   db.all("SELECT AVG(fee_amount) as avg_fee_spent FROM relayer_transactions WHERE block_time > ?", [yesterday], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -294,7 +294,7 @@ export async function updateAllMetrics() {
   // Update totalFeeSpentGauge
   db.all("SELECT SUM(fee_amount) as total_fee_spent FROM relayer_transactions", [], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -305,7 +305,7 @@ export async function updateAllMetrics() {
   // Update totalFeeSpent24hGauge
   db.all("SELECT SUM(fee_amount) as total_fee_spent FROM relayer_transactions WHERE block_time > ?", [yesterday], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -316,7 +316,7 @@ export async function updateAllMetrics() {
   // Update totalTxsGauge
   db.all("SELECT COUNT(*) as total_txs FROM relayer_transactions", [], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -327,7 +327,7 @@ export async function updateAllMetrics() {
   // Update totalTxs24hGauge
   db.all("SELECT COUNT(*) as total_txs FROM relayer_transactions WHERE block_time > ?", [yesterday], (err, rows) => {
     if (err) {
-      console.error('Error running query', err);
+      console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
@@ -335,14 +335,99 @@ export async function updateAllMetrics() {
     });
   });
 
+  // Initialize granteeTotalMisbehaviourTxs to 0 for all grantees
+  db.all("SELECT DISTINCT relayer_address FROM relayer_transactions", [], (err, rows) => {
+    if (err) {
+      console.error('[ERR] Error fetching grantees', err.message);
+      return;
+    }
+    rows.forEach((row) => {
+      metrics.granteeTotalMisbehaviourTxs.labels(row.relayer_address, "").set(0);
+    });
+  });
+
+  // Update granteeLastGasWantedGauge, granteeLastGasUsedGauge, granteeLastFeeSpentGauge
+  db.each("SELECT relayer_address, gas_wanted, gas_used, fee_amount FROM relayer_transactions GROUP BY relayer_address ORDER BY block_time DESC", [], (err, row) => {
+      if (err) {
+          console.error('[ERR] Error running query for last metrics', err.message);
+          return;
+      }
+      metrics.granteeLastGasWantedGauge.labels(row.relayer_address).set(row.gas_wanted);
+      metrics.granteeLastGasUsedGauge.labels(row.relayer_address).set(row.gas_used);
+      metrics.granteeLastFeeSpentGauge.labels(row.relayer_address).set(row.fee_amount);
+  });
+
+  // Update granteeLastGasWantedGauge, granteeLastGasUsedGauge, granteeLastFeeSpentGauge
+  db.each("SELECT relayer_address, gas_wanted, gas_used, fee_amount FROM relayer_transactions GROUP BY relayer_address ORDER BY block_time DESC", [], (err, row) => {
+    if (err) {
+        console.error('[ERR] Error running query for last metrics', err.message);
+        return;
+    }
+    metrics.granteeLastGasWantedGauge.labels(row.relayer_address).set(row.gas_wanted);
+    metrics.granteeLastGasUsedGauge.labels(row.relayer_address).set(row.gas_used);
+    metrics.granteeLastFeeSpentGauge.labels(row.relayer_address).set(row.fee_amount);
+  });
+
+  // Update granteeTotalMisbehaviourTxs with actual misbehaviours
+  db.all("SELECT grantee_address, COUNT(*) as misbehaviour_count, GROUP_CONCAT(msg_array) as msg_array FROM grantee_misbehaviors GROUP BY grantee_address", [], (err, rows) => {
+    if (err) {
+      console.error('[ERR] Error running query for misbehaviours', err.message);
+      return;
+    }
+    rows.forEach((row) => {
+      metrics.granteeTotalMisbehaviourTxs.labels(row.grantee_address, row.msg_array).set(row.misbehaviour_count);
+    });
+  });
+
+  // Update total top3 message types for each grantee
+  processMessageTypesForGauge(metrics.granteeTopMsgTypesTotalGauge);
+
+  // Update last 24h top3 message types for each grantee
+  processMessageTypesForGauge(metrics.granteeTopMsgTypes24hGauge, yesterday);
+
   return register;
 }
 
+function processMessageTypesForGauge(gauge, yesterday = null) {
+  const timeCondition = yesterday ? `WHERE block_time > '${yesterday}'` : '';
+  const sql = `SELECT relayer_address, msg_array FROM relayer_transactions ${timeCondition}`;
+  db.all(sql, [], (err, rows) => {
+      if (err) {
+          console.error(`[ERR] Error running query for msg types ${yesterday ? '24h' : 'total'}`, err.message);
+          return;
+      }
+
+      let messageTypeCounts = {};
+      rows.forEach(row => {
+          const msgTypes = JSON.parse(row.msg_array);
+          msgTypes.forEach(msgType => {
+              if (!messageTypeCounts[row.relayer_address]) {
+                  messageTypeCounts[row.relayer_address] = {};
+              }
+              if (!messageTypeCounts[row.relayer_address][msgType]) {
+                  messageTypeCounts[row.relayer_address][msgType] = 0;
+              }
+              messageTypeCounts[row.relayer_address][msgType]++;
+          });
+      });
+
+      updateGaugeWithTop3(gauge, messageTypeCounts);
+  });
+}
+
+function updateGaugeWithTop3(gauge, messageTypeCounts) {
+  Object.entries(messageTypeCounts).forEach(([relayer_address, msgCounts]) => {
+      const sortedMsgTypes = Object.entries(msgCounts).sort((a, b) => b[1] - a[1]).slice(0, 3);
+      sortedMsgTypes.forEach(([msgType, count], index) => {
+          gauge.labels(relayer_address, msgType).set(count);
+      });
+  });
+}
 process.on('exit', () => {
   db.close((err) => {
-    if (err) {
-      console.error(err.message);
-    }
-    console.log('Close the database read connection.');
+      if (err) {
+          console.error('[ERR] ' + err.message);
+      }
+      console.log('[INFO] Close the database read connection.');
   });
 });
