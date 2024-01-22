@@ -131,7 +131,7 @@ def main():
 
     processed_addresses = set()
 
-    total_gas_limit = 80000 
+    total_gas_limit = 200000 
     flags = f"--home '{daemon_home}' --from multisig-relayer-feegrant --keyring-backend test --keyring-dir {daemon_home} --chain-id '{chain_id}' --gas {total_gas_limit} --gas-prices '{gas_prices}' --node '{rpc_url}' --offline --output json --yes --generate-only --sequence {sequence} --account-number {account_number}"
 
     for operator in operators:
@@ -177,7 +177,7 @@ def main():
                 print(f"  - Revocation due to either disabled status or renewal requirement.")
 
             # Update total_gas_limit for each new command
-            total_gas_limit = 80000 + 40000 * (len(all_messages) + 1)
+            total_gas_limit = 200000 + 40000 * (len(all_messages) + 1)
             flags = f"--home '{daemon_home}' --from multisig-relayer-feegrant --chain-id '{chain_id}' --gas {total_gas_limit} --gas-prices '{gas_prices}' --node '{rpc_url}' --offline --output json --yes --generate-only --sequence {sequence} --account-number {account_number}"
 
         else:
