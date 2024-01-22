@@ -60,6 +60,22 @@
       "telegram": {
         "handle": "crosnest_com"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu"
+      },
+      "chain_2": {
+        "address": "terra1pn3t586r4t0w4w4pncmmdnsl3fqmj625xngs80"
+      },
+      "memo": "Relayed with 💜 by Lavender.Five Nodes 🐝",
+      "name": "Lavender.Five Nodes",
+      "discord": {
+        "handle": "dylanschultzie"
+      },
+      "telegram": {
+        "handle": "dylanschultzie"
+      }
     }
   ]
 }
