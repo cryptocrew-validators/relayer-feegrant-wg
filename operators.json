@@ -6,8 +6,8 @@
     "discord": "galadrin_crosnest",
     "telegram": "crosnest_com",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -27,8 +27,8 @@
     "discord": "galadrin_crosnest",
     "telegram": "crosnest_com",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -47,8 +47,8 @@
     "discord": ".tricky_.",
     "telegram": "Char1esBark1ey",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -72,8 +72,8 @@
     "discord": "architectnodes",
     "telegram": "social244305_Architect_Nodes",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -93,8 +93,8 @@
     "discord": "zanglang",
     "telegram": "zanglang",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -110,8 +110,8 @@
     "discord": ".tricky_.",
     "telegram": "Char1esBark1ey",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -126,8 +126,8 @@
     "discord": "zanglang",
     "telegram": "zanglang",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -144,8 +144,8 @@
     "discord": "galadrin_crosnest",
     "telegram": "crosnest_com",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -165,7 +165,8 @@
     "feegrant": {
       "enabled": true,
       "period_spend_limit": 50000000,
-      "active_period_spend_limit": 0
+      "active_period_spend_limit": 50000000,
+      "expiration": null
     },
     "paths": [
       "cosmoshub-osmosis"
@@ -178,8 +179,8 @@
     "discord": ".tricky_.",
     "telegram": "Char1esBark1ey",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -193,8 +194,8 @@
     "discord": "architectnodes",
     "telegram": "social244305_Architect_Nodes",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -209,8 +210,8 @@
     "discord": "architectnodes",
     "telegram": "social244305_Architect_Nodes",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -224,8 +225,8 @@
     "discord": "@ccclaimens",
     "telegram": "@clemensg",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -239,8 +240,8 @@
     "discord": ".tricky_.",
     "telegram": "Char1esBark1ey",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -254,8 +255,8 @@
     "discord": "dunguyen29",
     "telegram": "dunguyen_29",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -271,8 +272,8 @@
     "discord": "dunguyen29",
     "telegram": "dunguyen_29",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
