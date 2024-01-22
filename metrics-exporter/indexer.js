@@ -128,7 +128,7 @@ async function saveLastBlockData(blockHeight, blockTime) {
   return;
 }
 
-async function saveGranteeMisbehaviorData(blockHeight, blockTime, granteeAddress, msgTypes) {
+async function saveGranteeMisbehaviorData(blockHeight, blockTime, granteeAddress, typeString) {
   db.run(`INSERT INTO grantee_misbehaviors (
     block_height, 
     block_time, 
@@ -139,7 +139,7 @@ async function saveGranteeMisbehaviorData(blockHeight, blockTime, granteeAddress
       blockHeight, 
       blockTime, 
       granteeAddress, 
-      msgTypes
+      typeString
     ], (err) => {
       if (err) {
         console.error('[ERR] ' + err.message);
