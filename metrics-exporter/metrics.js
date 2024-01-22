@@ -22,14 +22,14 @@ export default {
         help: 'Average gas wanted by each grantee in the last 24 hours',
         labelNames: ['grantee'],
     }),
-    granteeTopGasWantedGauge: new prometheus.Gauge({
-        name: 'grantee_top_gas_wanted',
-        help: 'Top gas wanted by each grantee',
+    granteeMaxGasWantedGauge: new prometheus.Gauge({
+        name: 'grantee_max_gas_wanted',
+        help: 'Max gas wanted by each grantee',
         labelNames: ['grantee'],
     }),
-    granteeTopGasWanted24hGauge: new prometheus.Gauge({
-        name: 'grantee_top_gas_wanted_24h',
-        help: 'Top gas wanted by each grantee in the last 24 hours',
+    granteeMaxGasWanted24hGauge: new prometheus.Gauge({
+        name: 'grantee_max_gas_wanted_24h',
+        help: 'Max gas wanted by each grantee in the last 24 hours',
         labelNames: ['grantee'],
     }),
     granteeAvgGasUsedGauge: new prometheus.Gauge({
@@ -42,14 +42,14 @@ export default {
         help: 'Average gas used by each grantee in the last 24 hours',
         labelNames: ['grantee'],
     }),
-    granteeTopGasUsedGauge: new prometheus.Gauge({
-        name: 'grantee_top_gas_used',
-        help: 'Top gas used by each grantee',
+    granteeMaxGasUsedGauge: new prometheus.Gauge({
+        name: 'grantee_max_gas_used',
+        help: 'Max gas used by each grantee',
         labelNames: ['grantee'],
     }),
-    granteeTopGasUsed24hGauge: new prometheus.Gauge({
-        name: 'grantee_top_gas_used_24h',
-        help: 'Top gas used by each grantee in the last 24 hours',
+    granteeMaxGasUsed24hGauge: new prometheus.Gauge({
+        name: 'grantee_max_gas_used_24h',
+        help: 'Max gas used by each grantee in the last 24 hours',
         labelNames: ['grantee'],
     }),
     granteeAvgFeeSpentGauge: new prometheus.Gauge({
@@ -62,15 +62,45 @@ export default {
         help: 'Average fee spent by each grantee in the last 24 hours',
         labelNames: ['grantee'],
     }),
-    granteeTopFeeSpentGauge: new prometheus.Gauge({
-        name: 'grantee_top_fee_spent',
-        help: 'Top fee spent by each grantee',
+    granteeMaxFeeSpentGauge: new prometheus.Gauge({
+        name: 'grantee_max_fee_spent',
+        help: 'Max fee spent by each grantee',
         labelNames: ['grantee'],
     }),
-    granteeTopFeeSpent24hGauge: new prometheus.Gauge({
-        name: 'grantee_top_fee_spent_24h',
-        help: 'Top fee spent by each grantee in the last 24 hours',
+    granteeMaxFeeSpent24hGauge: new prometheus.Gauge({
+        name: 'grantee_max_fee_spent_24h',
+        help: 'Max fee spent by each grantee in the last 24 hours',
         labelNames: ['grantee'],
+    }),
+    granteeTotalMisbehaviourTxs: new prometheus.Gauge({
+        name: 'grantee_total_misbehavior_txs',
+        help: 'Total misbehavior transactions by each grantee',
+        labelNames: ['grantee', 'msgTypes']
+    }),
+    granteeLastGasWantedGauge: new prometheus.Gauge({
+        name: 'grantee_last_gas_wanted',
+        help: 'Last gas wanted by each grantee',
+        labelNames: ['grantee'],
+    }),
+    granteeLastGasUsedGauge: new prometheus.Gauge({
+        name: 'grantee_last_gas_used',
+        help: 'Last gas used by each grantee',
+        labelNames: ['grantee'],
+    }),
+    granteeLastFeeSpentGauge: new prometheus.Gauge({
+        name: 'grantee_last_fee_spent',
+        help: 'Last fee spent by each grantee',
+        labelNames: ['grantee'],
+    }),
+    granteeTopMsgTypesTotalGauge: new prometheus.Gauge({
+        name: 'grantee_top_msg_types_total',
+        help: 'Total counts of top 3 message types for each grantee',
+        labelNames: ['grantee_address', 'msg_type']
+    }),
+    granteeTopMsgTypes24hGauge: new prometheus.Gauge({
+        name: 'grantee_top_msg_types_24h',
+        help: 'Counts of top 3 message types for each grantee in the last 24 hours',
+        labelNames: ['grantee_address', 'msg_type']
     }),
     avgGasWantedGauge: new prometheus.Gauge({
         name: 'avg_gas_wanted',
