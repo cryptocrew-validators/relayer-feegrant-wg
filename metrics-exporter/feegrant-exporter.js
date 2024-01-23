@@ -169,7 +169,7 @@ function processAllowance(grantee, allowance) {
         periodCanSpend = allowance.period_can_spend?.[0]?.amount || 0;
         periodSpent = parseInt(periodSpendLimit) - parseInt(periodCanSpend);
         expirationTimestamp = allowance.period_reset ? new Date(allowance.period_reset).getTime() : 0;
-        periodDurationSeconds = parseDuration(allowance.period);
+        periodDurationSeconds = parseInt(allowance.period);
     }
 
     granteeTotalLimitGauge.labels(grantee).set(parseInt(spendLimit));
