@@ -347,18 +347,15 @@ export async function updateAllMetrics() {
   });
 
   // Update granteeLastGasWantedGauge, granteeLastGasUsedGauge, granteeLastFeeSpentGauge
-  db.each("SELECT relayer_address, gas_wanted, gas_used, fee_amount FROM relayer_transactions GROUP BY relayer_address ORDER BY block_time DESC", [], (err, row) => {
-      if (err) {
-          console.error('[ERR] Error running query for last metrics', err.message);
-          return;
-      }
-      metrics.granteeLastGasWantedGauge.labels(row.relayer_address).set(row.gas_wanted);
-      metrics.granteeLastGasUsedGauge.labels(row.relayer_address).set(row.gas_used);
-      metrics.granteeLastFeeSpentGauge.labels(row.relayer_address).set(row.fee_amount);
-  });
-
-  // Update granteeLastGasWantedGauge, granteeLastGasUsedGauge, granteeLastFeeSpentGauge
-  db.each("SELECT relayer_address, gas_wanted, gas_used, fee_amount FROM relayer_transactions GROUP BY relayer_address ORDER BY block_time DESC", [], (err, row) => {
+  db.each(`
+  SELECT r.relayer_address, r.gas_wanted, r.gas_used, r.fee_amount 
+  FROM relayer_transactions r
+  INNER JOIN (
+    SELECT relayer_address, MAX(block_time) as latest_time 
+    FROM relayer_transactions 
+    GROUP BY relayer_address
+  ) latest ON r.relayer_address = latest.relayer_address AND r.block_time = latest.latest_time
+  `, [], (err, row) => {
     if (err) {
         console.error('[ERR] Error running query for last metrics', err.message);
         return;
@@ -391,24 +388,35 @@ export async function updateAllMetrics() {
 function processMessageTypesForGauge(gauge, yesterday = null) {
   const timeCondition = yesterday ? `WHERE block_time > '${yesterday}'` : '';
   const sql = `SELECT relayer_address, msg_array FROM relayer_transactions ${timeCondition}`;
+//  console.log(`[DEBUG] Executing SQL: ${sql}`); // Log the query for debugging
+
   db.all(sql, [], (err, rows) => {
       if (err) {
           console.error(`[ERR] Error running query for msg types ${yesterday ? '24h' : 'total'}`, err.message);
           return;
       }
 
+      if (rows.length === 0) {
+          console.log(`[INFO] No data found for ${yesterday ? '24h' : 'total'} message types`);
+          return;
+      }
+
       let messageTypeCounts = {};
       rows.forEach(row => {
-          const msgTypes = JSON.parse(row.msg_array);
-          msgTypes.forEach(msgType => {
-              if (!messageTypeCounts[row.relayer_address]) {
-                  messageTypeCounts[row.relayer_address] = {};
-              }
-              if (!messageTypeCounts[row.relayer_address][msgType]) {
-                  messageTypeCounts[row.relayer_address][msgType] = 0;
-              }
-              messageTypeCounts[row.relayer_address][msgType]++;
-          });
+          try {
+              const msgTypes = JSON.parse(row.msg_array);
+              msgTypes.forEach(msgType => {
+                  if (!messageTypeCounts[row.relayer_address]) {
+                      messageTypeCounts[row.relayer_address] = {};
+                  }
+                  if (!messageTypeCounts[row.relayer_address][msgType]) {
+                      messageTypeCounts[row.relayer_address][msgType] = 0;
+                  }
+                  messageTypeCounts[row.relayer_address][msgType]++;
+              });
+          } catch (parseError) {
+              console.error(`[ERR] Error parsing msg_array for relayer_address ${row.relayer_address}:`, parseError);
+          }
       });
 
       updateGaugeWithTop3(gauge, messageTypeCounts);
@@ -423,6 +431,7 @@ function updateGaugeWithTop3(gauge, messageTypeCounts) {
       });
   });
 }
+
 process.on('exit', () => {
   db.close((err) => {
       if (err) {
