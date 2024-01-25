@@ -1,8 +1,7 @@
 import prometheus from 'prom-client';
 import sqlite3 from 'sqlite3';
 import moment from 'moment/moment.js';
-
-import metrics from './metrics.js';
+import metrics from './metrics-relayer.js';
 
 const register = prometheus.register;
 const db = new sqlite3.Database('./relayerMetrics.db', sqlite3.OPEN_READONLY);
