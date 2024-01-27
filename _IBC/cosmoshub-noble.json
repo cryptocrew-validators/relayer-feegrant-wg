@@ -60,6 +60,22 @@
       "telegram": {
         "handle": "dylanschultzie"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz"
+      },
+      "chain_2": {
+        "address": "noble1p4557mdpc2qk8vcemeqgrcg55gs2uyznv4z9lw"
+      },
+      "memo": "👾 Relayed by cosmosrescue.com | Securing the Cosmos",
+      "name": "cosmosrescue",
+      "discord": {
+        "handle": "subzero0057"
+      },
+      "telegram": {
+        "handle": "alagiz"
+      }
     }
   ]
 }

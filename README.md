@@ -2,12 +2,14 @@
 
 This repository is the implementation of [Cosmoshub Proposal #862](https://www.mintscan.io/cosmos/proposals/862): Cosmos Hub IBC Relayer gas cost restitution using FeeGrants
 
-It hosts automation to maintain IBC Relayer `feegrant` allowances my a multisig account.
+It hosts automation to maintain IBC Relayer `feegrant` allowances by a multisig account.
 
 ## Onboarding steps
-- Add your operator account to all official paths that you relay on. You can either do this completing a new [onboarding issue](https://github.com/cryptocrew-validators/relayer-feegrant-wg/issues/new?assignees=&labels=operator-onboarding&projects=&template=operator_onboarding.md&title=Operator+Onboarding%3A+%5BYour+Name%5D) or by [directly opening a PR](https://github.com/cryptocrew-validators/relayer-feegrant-wg/compare)
+- Add your operator account to all official paths that you relay on. You can either do this by completing a new [onboarding issue](https://github.com/cryptocrew-validators/relayer-feegrant-wg/issues/new?assignees=&labels=operator-onboarding&projects=&template=operator_onboarding.md&title=Operator+Onboarding%3A+%5BYour+Name%5D) or by [directly opening a PR](https://github.com/cryptocrew-validators/relayer-feegrant-wg/compare)
 - Upon submission, your PR will be reviewed by the maintainers of this repository.
-- Period spend limits (daily spend limits) are frequently evaluated. 
+- Grants and period spend limits (daily spend limits) are frequently evaluated. The current review schedule of the Governance Committee is bi-weekly.
+- Upon issuance of the `feegrant` allowance, your `Active Period Spend Limit` will show the active daily spend limit granted for your account.
+- Please frequently review the [Operators Table](#operators) below to stay informed about your allowance status and spend limit.
 
 ## Relayer Tier system
 
@@ -16,7 +18,7 @@ It hosts automation to maintain IBC Relayer `feegrant` allowances my a multisig 
 | `Tier 1` | 50 ATOM | Top 10 accounts by effected packets confirmed during the past 30d |
 | `Tier 2` | 5 ATOM | All other accounts |
 
-## Governance Team & Monitoring Framework
+## Governance Committee & Monitoring Framework
 
 The Governance Committee, composed of feegrant multisig members, holds the authority to review and withdraw whitelisting privileges on a regular basis. Additionally, this committee is empowered to assess and modify the onboarding guidelines as necessary. Reasons for revocation include, but are not limited to: excessive or inappropriate transactions (spamming), non-compliance with onboarding standards (such as batch delay and efficiency), utilization of feegrants for purposes unrelated to IBC, and exploitation of any inadvertent misconfigurations by the multisig.
 
@@ -29,6 +31,51 @@ The Governance Committee consists of:
 - Ertemann (Lavender.Five Nodes): `cosmos1xfl6qve3plepgk7wlgxypem5ngntavrnkng3vz`
 
 **Feegrant Multisig Address:** `cosmos14r8ff03jkyac2fukjtfrfgaj8ehjlhds5ec2zp`
+
+## Regulatory framework for participating Relayers 
+
+The following rules for relayer operation using this `feegrant` have been identified by the Governance Committee:
+
+- Relayers must use the globally defined minimum gas price of `0.005uatom`.
+- Relayers must set `batch_delay` to a minimum of `1000ms` to prevent overspending.
+- Relayers must use private / single-tenancy RPC/gRPC infrastructure.
+- Relayers must only use the `feegrant` allowance to broadcast IBC-relaying related message types (type urls beginning with `/ibc`). If relayers use the allowance for any other message type they will be warned upon the first instance, and disqualified at the 2nd instance of misbehavior.
+
+Failing to comply with any of the above rules will lead to disqualification of the Relayer Operator and revocation of all issued `feegrant` allowances corresponding to that Relayer Operator.
+
+### Example configuration for [Hermes Relayer](https://hermes.informal.systems)
+
+```toml
+[[chains]]
+id = 'cosmoshub-4'
+fee_granter = 'cosmos14r8ff03jkyac2fukjtfrfgaj8ehjlhds5ec2zp'
+event_source = { mode = 'push', url = '<YOUR-WS-URL>', batch_delay = '1000ms' }
+rpc_addr = '<YOUR-RPC-URL>'
+grpc_addr = '<YOUR-GRPC-URL>'
+rpc_timeout = '10s'
+account_prefix = 'cosmos'
+key_name = 'default'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 2000000
+max_gas = 9000000
+gas_price = { price = 0.005, denom = 'uatom' }
+gas_multiplier = 1.1
+max_msg_num = 25
+query_packets_chunk_size = 25
+max_tx_size = 180000
+clock_drift = '15s'
+max_block_time = '10s'
+trusting_period = '336h'
+memo_prefix = '<YOUR-MEMO>'
+trust_threshold = '2/3'
+client_refresh_rate = '1/30'
+[chains.packet_filter]
+policy = 'allow'
+list = [
+# ['transfer', 'channel-141'], # osmosis-1 transfer
+] 
+```
 
 ## Operators
 

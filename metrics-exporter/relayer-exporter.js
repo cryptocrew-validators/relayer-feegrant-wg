@@ -1,8 +1,7 @@
 import prometheus from 'prom-client';
 import sqlite3 from 'sqlite3';
 import moment from 'moment/moment.js';
-
-import metrics from './metrics.js';
+import metrics from './metrics-relayer.js';
 
 const register = prometheus.register;
 const db = new sqlite3.Database('./relayerMetrics.db', sqlite3.OPEN_READONLY);
@@ -28,156 +27,156 @@ export async function updateAllMetrics() {
   const yesterday = lastBlockMoment.subtract(24, 'hours').format('YYYY-MM-DD HH:mm:ss');
 
   // Update granteeTotalTxs
-  db.all("SELECT relayer_address, COUNT(*) as tx_count FROM relayer_transactions GROUP BY relayer_address", [], (err, rows) => {
+  db.all("SELECT relayer_address, memo, COUNT(*) as tx_count FROM relayer_transactions GROUP BY relayer_address, memo", [], (err, rows) => {
     if (err) {
       console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeTotalTxsGauge.labels(row.relayer_address).set(row.tx_count);
+      metrics.granteeTotalTxsGauge.labels(row.relayer_address, row.memo).set(row.tx_count);
     });
   });
 
   // Update granteeTotalTxs24h
-  db.all(`SELECT relayer_address, COUNT(*) as tx_count FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address`, [yesterday], (err, rows) => {
+  db.all(`SELECT relayer_address, memo, COUNT(*) as tx_count FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address, memo`, [yesterday], (err, rows) => {
     if (err) {
       console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeTotalTxs24hGauge.labels(row.relayer_address).set(row.tx_count);
+      metrics.granteeTotalTxs24hGauge.labels(row.relayer_address, row.memo).set(row.tx_count);
     });
   });
 
   // Update granteeAvgGasWanted
-  db.all("SELECT relayer_address, AVG(gas_wanted) as avg_gas_wanted FROM relayer_transactions GROUP BY relayer_address", [], (err, rows) => {
+  db.all("SELECT relayer_address, memo, AVG(gas_wanted) as avg_gas_wanted FROM relayer_transactions GROUP BY relayer_address, memo", [], (err, rows) => {
     if (err) {
       console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeAvgGasWantedGauge.labels(row.relayer_address).set(row.avg_gas_wanted);
+      metrics.granteeAvgGasWantedGauge.labels(row.relayer_address, row.memo).set(row.avg_gas_wanted);
     });
   });
 
   // Update granteeAvgGasWanted24h
-  db.all(`SELECT relayer_address, AVG(gas_wanted) as avg_gas_wanted FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address`, [yesterday], (err, rows) => {
+  db.all(`SELECT relayer_address, memo, AVG(gas_wanted) as avg_gas_wanted FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address, memo`, [yesterday], (err, rows) => {
     if (err) {
       console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeAvgGasWanted24hGauge.labels(row.relayer_address).set(row.avg_gas_wanted);
+      metrics.granteeAvgGasWanted24hGauge.labels(row.relayer_address, row.memo).set(row.avg_gas_wanted);
     });
   });
 
   // Update granteeMaxGasWanted
-  db.all("SELECT relayer_address, MAX(gas_wanted) as top_gas_wanted FROM relayer_transactions GROUP BY relayer_address", [], (err, rows) => {
+  db.all("SELECT relayer_address, memo, MAX(gas_wanted) as top_gas_wanted FROM relayer_transactions GROUP BY relayer_address, memo", [], (err, rows) => {
     if (err) {
       console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeMaxGasWantedGauge.labels(row.relayer_address).set(row.top_gas_wanted);
+      metrics.granteeMaxGasWantedGauge.labels(row.relayer_address, row.memo).set(row.top_gas_wanted);
     });
   });
 
   // Update granteeMaxGasWanted24h
-  db.all(`SELECT relayer_address, MAX(gas_wanted) as top_gas_wanted FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address`, [yesterday], (err, rows) => {
+  db.all(`SELECT relayer_address, memo, MAX(gas_wanted) as top_gas_wanted FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address, memo`, [yesterday], (err, rows) => {
     if (err) {
       console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeMaxGasWanted24hGauge.labels(row.relayer_address).set(row.top_gas_wanted);
+      metrics.granteeMaxGasWanted24hGauge.labels(row.relayer_address, row.memo).set(row.top_gas_wanted);
     });
   });
 
   // Update granteeAvgGasUsed
-  db.all("SELECT relayer_address, AVG(gas_used) as avg_gas_used FROM relayer_transactions GROUP BY relayer_address", [], (err, rows) => {
+  db.all("SELECT relayer_address, memo, AVG(gas_used) as avg_gas_used FROM relayer_transactions GROUP BY relayer_address, memo", [], (err, rows) => {
     if (err) {
       console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeAvgGasUsedGauge.labels(row.relayer_address).set(row.avg_gas_used);
+      metrics.granteeAvgGasUsedGauge.labels(row.relayer_address, row.memo).set(row.avg_gas_used);
     });
   });
 
   // Update granteeAvgGasUsed24h
-  db.all(`SELECT relayer_address, AVG(gas_used) as avg_gas_used FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address`, [yesterday], (err, rows) => {
+  db.all(`SELECT relayer_address, memo, AVG(gas_used) as avg_gas_used FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address, memo`, [yesterday], (err, rows) => {
     if (err) {
       console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeAvgGasUsed24hGauge.labels(row.relayer_address).set(row.avg_gas_used);
+      metrics.granteeAvgGasUsed24hGauge.labels(row.relayer_address, row.memo).set(row.avg_gas_used);
     });
   });
 
   // Update granteeMaxGasUsed
-  db.all("SELECT relayer_address, MAX(gas_used) as top_gas_used FROM relayer_transactions GROUP BY relayer_address", [], (err, rows) => {
+  db.all("SELECT relayer_address, memo, MAX(gas_used) as top_gas_used FROM relayer_transactions GROUP BY relayer_address, memo", [], (err, rows) => {
     if (err) {
       console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeMaxGasUsedGauge.labels(row.relayer_address).set(row.top_gas_used);
+      metrics.granteeMaxGasUsedGauge.labels(row.relayer_address, row.memo).set(row.top_gas_used);
     });
   });
 
   // Update granteeMaxGasUsed24h
-  db.all(`SELECT relayer_address, MAX(gas_used) as top_gas_used FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address`, [yesterday], (err, rows) => {
+  db.all(`SELECT relayer_address, memo, MAX(gas_used) as top_gas_used FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address, memo`, [yesterday], (err, rows) => {
     if (err) {
       console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeMaxGasUsed24hGauge.labels(row.relayer_address).set(row.top_gas_used);
+      metrics.granteeMaxGasUsed24hGauge.labels(row.relayer_address, row.memo).set(row.top_gas_used);
     });
   });
 
   // Update granteeAvgFeeSpent
-  db.all("SELECT relayer_address, AVG(fee_amount) as avg_fee_spent FROM relayer_transactions GROUP BY relayer_address", [], (err, rows) => {
+  db.all("SELECT relayer_address, memo, AVG(fee_amount) as avg_fee_spent FROM relayer_transactions GROUP BY relayer_address, memo", [], (err, rows) => {
     if (err) {
       console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeAvgFeeSpentGauge.labels(row.relayer_address).set(row.avg_fee_spent);
+      metrics.granteeAvgFeeSpentGauge.labels(row.relayer_address, row.memo).set(row.avg_fee_spent);
     });
   });
 
   // Update granteeAvgFeeSpent24h
-  db.all(`SELECT relayer_address, AVG(fee_amount) as avg_fee_spent FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address`, [yesterday], (err, rows) => {
+  db.all(`SELECT relayer_address, memo, AVG(fee_amount) as avg_fee_spent FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address, memo`, [yesterday], (err, rows) => {
     if (err) {
       console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeAvgFeeSpent24hGauge.labels(row.relayer_address).set(row.avg_fee_spent);
+      metrics.granteeAvgFeeSpent24hGauge.labels(row.relayer_address, row.memo).set(row.avg_fee_spent);
     });
   });
 
   // Update granteeMaxFeeSpent
-  db.all("SELECT relayer_address, MAX(fee_amount) as top_fee_spent FROM relayer_transactions GROUP BY relayer_address", [], (err, rows) => {
+  db.all("SELECT relayer_address, memo, MAX(fee_amount) as top_fee_spent FROM relayer_transactions GROUP BY relayer_address, memo", [], (err, rows) => {
     if (err) {
       console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeMaxFeeSpentGauge.labels(row.relayer_address).set(row.top_fee_spent);
+      metrics.granteeMaxFeeSpentGauge.labels(row.relayer_address, row.memo).set(row.top_fee_spent);
     });
   });
 
   // Update granteeMaxFeeSpent24h
-  db.all(`SELECT relayer_address, MAX(fee_amount) as top_fee_spent FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address`, [yesterday], (err, rows) => {
+  db.all(`SELECT relayer_address, memo, MAX(fee_amount) as top_fee_spent FROM relayer_transactions WHERE block_time > ? GROUP BY relayer_address, memo`, [yesterday], (err, rows) => {
     if (err) {
       console.error('[ERR] Error running query', err.message);
       return;
     }
     rows.forEach((row) => {
-      metrics.granteeMaxFeeSpent24hGauge.labels(row.relayer_address).set(row.top_fee_spent);
+      metrics.granteeMaxFeeSpent24hGauge.labels(row.relayer_address, row.memo).set(row.top_fee_spent);
     });
   });
 
@@ -331,7 +330,7 @@ export async function updateAllMetrics() {
       return;
     }
     rows.forEach((row) => {
-      metrics.totalTxsGauge.set(row.total_txs);
+      metrics.totalTxs24hGauge.set(row.total_txs);
     });
   });
 
@@ -347,35 +346,57 @@ export async function updateAllMetrics() {
   });
 
   // Update granteeLastGasWantedGauge, granteeLastGasUsedGauge, granteeLastFeeSpentGauge
-  db.each("SELECT relayer_address, gas_wanted, gas_used, fee_amount FROM relayer_transactions GROUP BY relayer_address ORDER BY block_time DESC", [], (err, row) => {
-      if (err) {
-          console.error('[ERR] Error running query for last metrics', err.message);
-          return;
-      }
-      metrics.granteeLastGasWantedGauge.labels(row.relayer_address).set(row.gas_wanted);
-      metrics.granteeLastGasUsedGauge.labels(row.relayer_address).set(row.gas_used);
-      metrics.granteeLastFeeSpentGauge.labels(row.relayer_address).set(row.fee_amount);
-  });
-
-  // Update granteeLastGasWantedGauge, granteeLastGasUsedGauge, granteeLastFeeSpentGauge
-  db.each("SELECT relayer_address, gas_wanted, gas_used, fee_amount FROM relayer_transactions GROUP BY relayer_address ORDER BY block_time DESC", [], (err, row) => {
+  db.each(`
+  SELECT r.relayer_address, r.memo, r.gas_wanted, r.gas_used, r.fee_amount 
+  FROM relayer_transactions r
+  INNER JOIN (
+    SELECT relayer_address, memo, MAX(block_time) as latest_time 
+    FROM relayer_transactions 
+    GROUP BY relayer_address, memo
+  ) latest ON r.relayer_address = latest.relayer_address AND r.memo = latest.memo AND r.block_time = latest.latest_time  
+  `, [], (err, row) => {
     if (err) {
         console.error('[ERR] Error running query for last metrics', err.message);
         return;
     }
-    metrics.granteeLastGasWantedGauge.labels(row.relayer_address).set(row.gas_wanted);
-    metrics.granteeLastGasUsedGauge.labels(row.relayer_address).set(row.gas_used);
-    metrics.granteeLastFeeSpentGauge.labels(row.relayer_address).set(row.fee_amount);
+    metrics.granteeLastGasWantedGauge.labels(row.relayer_address, row.memo).set(row.gas_wanted);
+    metrics.granteeLastGasUsedGauge.labels(row.relayer_address, row.memo).set(row.gas_used);
+    metrics.granteeLastFeeSpentGauge.labels(row.relayer_address, row.memo).set(row.fee_amount);
   });
 
   // Update granteeTotalMisbehaviourTxs with actual misbehaviours
-  db.all("SELECT grantee_address, COUNT(*) as misbehaviour_count, GROUP_CONCAT(msg_array) as msg_array FROM grantee_misbehaviors GROUP BY grantee_address", [], (err, rows) => {
+  db.all("SELECT grantee_address, msg_array FROM grantee_misbehaviors", [], (err, rows) => {
     if (err) {
-      console.error('[ERR] Error running query for misbehaviours', err.message);
+      console.error('[ERR] Error running query for grantee misbehaviors', err.message);
       return;
     }
-    rows.forEach((row) => {
-      metrics.granteeTotalMisbehaviourTxs.labels(row.grantee_address, row.msg_array).set(row.misbehaviour_count);
+  
+    if (rows.length === 0) {
+      console.log('[INFO] No data found for grantee misbehaviors');
+      return;
+    }
+
+    const aggregateCounts = {};
+    rows.forEach(row => {
+      try {
+        const msgTypes = JSON.parse(row.msg_array);
+  
+        msgTypes.forEach(msgType => {
+          if (!aggregateCounts[row.grantee_address]) {
+            aggregateCounts[row.grantee_address] = {};
+          }
+          aggregateCounts[row.grantee_address][msgType] = (aggregateCounts[row.grantee_address][msgType] || 0) + 1;
+        });
+  
+      } catch (parseError) {
+        console.error(`[ERR] Error parsing msg_array for grantee_address ${row.grantee_address}:`, parseError);
+      }
+    });
+
+    Object.entries(aggregateCounts).forEach(([grantee, counts]) => {
+      Object.entries(counts).forEach(([msgType, count]) => {
+        metrics.granteeTotalMisbehaviourTxs.labels(grantee, msgType).set(count);
+      });
     });
   });
 
@@ -390,25 +411,35 @@ export async function updateAllMetrics() {
 
 function processMessageTypesForGauge(gauge, yesterday = null) {
   const timeCondition = yesterday ? `WHERE block_time > '${yesterday}'` : '';
-  const sql = `SELECT relayer_address, msg_array FROM relayer_transactions ${timeCondition}`;
+  const sql = `SELECT relayer_address, msg_array, memo FROM relayer_transactions ${timeCondition}`;
+
   db.all(sql, [], (err, rows) => {
       if (err) {
           console.error(`[ERR] Error running query for msg types ${yesterday ? '24h' : 'total'}`, err.message);
           return;
       }
 
+      if (rows.length === 0) {
+          console.log(`[INFO] No data found for ${yesterday ? '24h' : 'total'} message types`);
+          return;
+      }
+
       let messageTypeCounts = {};
       rows.forEach(row => {
-          const msgTypes = JSON.parse(row.msg_array);
-          msgTypes.forEach(msgType => {
-              if (!messageTypeCounts[row.relayer_address]) {
-                  messageTypeCounts[row.relayer_address] = {};
-              }
-              if (!messageTypeCounts[row.relayer_address][msgType]) {
-                  messageTypeCounts[row.relayer_address][msgType] = 0;
-              }
-              messageTypeCounts[row.relayer_address][msgType]++;
-          });
+          try {
+              const msgTypes = JSON.parse(row.msg_array);
+              msgTypes.forEach(msgType => {
+                  if (!messageTypeCounts[row.relayer_address]) {
+                      messageTypeCounts[row.relayer_address] = { msgs: {}, memo: row.memo };
+                  }
+                  if (!messageTypeCounts[row.relayer_address].msgs[msgType]) {
+                      messageTypeCounts[row.relayer_address].msgs[msgType] = 0;
+                  }
+                  messageTypeCounts[row.relayer_address].msgs[msgType]++;
+              });
+          } catch (parseError) {
+              console.error(`[ERR] Error parsing msg_array for relayer_address ${row.relayer_address}:`, parseError);
+          }
       });
 
       updateGaugeWithTop3(gauge, messageTypeCounts);
@@ -416,13 +447,14 @@ function processMessageTypesForGauge(gauge, yesterday = null) {
 }
 
 function updateGaugeWithTop3(gauge, messageTypeCounts) {
-  Object.entries(messageTypeCounts).forEach(([relayer_address, msgCounts]) => {
-      const sortedMsgTypes = Object.entries(msgCounts).sort((a, b) => b[1] - a[1]).slice(0, 3);
+  Object.entries(messageTypeCounts).forEach(([relayer_address, data]) => {
+      const sortedMsgTypes = Object.entries(data.msgs).sort((a, b) => b[1] - a[1]).slice(0, 3);
       sortedMsgTypes.forEach(([msgType, count], index) => {
-          gauge.labels(relayer_address, msgType).set(count);
+          gauge.labels(relayer_address, msgType, data.memo).set(count);
       });
   });
 }
+
 process.on('exit', () => {
   db.close((err) => {
       if (err) {
