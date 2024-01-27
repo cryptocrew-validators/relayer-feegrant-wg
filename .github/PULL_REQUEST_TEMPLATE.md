@@ -10,7 +10,7 @@ Closes #issue_number
 
 ## Checklist
 
-- [ ] I have read the [onboarding documentation & contribution guidelines](../CONTRIBUTE.md).
+- [ ] I have read the [onboarding documentation](../blob/main/README.md) and [contribution guidelines](../blob/main/CONTRIBUTING.md).
 - [ ] I have added my Account Addresses and Operator Information to the correct path file in the `_IBC` folder.
 - [ ] I have ensured my changes follow the required format.
 - [ ] I have linked the related onboarding issue (if one was created).
