@@ -17,6 +17,7 @@
     "express": "^4.18.2",
     "moment": "^2.29.4",
     "prom-client": "^15.0.0",
+    "segfault-handler": "^1.3.0",
     "sqlite3": "^5.1.6"
   },
   "type": "module"
