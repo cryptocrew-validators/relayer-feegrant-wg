@@ -125,6 +125,22 @@
       "telegram": {
         "handle": "dunguyen_29"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz"
+      },
+      "chain_2": {
+        "address": "osmo1p4557mdpc2qk8vcemeqgrcg55gs2uyznvdya3j"
+      },
+      "memo": "👾 Relayed by cosmosrescue.com | Securing the Cosmos",
+      "name": "cosmosrescue",
+      "discord": {
+        "handle": "subzero0057"
+      },
+      "telegram": {
+        "handle": "alagiz"
+      }
     }
   ]
 }
