@@ -41,6 +41,38 @@
       "telegram": {
         "handle": "Char1esBark1ey"
       }
+    },
+    {
+      "chain_1": {
+        "address": "akash18xrruhq5r246mwk0yj9elnn3mte8xa9udwk24x"
+      },
+      "chain_2": {
+        "address": "cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu"
+      },
+      "memo": "Relayed with \ud83d\udc9c by Lavender.Five Nodes \ud83d\udc1d",
+      "name": "Lavender.Five Nodes",
+      "discord": {
+        "handle": "dylanschultzie"
+      },
+      "telegram": {
+        "handle": "dylanschultzie"
+      }
+    },
+    {
+      "chain_1": {
+        "address": "akash1p4557mdpc2qk8vcemeqgrcg55gs2uyznfd6276"
+      },
+      "chain_2": {
+        "address": "cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz"
+      },
+      "memo": "\ud83d\udc7e Relayed by cosmosrescue.com | Securing the Cosmos",
+      "name": "cosmosrescue",
+      "discord": {
+        "handle": "subzero0057"
+      },
+      "telegram": {
+        "handle": "alagiz"
+      }
     }
   ]
 }
