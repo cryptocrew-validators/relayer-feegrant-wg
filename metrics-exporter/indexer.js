@@ -95,7 +95,7 @@ async function processTransaction(tx) {
         typeString
       );
 
-      granteeTotalMisbehaviourTxs.labels(granteeAddress, typeString).inc();
+      // granteeTotalMisbehaviourTxs.labels(granteeAddress, typeString).inc();
     }
   } catch (error) {
     console.error('[ERR] Error processing transaction:', error);

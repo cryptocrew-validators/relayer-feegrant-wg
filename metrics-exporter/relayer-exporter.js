@@ -365,13 +365,38 @@ export async function updateAllMetrics() {
   });
 
   // Update granteeTotalMisbehaviourTxs with actual misbehaviours
-  db.all("SELECT grantee_address, COUNT(*) as misbehaviour_count, GROUP_CONCAT(msg_array) as msg_array FROM grantee_misbehaviors GROUP BY grantee_address", [], (err, rows) => {
+  db.all("SELECT grantee_address, msg_array FROM grantee_misbehaviors", [], (err, rows) => {
     if (err) {
-      console.error('[ERR] Error running query for misbehaviours', err.message);
+      console.error('[ERR] Error running query for grantee misbehaviors', err.message);
       return;
     }
-    rows.forEach((row) => {
-      metrics.granteeTotalMisbehaviourTxs.labels(row.grantee_address, row.msg_array).set(row.misbehaviour_count);
+  
+    if (rows.length === 0) {
+      console.log('[INFO] No data found for grantee misbehaviors');
+      return;
+    }
+
+    const aggregateCounts = {};
+    rows.forEach(row => {
+      try {
+        const msgTypes = JSON.parse(row.msg_array);
+  
+        msgTypes.forEach(msgType => {
+          if (!aggregateCounts[row.grantee_address]) {
+            aggregateCounts[row.grantee_address] = {};
+          }
+          aggregateCounts[row.grantee_address][msgType] = (aggregateCounts[row.grantee_address][msgType] || 0) + 1;
+        });
+  
+      } catch (parseError) {
+        console.error(`[ERR] Error parsing msg_array for grantee_address ${row.grantee_address}:`, parseError);
+      }
+    });
+
+    Object.entries(aggregateCounts).forEach(([grantee, counts]) => {
+      Object.entries(counts).forEach(([msgType, count]) => {
+        metrics.granteeTotalMisbehaviourTxs.labels(grantee, msgType).set(count);
+      });
     });
   });
 
