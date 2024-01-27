@@ -47,6 +47,22 @@
     },
     {
       "chain_1": {
+        "address": "cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu"
+      },
+      "chain_2": {
+        "address": "noble18xrruhq5r246mwk0yj9elnn3mte8xa9ugkw95j"
+      },
+      "memo": "Relayed with 💜 by Lavender.Five Nodes 🐝",
+      "name": "Lavender.Five Nodes",
+      "discord": {
+        "handle": "dylanschultzie"
+      },
+      "telegram": {
+        "handle": "dylanschultzie"
+      }
+    },
+    {
+      "chain_1": {
         "address": "cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz"
       },
       "chain_2": {
