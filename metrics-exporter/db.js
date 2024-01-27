@@ -2,22 +2,23 @@ import sqlite3 from 'sqlite3';
 
 const sqlite = sqlite3.verbose();
 const db = new sqlite.Database('./relayerMetrics.db', (err) => {
-  if (err) {
-    console.error('[ERR] ' + err.message);
-  }
-  console.log('[INFO] Connected to the relayer metrics SQLite database.');
+    if (err) {
+        console.error('[ERR] ' + err.message);
+    }
+    console.log('[INFO] Connected to the relayer metrics SQLite database.');
 });
 
 db.serialize(() => {
     db.run(`CREATE TABLE IF NOT EXISTS relayer_transactions (
-      block_height INTEGER,
-      block_time TEXT,
-      relayer_address TEXT,
-      msg_array TXT,
-      gas_wanted INTEGER,
-      gas_used INTEGER,
-      fee_amount INTEGER,
-      gas_price REAL
+        block_height INTEGER,
+        block_time TEXT,
+        relayer_address TEXT,
+        msg_array TEXT,
+        gas_wanted INTEGER,
+        gas_used INTEGER,
+        fee_amount INTEGER,
+        gas_price REAL,
+        memo TEXT
     )`);
 
     db.run(`CREATE TABLE IF NOT EXISTS total_metrics (
@@ -42,7 +43,7 @@ db.serialize(() => {
     )`);
 });
 
-export async function saveTransactionData(blockHeight, blockTime, relayerAddress, msgArray, gasWanted, gasUsed, feeAmount, gasPrice) {
+export async function saveTransactionData(blockHeight, blockTime, relayerAddress, msgArray, gasWanted, gasUsed, feeAmount, gasPrice, memo) {
     db.run(`INSERT INTO relayer_transactions (
       block_height, 
       block_time, 
@@ -51,8 +52,9 @@ export async function saveTransactionData(blockHeight, blockTime, relayerAddress
       gas_wanted, 
       gas_used, 
       fee_amount, 
-      gas_price
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+      gas_price,
+      memo
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         [
             blockHeight,
             blockTime,
@@ -61,7 +63,8 @@ export async function saveTransactionData(blockHeight, blockTime, relayerAddress
             gasWanted,
             gasUsed,
             feeAmount,
-            gasPrice
+            gasPrice,
+            memo
         ], (err) => {
             if (err) {
                 console.error('[ERR] ' + err.message);
@@ -152,9 +155,9 @@ export async function getLatestBlockHeightFromDB() {
 
 process.on('exit', () => {
     db.close((err) => {
-      if (err) {
-        console.error('[ERR] ' + err.message);
-      }
-      console.log('[INFO] Close the database write connection.');
+        if (err) {
+            console.error('[ERR] ' + err.message);
+        }
+        console.log('[INFO] Close the database write connection.');
     });
-  });
+});

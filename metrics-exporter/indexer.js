@@ -47,9 +47,10 @@ async function processTransaction(tx) {
     let txDecoded = Tx.decode(buff);
     let isRelayerTx = false;
     let typeArray = [];
+    let memo = txDecoded.body.memo; // Extract memo from the transaction
 
     txDecoded.body.messages.forEach((msg) => {
-      typeArray.push(msg.typeUrl)
+      typeArray.push(msg.typeUrl);
       if (msg.typeUrl.includes('/ibc') && msg.typeUrl != "/ibc.applications.transfer.v1.MsgTransfer") {
         isRelayerTx = true;
       }
@@ -72,7 +73,8 @@ async function processTransaction(tx) {
         gasWanted,
         gasUsed,
         feeAmount,
-        gasPrice
+        gasPrice,
+        memo
       );
 
       totalGasWanted += gasWanted;
