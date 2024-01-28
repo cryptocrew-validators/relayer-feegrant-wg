@@ -400,6 +400,59 @@ export async function updateAllMetrics() {
     });
   });
 
+  // Update granteeLastNumMsgsGauge
+  db.each(`
+  SELECT t.relayer_address, t.memo, t.msg_array
+  FROM relayer_transactions t
+  INNER JOIN (
+    SELECT relayer_address, memo, MAX(block_time) as latest_time 
+    FROM relayer_transactions 
+    GROUP BY relayer_address, memo
+  ) latest ON t.relayer_address = latest.relayer_address AND t.memo = latest.memo AND t.block_time = latest.latest_time
+  `, [], (err, row) => {
+    if (err) {
+      console.error('[ERR] Error running query for last number of messages', err.message);
+      return;
+    }
+    try {
+      const msgCount = JSON.parse(row.msg_array).length;
+      metrics.granteeLastNumMsgsGauge.labels(row.relayer_address, row.memo).set(msgCount);
+    } catch (parseError) {
+      console.error('[ERR] Error parsing msg_array:', parseError);
+    }
+  });
+
+  // Update granteeAvgNumMsgs24hGauge
+  db.all(`
+  SELECT relayer_address, memo, msg_array
+  FROM relayer_transactions
+  WHERE block_time > ?
+  `, [yesterday], (err, rows) => {
+    if (err) {
+      console.error('[ERR] Error running query for average number of messages in 24h', err.message);
+      return;
+    }
+
+    const granteeMsgCounts = {};
+    rows.forEach(row => {
+      try {
+        const msgCount = JSON.parse(row.msg_array).length;
+        if (!granteeMsgCounts[row.relayer_address]) {
+          granteeMsgCounts[row.relayer_address] = { totalMsgs: 0, txCount: 0, memo: row.memo };
+        }
+        granteeMsgCounts[row.relayer_address].totalMsgs += msgCount;
+        granteeMsgCounts[row.relayer_address].txCount += 1;
+      } catch (parseError) {
+        console.error('[ERR] Error parsing msg_array:', parseError);
+      }
+    });
+
+    for (const [relayer_address, data] of Object.entries(granteeMsgCounts)) {
+      const avgMsgs = data.totalMsgs / data.txCount;
+      metrics.granteeAvgNumMsgs24hGauge.labels(relayer_address, data.memo).set(avgMsgs);
+    }
+  });
+
   // Update total top3 message types for each grantee
   processMessageTypesForGauge(metrics.granteeTopMsgTypesTotalGauge);
 

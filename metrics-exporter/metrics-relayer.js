@@ -102,6 +102,16 @@ export default {
         help: 'Counts of top 3 message types for each grantee in the last 24 hours',
         labelNames: ['grantee_address', 'msg_type', 'memo']
     }),
+    granteeLastNumMsgsGauge: new prometheus.Gauge({
+        name: 'grantee_last_num_msgs',
+        help: 'Last number of messages used (batched) for each grantee',
+        labelNames: ['grantee_address', 'memo']
+    }),
+    granteeAvgNumMsgs24hGauge: new prometheus.Gauge({
+        name: 'grantee_avg_num_msgs_24h',
+        help: 'Average number of messages used (batched) for each grantee in the last 24 hours',
+        labelNames: ['grantee_address', 'memo']
+    }),
     avgGasWantedGauge: new prometheus.Gauge({
         name: 'avg_gas_wanted',
         help: 'Average gas wanted across all transactions',
