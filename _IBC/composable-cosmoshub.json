@@ -44,6 +44,22 @@
       "telegram": {
         "handle": "Char1esBark1ey"
       }
+    },
+    {
+      "chain_1": {
+        "address": "centauri1ryq6zncdxpdnnwhn9h24ar48ap9zkqglahpkwl"
+      },
+      "chain_2": {
+        "address": "cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v"
+      },
+      "memo": "Eat, Sleep, Relay, Repeat - by Team WhisperNode \ud83e\udd10",
+      "name": "WhisperNode",
+      "discord": {
+        "handle": "ghostdotexe"
+      },
+      "telegram": {
+        "handle": "gh0stdotexe"
+      }
     }
   ]
 }

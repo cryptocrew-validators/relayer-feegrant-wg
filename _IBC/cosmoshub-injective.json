@@ -109,6 +109,22 @@
       "telegram": {
         "handle": "alagiz"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v"
+      },
+      "chain_2": {
+        "address": "inj1jszj9xyh2eh8lx25u88rsv7hmsytvwsvr6cne0"
+      },
+      "memo": "Eat, Sleep, Relay, Repeat - by Team WhisperNode \ud83e\udd10",
+      "name": "WhisperNode",
+      "discord": {
+        "handle": "ghostdotexe"
+      },
+      "telegram": {
+        "handle": "gh0stdotexe"
+      }
     }
   ]
 }
