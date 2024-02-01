@@ -346,5 +346,47 @@
       "cosmoshub-terra2",
       "cosmoshub-injective"
     ]
+  },
+  {
+    "name": "WhisperNode",
+    "memo": "Eat, Sleep, Relay, Repeat - by Team WhisperNode \ud83e\udd10",
+    "address": "cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v",
+    "discord": "ghostdotexe",
+    "telegram": "gh0stdotexe",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-secretnetwork",
+      "cosmoshub-injective",
+      "cosmoshub-osmosis",
+      "cosmoshub-empowerchain",
+      "cosmoshub-neutron",
+      "cosmoshub-stride",
+      "akash-cosmoshub",
+      "cosmoshub-juno",
+      "composable-cosmoshub",
+      "archway-cosmoshub",
+      "cosmoshub-kujira",
+      "axelar-cosmoshub",
+      "cosmoshub-sentinel"
+    ]
+  },
+  {
+    "name": "Cosmonaut Stakes",
+    "memo": "You have been relayed by Cosmonaut Stakes",
+    "address": "cosmos1ujwsewqwndsyyzt0ujevhr4uxrsd574m8f7l78",
+    "discord": "danoly",
+    "telegram": "CosmonautStakes",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "akash-cosmoshub"
+    ]
   }
 ]

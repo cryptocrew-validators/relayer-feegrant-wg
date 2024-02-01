@@ -82,6 +82,7 @@ list = [
 | Name | Address | Total Paths | Discord | Telegram | Period Spend Limit | Active Period Spend Limit |
 |------|---------|-------------|---------|----------|--------------------|---------------------------|
 | Lavender.Five Nodes | `cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu` | 13 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 0.0 | 0.0 |
+| WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | 13 | [`ghostdotexe`](https://discordapp.com/users/ghostdotexe) | [`gh0stdotexe`](https://t.me/gh0stdotexe) | 0.0 | 0.0 |
 | Cosmos Spaces | `cosmos1ks0qeq9vyt9l7vgasaajd49ff0k8klure6ez4n` | 11 | [`.tricky_.`](https://discordapp.com/users/.tricky_.) | [`Char1esBark1ey`](https://t.me/Char1esBark1ey) | 50.0 | 50.0 |
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | 11 | [`subzero0057`](https://discordapp.com/users/subzero0057) | [`alagiz`](https://t.me/alagiz) | 0.0 | 0.0 |
 | Crosnest | `cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt` | 7 | [`galadrin_crosnest`](https://discordapp.com/users/galadrin_crosnest) | [`crosnest_com`](https://t.me/crosnest_com) | 50.0 | 50.0 |
@@ -99,6 +100,7 @@ list = [
 | CryptoCrew | `cosmos1yghndrffay859ma2ue4pa2cltw640vtayerdla` | 1 | [`@ccclaimens`](https://discordapp.com/users/@ccclaimens) | [`@clemensg`](https://t.me/@clemensg) | 50.0 | 50.0 |
 | Cosmos Spaces | `cosmos126pkrcvytfvsvrdm7x4wme5y780amvwwarzezc` | 1 | [`.tricky_.`](https://discordapp.com/users/.tricky_.) | [`Char1esBark1ey`](https://t.me/Char1esBark1ey) | 50.0 | 50.0 |
 | Decentrio | `cosmos1sk76c20mkypkm8mmrza09nnkq9vkqn4atn60qj` | 1 | [`dunguyen29`](https://discordapp.com/users/dunguyen29) | [`dunguyen_29`](https://t.me/dunguyen_29) | 50.0 | 50.0 |
+| Cosmonaut Stakes | `cosmos1ujwsewqwndsyyzt0ujevhr4uxrsd574m8f7l78` | 1 | [`danoly`](https://discordapp.com/users/danoly) | [`CosmonautStakes`](https://t.me/CosmonautStakes) | 0.0 | 0.0 |
 
 ## Paths
 
@@ -109,6 +111,8 @@ list = [
 | Cosmos Spaces | `akash1ks0qeq9vyt9l7vgasaajd49ff0k8klur5p59vf` | `cosmos1ks0qeq9vyt9l7vgasaajd49ff0k8klure6ez4n` | 0.0 | 0.0 |
 | Lavender.Five Nodes | `akash18xrruhq5r246mwk0yj9elnn3mte8xa9udwk24x` | `cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu` | 0.0 | 0.0 |
 | cosmosrescue | `akash1p4557mdpc2qk8vcemeqgrcg55gs2uyznfd6276` | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | 0.0 | 0.0 |
+| Cosmonaut Stakes | `akash12396w3rxfpe349h7vdhs4e35y4xqq7rxjfnznt` | `cosmos1ujwsewqwndsyyzt0ujevhr4uxrsd574m8f7l78` | 0.0 | 0.0 |
+| WhisperNode | `akash1ryq6zncdxpdnnwhn9h24ar48ap9zkqgl5xpdnk` | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | 0.0 | 0.0 |
 </details>
 
 <details><summary>archway-cosmoshub</summary>
@@ -117,6 +121,7 @@ list = [
 |------|-----------------|-----------------|--------------------|---------------------------|
 | Crosnest | `archway1l267dmlmprhu4p5aqslf50f495vjqlg3glkqcu` | `cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt` | 0.0 | 0.0 |
 | Lavender.Five Nodes | `archway18xrruhq5r246mwk0yj9elnn3mte8xa9u478fxt` | `cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu` | 0.0 | 0.0 |
+| WhisperNode | `archway1ryq6zncdxpdnnwhn9h24ar48ap9zkqglvkswqm` | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | 0.0 | 0.0 |
 </details>
 
 <details><summary>aura-cosmoshub</summary>
@@ -135,6 +140,7 @@ list = [
 | Crosnest | `axelar19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqzxn3p9` | `cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y` | 0.0 | 0.0 |
 | IcyCRO | `axelar1nna7k5lywn99cd63elcfqm6p8c5c4qcuvmt3z4` | `cosmos1nna7k5lywn99cd63elcfqm6p8c5c4qcug4aef5` | 0.0 | 0.0 |
 | cosmosrescue | `axelar1p4557mdpc2qk8vcemeqgrcg55gs2uyznqcp9vp` | `cosmos1nna7k5lywn99cd63elcfqm6p8c5c4qcug4aef5` | 0.0 | 0.0 |
+| WhisperNode | `axelar1ryq6zncdxpdnnwhn9h24ar48ap9zkqglan6zpd` | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | 0.0 | 0.0 |
 </details>
 
 <details><summary>bitsong-cosmoshub</summary>
@@ -156,6 +162,7 @@ list = [
 | Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
 |------|-----------------|-----------------|--------------------|---------------------------|
 | Cosmos Spaces | `centauri1ks0qeq9vyt9l7vgasaajd49ff0k8kluras573q` | `cosmos1ks0qeq9vyt9l7vgasaajd49ff0k8klure6ez4n` | 0.0 | 0.0 |
+| WhisperNode | `centauri1ryq6zncdxpdnnwhn9h24ar48ap9zkqglahpkwl` | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-crescent</summary>
@@ -181,6 +188,13 @@ list = [
 | Crosnest | `cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y` | `emoney19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqftldae` | 0.0 | 0.0 |
 </details>
 
+<details><summary>cosmoshub-empowerchain</summary>
+
+| Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
+|------|-----------------|-----------------|--------------------|---------------------------|
+| WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `empower1ryq6zncdxpdnnwhn9h24ar48ap9zkqgl93gpsj` | 0.0 | 0.0 |
+</details>
+
 <details><summary>cosmoshub-evmos</summary>
 
 | Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
@@ -199,6 +213,7 @@ list = [
 | Decentrio | `cosmos1w0f29w3hst8hzhr2cv30cfjvqp70yyp9wgr3pv` | `inj1n2wzhz0zvrpzjvwfjva6shq0lxyy0d8atf4f5f` | 0.0 | 0.0 |
 | Lavender.Five Nodes | `cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu` | `inj1mx070d26eu5trde862pfl6gaqmzlcj99udwy02` | 0.0 | 0.0 |
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `inj1w29rwsjjpcmen347qdugjfusun4xshq6zfc6gj` | 0.0 | 0.0 |
+| WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `inj1jszj9xyh2eh8lx25u88rsv7hmsytvwsvr6cne0` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-juno</summary>
@@ -210,6 +225,7 @@ list = [
 | Architect Nodes | `cosmos1w8kzcqk25vr0fx0k7yxn2vjw49qerut2tfv8up` | `juno1w8kzcqk25vr0fx0k7yxn2vjw49qerut2am0uma` | 0.0 | 0.0 |
 | IcyCRO | `cosmos1p7d8mnjttcszv34pk2a5yyug3474mhffasa7tg` | `juno1nna7k5lywn99cd63elcfqm6p8c5c4qcu787zwg` | 0.0 | 0.0 |
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `juno1p4557mdpc2qk8vcemeqgrcg55gs2uyznjy5kqu` | 0.0 | 0.0 |
+| WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `juno1ryq6zncdxpdnnwhn9h24ar48ap9zkqgl0003ds` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-kava</summary>
@@ -236,6 +252,7 @@ list = [
 | IcyCRO | `cosmos1nna7k5lywn99cd63elcfqm6p8c5c4qcug4aef5` | `kujira1nna7k5lywn99cd63elcfqm6p8c5c4qcuealpy7` | 0.0 | 0.0 |
 | Lavender.Five Nodes | `cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu` | `kujira18xrruhq5r246mwk0yj9elnn3mte8xa9u3ae4pk` | 0.0 | 0.0 |
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `kujira1p4557mdpc2qk8vcemeqgrcg55gs2uyzn474422` | 0.0 | 0.0 |
+| WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `kujira1ryq6zncdxpdnnwhn9h24ar48ap9zkqglg4wj8x` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-lumnetwork</summary>
@@ -253,6 +270,7 @@ list = [
 | IcyCRO | `cosmos1nna7k5lywn99cd63elcfqm6p8c5c4qcug4aef5` | `neutron1nna7k5lywn99cd63elcfqm6p8c5c4qcuv25mnn` | 0.0 | 0.0 |
 | CryptoCrew | `cosmos1yghndrffay859ma2ue4pa2cltw640vtayerdla` | `neutron1yghndrffay859ma2ue4pa2cltw640vtaqx2096` | 0.0 | 0.0 |
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `neutron1p4557mdpc2qk8vcemeqgrcg55gs2uyznqf70a8` | 0.0 | 0.0 |
+| WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `neutron1ryq6zncdxpdnnwhn9h24ar48ap9zkqglaz9gst` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-noble</summary>
@@ -285,6 +303,7 @@ list = [
 | Decentrio | `cosmos1sk76c20mkypkm8mmrza09nnkq9vkqn4atn60qj` | `osmo1sk76c20mkypkm8mmrza09nnkq9vkqn4argflkq` | 0.0 | 0.0 |
 | Lavender.Five Nodes | `cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu` | `osmo18xrruhq5r246mwk0yj9elnn3mte8xa9ugwga6w` | 0.0 | 0.0 |
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `osmo1p4557mdpc2qk8vcemeqgrcg55gs2uyznvdya3j` | 0.0 | 0.0 |
+| WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `osmo1ryq6zncdxpdnnwhn9h24ar48ap9zkqgl3xl6u7` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-persistence</summary>
@@ -310,6 +329,7 @@ list = [
 |------|-----------------|-----------------|--------------------|---------------------------|
 | Lavender.Five Nodes | `cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu` | `secret1czy3ak7s26sajcr99cyzfd2l75rprjxlkw4n6t` | 0.0 | 0.0 |
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `secret1u4rm5gqswjyqhtyatu56q42avnzlg0gxklj3v9` | 0.0 | 0.0 |
+| WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `secret1xpgjd2akpc8gmwez25keftpmlgs4aa3un463s7` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-sei</summary>
@@ -317,6 +337,13 @@ list = [
 | Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
 |------|-----------------|-----------------|--------------------|---------------------------|
 | Lavender.Five Nodes | `cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu` | `sei18xrruhq5r246mwk0yj9elnn3mte8xa9ude2m2a` | 0.0 | 0.0 |
+</details>
+
+<details><summary>cosmoshub-sentinel</summary>
+
+| Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
+|------|-----------------|-----------------|--------------------|---------------------------|
+| WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `sent1ryq6zncdxpdnnwhn9h24ar48ap9zkqglzx6nwr` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-stride</summary>
@@ -331,6 +358,7 @@ list = [
 | Decentrio | `cosmos1w0f29w3hst8hzhr2cv30cfjvqp70yyp9wgr3pv` | `stride1w0f29w3hst8hzhr2cv30cfjvqp70yyp9drrd4q` | 0.0 | 0.0 |
 | Lavender.Five Nodes | `cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu` | `stride18xrruhq5r246mwk0yj9elnn3mte8xa9ur7m3cs` | 0.0 | 0.0 |
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `stride1p4557mdpc2qk8vcemeqgrcg55gs2uyzn8ah3nv` | 0.0 | 0.0 |
+| WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `stride1ryq6zncdxpdnnwhn9h24ar48ap9zkqgl6kvk7q` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-teritori</summary>
