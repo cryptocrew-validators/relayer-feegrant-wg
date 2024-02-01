@@ -76,6 +76,22 @@
     },
     {
       "chain_1": {
+        "address": "akash12396w3rxfpe349h7vdhs4e35y4xqq7rxjfnznt"
+      },
+      "chain_2": {
+        "address": "cosmos1ujwsewqwndsyyzt0ujevhr4uxrsd574m8f7l78"
+      },
+      "memo": "You have been relayed by Cosmonaut Stakes",
+      "name": "Cosmonaut Stakes",
+      "discord": {
+        "handle": "danoly"
+      },
+      "telegram": {
+        "handle": "CosmonautStakes"
+      }
+    },
+    {
+      "chain_1": {
         "address": "akash1ryq6zncdxpdnnwhn9h24ar48ap9zkqgl5xpdnk"
       },
       "chain_2": {
