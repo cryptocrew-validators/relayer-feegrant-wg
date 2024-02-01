@@ -27,5 +27,23 @@
         "preferred": true
       }
     }
+  ],
+  "operators": [
+    {
+      "chain_1": {
+        "address": "cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v"
+      },
+      "chain_2": {
+        "address": "empower1ryq6zncdxpdnnwhn9h24ar48ap9zkqgl93gpsj"
+      },
+      "memo": "Eat, Sleep, Relay, Repeat - by Team WhisperNode \ud83e\udd10",
+      "name": "WhisperNode",
+      "discord": {
+        "handle": "ghostdotexe"
+      },
+      "telegram": {
+        "handle": "gh0stdotexe"
+      }
+    }
   ]
 }
