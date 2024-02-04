@@ -92,6 +92,22 @@
       "telegram": {
         "handle": "alagiz"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1wqp8yslqh2mdvxzgljsde8wu6nyjp4qyk5ccwh"
+      },
+      "chain_2": {
+        "address": "terra1j32kujppc2xekktlnrgqepnmjhpg44jwf5045t"
+      },
+      "memo": "PFC - Packets Flying Crosschain",
+      "name": "PFC",
+      "discord": {
+        "handle": ".pfc"
+      },
+      "telegram": {
+        "handle": "pfc_validator"
+      }
     }
   ]
 }

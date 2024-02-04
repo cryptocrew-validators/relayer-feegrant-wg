@@ -172,6 +172,22 @@
       "telegram": {
         "handle": "gh0stdotexe"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1wqp8yslqh2mdvxzgljsde8wu6nyjp4qyk5ccwh"
+      },
+      "chain_2": {
+        "address": "stride1wqp8yslqh2mdvxzgljsde8wu6nyjp4qy4lcy6m"
+      },
+      "memo": "PFC - Packets Flying Crosschain",
+      "name": "PFC",
+      "discord": {
+        "handle": ".pfc"
+      },
+      "telegram": {
+        "handle": "pfc_validator"
+      }
     }
   ]
 }
