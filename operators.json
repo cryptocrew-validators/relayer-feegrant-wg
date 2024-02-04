@@ -392,5 +392,24 @@
     "paths": [
       "akash-cosmoshub"
     ]
+  },
+  {
+    "name": "PFC",
+    "memo": "PFC - Packets Flying Crosschain",
+    "address": "cosmos1wqp8yslqh2mdvxzgljsde8wu6nyjp4qyk5ccwh",
+    "discord": ".pfc",
+    "telegram": "pfc_validator",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-terra2",
+      "cosmoshub-secretnetwork",
+      "cosmoshub-injective",
+      "cosmoshub-stride",
+      "cosmoshub-kujira"
+    ]
   }
 ]
