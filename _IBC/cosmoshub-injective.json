@@ -125,6 +125,22 @@
       "telegram": {
         "handle": "gh0stdotexe"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1wqp8yslqh2mdvxzgljsde8wu6nyjp4qyk5ccwh"
+      },
+      "chain_2": {
+        "address": "inj12qsz2ks3c88knmdg70naeu8xap6reeex9vyjg6"
+      },
+      "memo": "PFC - Packets Flying Crosschain",
+      "name": "PFC",
+      "discord": {
+        "handle": ".pfc"
+      },
+      "telegram": {
+        "handle": "pfc_validator"
+      }
     }
   ]
 }
