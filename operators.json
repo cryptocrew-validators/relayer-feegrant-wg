@@ -411,5 +411,69 @@
       "cosmoshub-stride",
       "cosmoshub-kujira"
     ]
+  },
+  {
+    "name": "Inter Blockchain Services",
+    "memo": "Inter Blockchain Services Relayer",
+    "address": "cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq",
+    "discord": "remiinterblockchainservices",
+    "telegram": "https://t.me/remiibs",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "axelar-cosmoshub",
+      "cosmoshub-kujira",
+      "cosmoshub-teritori"
+    ]
+  },
+  {
+    "name": "Inter Blockchain Services",
+    "memo": "Inter Blockchain Services Relayer",
+    "address": "cosmos1evdjzy3w9t2yu54w4dhc2cvrlc2fvnpts7qstc",
+    "discord": "remiinterblockchainservices",
+    "telegram": "https://t.me/remiibs",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-kichain",
+      "cosmoshub-kava"
+    ]
+  },
+  {
+    "name": "Inter Blockchain Services",
+    "memo": "Inter Blockchain Services Relayer",
+    "address": "cosmos156vfr4kpaa0f07y673awf3u87eeemygldsjwu5",
+    "discord": "remiinterblockchainservices",
+    "telegram": "https://t.me/remiibs",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-osmosis"
+    ]
+  },
+  {
+    "name": "Inter Blockchain Services",
+    "memo": "Inter Blockchain Services Relayer",
+    "address": "cosmos14uyfxlv00lj0qhcwt7vms2rsf7kxuld75qcj6u",
+    "discord": "remiinterblockchainservices",
+    "telegram": "https://t.me/remiibs",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-lumnetwork",
+      "cosmoshub-quicksilver"
+    ]
   }
 ]
