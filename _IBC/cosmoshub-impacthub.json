@@ -24,5 +24,23 @@
       "version": "ics20-1",
       "tags": {}
     }
+  ],
+  "operators": [
+    {
+      "chain_1": {
+        "address": "cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq"
+      },
+      "chain_2": {
+        "address": "ixo14uyfxlv00lj0qhcwt7vms2rsf7kxuld7t4xq70"
+      },
+      "memo": "Inter Blockchain Services Relayer",
+      "name": "Inter Blockchain Services",
+      "discord": {
+        "handle": "remiinterblockchainservices"
+      },
+      "telegram": {
+        "handle": "remiibs"
+      }
+    }
   ]
 }

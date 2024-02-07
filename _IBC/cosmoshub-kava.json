@@ -60,6 +60,22 @@
       "telegram": {
         "handle": "alagiz"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1evdjzy3w9t2yu54w4dhc2cvrlc2fvnpts7qstc"
+      },
+      "chain_2": {
+        "address": "kava1evdjzy3w9t2yu54w4dhc2cvrlc2fvnptvt5dal"
+      },
+      "memo": "Inter Blockchain Services Relayer",
+      "name": "Inter Blockchain Services",
+      "discord": {
+        "handle": "remiinterblockchainservices"
+      },
+      "telegram": {
+        "handle": "remiibs"
+      }
     }
   ]
 }

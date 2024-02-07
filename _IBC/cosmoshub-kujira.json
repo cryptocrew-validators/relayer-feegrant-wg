@@ -140,6 +140,22 @@
       "telegram": {
         "handle": "pfc_validator"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq"
+      },
+      "chain_2": {
+        "address": "kujira1evdjzy3w9t2yu54w4dhc2cvrlc2fvnptpkzgxj"
+      },
+      "memo": "Inter Blockchain Services Relayer",
+      "name": "Inter Blockchain Services",
+      "discord": {
+        "handle": "remiinterblockchainservices"
+      },
+      "telegram": {
+        "handle": "remiibs"
+      }
     }
   ]
 }

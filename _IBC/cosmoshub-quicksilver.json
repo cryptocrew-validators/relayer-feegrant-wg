@@ -72,6 +72,22 @@
       "telegram": {
         "handle": "social244305_Architect_Nodes"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos14uyfxlv00lj0qhcwt7vms2rsf7kxuld75qcj6u"
+      },
+      "chain_2": {
+        "address": "quick14uyfxlv00lj0qhcwt7vms2rsf7kxuld7lygqrw"
+      },
+      "memo": "Inter Blockchain Services Relayer",
+      "name": "Inter Blockchain Services",
+      "discord": {
+        "handle": "remiinterblockchainservices"
+      },
+      "telegram": {
+        "handle": "remiibs"
+      }
     }
   ]
 }
