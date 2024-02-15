@@ -189,6 +189,38 @@
       "telegram": {
         "handle": "remiibs"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf"
+      },
+      "chain_2": {
+        "address": "osmo1clpawdm0dkyjsz5ed48ch3cv5z7d40gu09jta3"
+      },
+      "memo": "Peace and love brought to you by Cypher Core",
+      "name": "Cypher Core",
+      "discord": {
+        "handle": "pepeforlife"
+      },
+      "telegram": {
+        "handle": "jim380"
+      }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos17ndx5qfku28ymxgmq6zq4a6d02dvpfjj5yu8j9"
+      },
+      "chain_2": {
+        "address": "osmo17ndx5qfku28ymxgmq6zq4a6d02dvpfjjul0hyh"
+      },
+      "memo": "Relayed with \u2764\ufe0f by \ud83d\udc39 Quokka Stake",
+      "name": "\ud83d\udc39 Quokka Stake",
+      "discord": {
+        "handle": "@freak12techno"
+      },
+      "telegram": {
+        "handle": "@freak12techno"
+      }
     }
   ]
 }

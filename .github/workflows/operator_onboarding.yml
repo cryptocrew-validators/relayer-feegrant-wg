@@ -5,7 +5,8 @@ on:
     types: [opened, edited]
 
 permissions:
-  contents: write  
+  contents: write
+  issues: write
 
 jobs:
   update-ibc-file:

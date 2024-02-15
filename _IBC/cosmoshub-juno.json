@@ -124,6 +124,22 @@
       "telegram": {
         "handle": "gh0stdotexe"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf"
+      },
+      "chain_2": {
+        "address": "juno1yv2myphganx8evm3z6s8rstwnd468c8cf36mg4"
+      },
+      "memo": "Peace and love brought to you by Cypher Core",
+      "name": "Cypher Core",
+      "discord": {
+        "handle": "pepeforlife"
+      },
+      "telegram": {
+        "handle": "jim380"
+      }
     }
   ]
 }
