@@ -108,6 +108,22 @@
       "telegram": {
         "handle": "gh0stdotexe"
       }
+    },
+    {
+      "chain_1": {
+        "address": "axelar14uyfxlv00lj0qhcwt7vms2rsf7kxuld7sww63a"
+      },
+      "chain_2": {
+        "address": "cosmos14uyfxlv00lj0qhcwt7vms2rsf7kxuld75qcj6u"
+      },
+      "memo": "Inter Blockchain Services Relayer",
+      "name": "Inter Blockchain Services",
+      "discord": {
+        "handle": "remiinterblockchainservices"
+      },
+      "telegram": {
+        "handle": "remiibs"
+      }
     }
   ]
 }

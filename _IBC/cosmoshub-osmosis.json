@@ -176,6 +176,22 @@
     },
     {
       "chain_1": {
+        "address": "cosmos156vfr4kpaa0f07y673awf3u87eeemygldsjwu5"
+      },
+      "chain_2": {
+        "address": "osmo156vfr4kpaa0f07y673awf3u87eeemygl9tp72x"
+      },
+      "memo": "Inter Blockchain Services Relayer",
+      "name": "Inter Blockchain Services",
+      "discord": {
+        "handle": "remiinterblockchainservices"
+      },
+      "telegram": {
+        "handle": "remiibs"
+      }
+    },
+    {
+      "chain_1": {
         "address": "cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf"
       },
       "chain_2": {

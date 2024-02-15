@@ -44,6 +44,22 @@
       "telegram": {
         "handle": "crosnest_com"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1evdjzy3w9t2yu54w4dhc2cvrlc2fvnpts7qstc"
+      },
+      "chain_2": {
+        "address": "ki1evdjzy3w9t2yu54w4dhc2cvrlc2fvnptpn3l0v"
+      },
+      "memo": "Inter Blockchain Services Relayer",
+      "name": "Inter Blockchain Services",
+      "discord": {
+        "handle": "remiinterblockchainservices"
+      },
+      "telegram": {
+        "handle": "remiibs"
+      }
     }
   ]
 }

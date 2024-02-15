@@ -27,5 +27,23 @@
         "preferred": true
       }
     }
+  ],
+  "operators": [
+    {
+      "chain_1": {
+        "address": "cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq"
+      },
+      "chain_2": {
+        "address": "dym1yp9cvg8rncfh07xcsmafte6jf860qq5vlwp32t"
+      },
+      "memo": "Inter Blockchain Services Relayer",
+      "name": "Inter Blockchain Services",
+      "discord": {
+        "handle": "remiinterblockchainservices"
+      },
+      "telegram": {
+        "handle": "remiibs"
+      }
+    }
   ]
 }
