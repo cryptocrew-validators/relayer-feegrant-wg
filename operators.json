@@ -426,5 +426,89 @@
     "paths": [
       "cosmoshub-osmosis"
     ]
+  },
+  {
+    "name": "Inter Blockchain Services",
+    "memo": "Inter Blockchain Services Relayer",
+    "address": "cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq",
+    "discord": "remiinterblockchainservices",
+    "telegram": "remiibs",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-kujira",
+      "cosmoshub-impacthub",
+      "cosmoshub-dymension",
+      "cosmoshub-teritori",
+      "coreum-cosmoshub"
+    ]
+  },
+  {
+    "name": "Inter Blockchain Services",
+    "memo": "Inter Blockchain Services Relayer",
+    "address": "cosmos1evdjzy3w9t2yu54w4dhc2cvrlc2fvnpts7qstc",
+    "discord": "remiinterblockchainservices",
+    "telegram": "remiibs",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-kichain",
+      "cosmoshub-kava",
+      "bitcanna-cosmoshub"
+    ]
+  },
+  {
+    "name": "Inter Blockchain Services",
+    "memo": "Inter Blockchain Services Relayer",
+    "address": "cosmos156vfr4kpaa0f07y673awf3u87eeemygldsjwu5",
+    "discord": "remiinterblockchainservices",
+    "telegram": "remiibs",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-osmosis"
+    ]
+  },
+  {
+    "name": "Cypher Core",
+    "memo": "Peace and love brought to you by Cypher Core",
+    "address": "cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf",
+    "discord": "pepeforlife",
+    "telegram": "jim380",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-osmosis",
+      "cosmoshub-juno",
+      "cosmoshub-stride"
+    ]
+  },
+  {
+    "name": "Inter Blockchain Services",
+    "memo": "Inter Blockchain Services Relayer",
+    "address": "cosmos14uyfxlv00lj0qhcwt7vms2rsf7kxuld75qcj6u",
+    "discord": "remiinterblockchainservices",
+    "telegram": "remiibs",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-quicksilver",
+      "axelar-cosmoshub"
+    ]
   }
 ]

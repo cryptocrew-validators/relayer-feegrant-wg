@@ -90,11 +90,15 @@ list = [
 | Crosnest | `cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y` | 6 | [`galadrin_crosnest`](https://discordapp.com/users/galadrin_crosnest) | [`crosnest_com`](https://t.me/crosnest_com) | 50.0 | 50.0 |
 | Crosnest | `cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff` | 5 | [`galadrin_crosnest`](https://discordapp.com/users/galadrin_crosnest) | [`crosnest_com`](https://t.me/crosnest_com) | 50.0 | 50.0 |
 | PFC | `cosmos1wqp8yslqh2mdvxzgljsde8wu6nyjp4qyk5ccwh` | 5 | [`.pfc`](https://discordapp.com/users/.pfc) | [`pfc_validator`](https://t.me/pfc_validator) | 0.0 | 0.0 |
+| Inter Blockchain Services | `cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq` | 5 | [`remiinterblockchainservices`](https://discordapp.com/users/remiinterblockchainservices) | [`remiibs`](https://t.me/remiibs) | 0.0 | 0.0 |
 | IcyCRO | `cosmos1nna7k5lywn99cd63elcfqm6p8c5c4qcug4aef5` | 4 | [`zanglang`](https://discordapp.com/users/zanglang) | [`zanglang`](https://t.me/zanglang) | 50.0 | 50.0 |
 | IcyCRO | `cosmos1p7d8mnjttcszv34pk2a5yyug3474mhffasa7tg` | 3 | [`zanglang`](https://discordapp.com/users/zanglang) | [`zanglang`](https://t.me/zanglang) | 50.0 | 50.0 |
 | Decentrio | `cosmos1w0f29w3hst8hzhr2cv30cfjvqp70yyp9wgr3pv` | 3 | [`dunguyen29`](https://discordapp.com/users/dunguyen29) | [`dunguyen_29`](https://t.me/dunguyen_29) | 50.0 | 50.0 |
+| Inter Blockchain Services | `cosmos1evdjzy3w9t2yu54w4dhc2cvrlc2fvnpts7qstc` | 3 | [`remiinterblockchainservices`](https://discordapp.com/users/remiinterblockchainservices) | [`remiibs`](https://t.me/remiibs) | 0.0 | 0.0 |
+| Cypher Core | `cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf` | 3 | [`pepeforlife`](https://discordapp.com/users/pepeforlife) | [`jim380`](https://t.me/jim380) | 0.0 | 0.0 |
 | Cosmos Spaces | `cosmos1558hpgzv2jt6rkuccaklxhgtj8mcleq0s2zcsl` | 2 | [`.tricky_.`](https://discordapp.com/users/.tricky_.) | [`Char1esBark1ey`](https://t.me/Char1esBark1ey) | 50.0 | 50.0 |
 | Architect Nodes | `cosmos1w8kzcqk25vr0fx0k7yxn2vjw49qerut2tfv8up` | 2 | [`architectnodes`](https://discordapp.com/users/architectnodes) | [`social244305_Architect_Nodes`](https://t.me/social244305_Architect_Nodes) | 50.0 | 50.0 |
+| Inter Blockchain Services | `cosmos14uyfxlv00lj0qhcwt7vms2rsf7kxuld75qcj6u` | 2 | [`remiinterblockchainservices`](https://discordapp.com/users/remiinterblockchainservices) | [`remiibs`](https://t.me/remiibs) | 0.0 | 0.0 |
 | CryptoCrew | `cosmos1f269n4mrg0s8tqveny9huulyamvdv97n094dgm` | 1 | [`ccclaimens`](https://discordapp.com/users/ccclaimens) | [`clemensg`](https://t.me/clemensg) | 50.0 | 50.0 |
 | Cosmos Spaces | `cosmos1kgs9ml9hc085k6pm36z6wlnjc3c8zv99myau2w` | 1 | [`.tricky_.`](https://discordapp.com/users/.tricky_.) | [`Char1esBark1ey`](https://t.me/Char1esBark1ey) | 50.0 | 50.0 |
 | Architect Nodes | `cosmos1ln3l6waaqdjcskt3ztzqlzkpvmzp7zw4ky2xgp` | 1 | [`architectnodes`](https://discordapp.com/users/architectnodes) | [`social244305_Architect_Nodes`](https://t.me/social244305_Architect_Nodes) | 50.0 | 50.0 |
@@ -103,6 +107,7 @@ list = [
 | Decentrio | `cosmos1sk76c20mkypkm8mmrza09nnkq9vkqn4atn60qj` | 1 | [`dunguyen29`](https://discordapp.com/users/dunguyen29) | [`dunguyen_29`](https://t.me/dunguyen_29) | 50.0 | 50.0 |
 | Cosmonaut Stakes | `cosmos1ujwsewqwndsyyzt0ujevhr4uxrsd574m8f7l78` | 1 | [`danoly`](https://discordapp.com/users/danoly) | [`CosmonautStakes`](https://t.me/CosmonautStakes) | 50.0 | 50.0 |
 | 🐹 Quokka Stake | `cosmos17ndx5qfku28ymxgmq6zq4a6d02dvpfjj5yu8j9` | 1 | [`@freak12techno`](https://discordapp.com/users/@freak12techno) | [`@freak12techno`](https://t.me/@freak12techno) | 0.0 | 0.0 |
+| Inter Blockchain Services | `cosmos156vfr4kpaa0f07y673awf3u87eeemygldsjwu5` | 1 | [`remiinterblockchainservices`](https://discordapp.com/users/remiinterblockchainservices) | [`remiibs`](https://t.me/remiibs) | 0.0 | 0.0 |
 
 ## Paths
 
@@ -143,6 +148,14 @@ list = [
 | IcyCRO | `axelar1nna7k5lywn99cd63elcfqm6p8c5c4qcuvmt3z4` | `cosmos1nna7k5lywn99cd63elcfqm6p8c5c4qcug4aef5` | 0.0 | 0.0 |
 | cosmosrescue | `axelar1p4557mdpc2qk8vcemeqgrcg55gs2uyznqcp9vp` | `cosmos1nna7k5lywn99cd63elcfqm6p8c5c4qcug4aef5` | 0.0 | 0.0 |
 | WhisperNode | `axelar1ryq6zncdxpdnnwhn9h24ar48ap9zkqglan6zpd` | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | 0.0 | 0.0 |
+| Inter Blockchain Services | `axelar14uyfxlv00lj0qhcwt7vms2rsf7kxuld7sww63a` | `cosmos14uyfxlv00lj0qhcwt7vms2rsf7kxuld75qcj6u` | 0.0 | 0.0 |
+</details>
+
+<details><summary>bitcanna-cosmoshub</summary>
+
+| Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
+|------|-----------------|-----------------|--------------------|---------------------------|
+| Inter Blockchain Services | `bcna1evdjzy3w9t2yu54w4dhc2cvrlc2fvnpt2ws3r2` | `cosmos1evdjzy3w9t2yu54w4dhc2cvrlc2fvnpts7qstc` | 0.0 | 0.0 |
 </details>
 
 <details><summary>bitsong-cosmoshub</summary>
@@ -167,6 +180,13 @@ list = [
 | WhisperNode | `centauri1ryq6zncdxpdnnwhn9h24ar48ap9zkqglahpkwl` | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | 0.0 | 0.0 |
 </details>
 
+<details><summary>coreum-cosmoshub</summary>
+
+| Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
+|------|-----------------|-----------------|--------------------|---------------------------|
+| Inter Blockchain Services | `core14uyfxlv00lj0qhcwt7vms2rsf7kxuld78wqfa8` | `cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq` | 0.0 | 0.0 |
+</details>
+
 <details><summary>cosmoshub-crescent</summary>
 
 | Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
@@ -181,6 +201,13 @@ list = [
 | Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
 |------|-----------------|-----------------|--------------------|---------------------------|
 | Crosnest | `cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y` | `cro19kzuzfmmy9wjr3cl0ss8wjzjup9g49hq7ndqk4` | 0.0 | 0.0 |
+</details>
+
+<details><summary>cosmoshub-dymension</summary>
+
+| Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
+|------|-----------------|-----------------|--------------------|---------------------------|
+| Inter Blockchain Services | `cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq` | `dym1yp9cvg8rncfh07xcsmafte6jf860qq5vlwp32t` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-emoney</summary>
@@ -206,6 +233,13 @@ list = [
 | IcyCRO | `cosmos1p7d8mnjttcszv34pk2a5yyug3474mhffasa7tg` | `evmos1lldjhjnn32e8vek7cxe9g05nf8j74y0xa6dt3p` | 0.0 | 0.0 |
 </details>
 
+<details><summary>cosmoshub-impacthub</summary>
+
+| Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
+|------|-----------------|-----------------|--------------------|---------------------------|
+| Inter Blockchain Services | `cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq` | `ixo14uyfxlv00lj0qhcwt7vms2rsf7kxuld7t4xq70` | 0.0 | 0.0 |
+</details>
+
 <details><summary>cosmoshub-injective</summary>
 
 | Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
@@ -229,6 +263,7 @@ list = [
 | IcyCRO | `cosmos1p7d8mnjttcszv34pk2a5yyug3474mhffasa7tg` | `juno1nna7k5lywn99cd63elcfqm6p8c5c4qcu787zwg` | 0.0 | 0.0 |
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `juno1p4557mdpc2qk8vcemeqgrcg55gs2uyznjy5kqu` | 0.0 | 0.0 |
 | WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `juno1ryq6zncdxpdnnwhn9h24ar48ap9zkqgl0003ds` | 0.0 | 0.0 |
+| Cypher Core | `cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf` | `juno1yv2myphganx8evm3z6s8rstwnd468c8cf36mg4` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-kava</summary>
@@ -237,6 +272,7 @@ list = [
 |------|-----------------|-----------------|--------------------|---------------------------|
 | Crosnest | `cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff` | `kava19pjtx7dah2fquf7udyxjv94h0eraha78er9rlw` | 0.0 | 0.0 |
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `kava1k9jg0f6rtp6vengjjnzd27plvygsr9r0wuu0qt` | 0.0 | 0.0 |
+| Inter Blockchain Services | `cosmos1evdjzy3w9t2yu54w4dhc2cvrlc2fvnpts7qstc` | `kava1evdjzy3w9t2yu54w4dhc2cvrlc2fvnptvt5dal` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-kichain</summary>
@@ -244,6 +280,7 @@ list = [
 | Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
 |------|-----------------|-----------------|--------------------|---------------------------|
 | Crosnest | `cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y` | `ki19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqh95kws` | 0.0 | 0.0 |
+| Inter Blockchain Services | `cosmos1evdjzy3w9t2yu54w4dhc2cvrlc2fvnpts7qstc` | `ki1evdjzy3w9t2yu54w4dhc2cvrlc2fvnptpn3l0v` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-kujira</summary>
@@ -257,6 +294,7 @@ list = [
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `kujira1p4557mdpc2qk8vcemeqgrcg55gs2uyzn474422` | 0.0 | 0.0 |
 | WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `kujira1ryq6zncdxpdnnwhn9h24ar48ap9zkqglg4wj8x` | 0.0 | 0.0 |
 | PFC | `cosmos1wqp8yslqh2mdvxzgljsde8wu6nyjp4qyk5ccwh` | `kujira1wqp8yslqh2mdvxzgljsde8wu6nyjp4qy8u6qra` | 0.0 | 0.0 |
+| Inter Blockchain Services | `cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq` | `kujira1evdjzy3w9t2yu54w4dhc2cvrlc2fvnptpkzgxj` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-lumnetwork</summary>
@@ -308,6 +346,8 @@ list = [
 | Lavender.Five Nodes | `cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu` | `osmo18xrruhq5r246mwk0yj9elnn3mte8xa9ugwga6w` | 0.0 | 0.0 |
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `osmo1p4557mdpc2qk8vcemeqgrcg55gs2uyznvdya3j` | 0.0 | 0.0 |
 | WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `osmo1ryq6zncdxpdnnwhn9h24ar48ap9zkqgl3xl6u7` | 0.0 | 0.0 |
+| Inter Blockchain Services | `cosmos156vfr4kpaa0f07y673awf3u87eeemygldsjwu5` | `osmo156vfr4kpaa0f07y673awf3u87eeemygl9tp72x` | 0.0 | 0.0 |
+| Cypher Core | `cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf` | `osmo1clpawdm0dkyjsz5ed48ch3cv5z7d40gu09jta3` | 0.0 | 0.0 |
 | 🐹 Quokka Stake | `cosmos17ndx5qfku28ymxgmq6zq4a6d02dvpfjj5yu8j9` | `osmo17ndx5qfku28ymxgmq6zq4a6d02dvpfjjul0hyh` | 0.0 | 0.0 |
 </details>
 
@@ -326,6 +366,7 @@ list = [
 | Cosmos Spaces | `cosmos1ks0qeq9vyt9l7vgasaajd49ff0k8klure6ez4n` | `quick1ks0qeq9vyt9l7vgasaajd49ff0k8klurj7fsvp` | 0.0 | 0.0 |
 | Crosnest | `cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt` | `quick1l267dmlmprhu4p5aqslf50f495vjqlg3ks6kte` | 0.0 | 0.0 |
 | Architect Nodes | `cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv` | `quick1cx82d7pm4dgffy7a93rl6ul5g84vjgxkvzk327` | 0.0 | 0.0 |
+| Inter Blockchain Services | `cosmos14uyfxlv00lj0qhcwt7vms2rsf7kxuld75qcj6u` | `quick14uyfxlv00lj0qhcwt7vms2rsf7kxuld7lygqrw` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-secretnetwork</summary>
@@ -366,6 +407,7 @@ list = [
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `stride1p4557mdpc2qk8vcemeqgrcg55gs2uyzn8ah3nv` | 0.0 | 0.0 |
 | WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `stride1ryq6zncdxpdnnwhn9h24ar48ap9zkqgl6kvk7q` | 0.0 | 0.0 |
 | PFC | `cosmos1wqp8yslqh2mdvxzgljsde8wu6nyjp4qyk5ccwh` | `stride1wqp8yslqh2mdvxzgljsde8wu6nyjp4qy4lcy6m` | 0.0 | 0.0 |
+| Cypher Core | `cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf` | `stride1yv2myphganx8evm3z6s8rstwnd468c8cugeum9` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-teritori</summary>
@@ -373,6 +415,7 @@ list = [
 | Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
 |------|-----------------|-----------------|--------------------|---------------------------|
 | Crosnest | `cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt` | `tori1l267dmlmprhu4p5aqslf50f495vjqlg3lqadfm` | 0.0 | 0.0 |
+| Inter Blockchain Services | `cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq` | `tori14uyfxlv00lj0qhcwt7vms2rsf7kxuld7k50mpv` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-terra2</summary>
