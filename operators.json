@@ -411,5 +411,20 @@
       "cosmoshub-stride",
       "cosmoshub-kujira"
     ]
+  },
+  {
+    "name": "\ud83d\udc39 Quokka Stake",
+    "memo": "Relayed with \u2764\ufe0f by \ud83d\udc39 Quokka Stake",
+    "address": "cosmos17ndx5qfku28ymxgmq6zq4a6d02dvpfjj5yu8j9",
+    "discord": "@freak12techno",
+    "telegram": "@freak12techno",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-osmosis"
+    ]
   }
 ]

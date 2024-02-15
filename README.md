@@ -102,6 +102,7 @@ list = [
 | Cosmos Spaces | `cosmos126pkrcvytfvsvrdm7x4wme5y780amvwwarzezc` | 1 | [`.tricky_.`](https://discordapp.com/users/.tricky_.) | [`Char1esBark1ey`](https://t.me/Char1esBark1ey) | 50.0 | 50.0 |
 | Decentrio | `cosmos1sk76c20mkypkm8mmrza09nnkq9vkqn4atn60qj` | 1 | [`dunguyen29`](https://discordapp.com/users/dunguyen29) | [`dunguyen_29`](https://t.me/dunguyen_29) | 50.0 | 50.0 |
 | Cosmonaut Stakes | `cosmos1ujwsewqwndsyyzt0ujevhr4uxrsd574m8f7l78` | 1 | [`danoly`](https://discordapp.com/users/danoly) | [`CosmonautStakes`](https://t.me/CosmonautStakes) | 50.0 | 50.0 |
+| 🐹 Quokka Stake | `cosmos17ndx5qfku28ymxgmq6zq4a6d02dvpfjj5yu8j9` | 1 | [`@freak12techno`](https://discordapp.com/users/@freak12techno) | [`@freak12techno`](https://t.me/@freak12techno) | 0.0 | 0.0 |
 
 ## Paths
 
@@ -307,6 +308,7 @@ list = [
 | Lavender.Five Nodes | `cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu` | `osmo18xrruhq5r246mwk0yj9elnn3mte8xa9ugwga6w` | 0.0 | 0.0 |
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `osmo1p4557mdpc2qk8vcemeqgrcg55gs2uyznvdya3j` | 0.0 | 0.0 |
 | WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `osmo1ryq6zncdxpdnnwhn9h24ar48ap9zkqgl3xl6u7` | 0.0 | 0.0 |
+| 🐹 Quokka Stake | `cosmos17ndx5qfku28ymxgmq6zq4a6d02dvpfjj5yu8j9` | `osmo17ndx5qfku28ymxgmq6zq4a6d02dvpfjjul0hyh` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-persistence</summary>
