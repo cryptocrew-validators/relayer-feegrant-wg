@@ -188,6 +188,22 @@
       "telegram": {
         "handle": "pfc_validator"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf"
+      },
+      "chain_2": {
+        "address": "stride1yv2myphganx8evm3z6s8rstwnd468c8cugeum9"
+      },
+      "memo": "Peace and love brought to you by Cypher Core",
+      "name": "Cypher Core",
+      "discord": {
+        "handle": "pepeforlife"
+      },
+      "telegram": {
+        "handle": "jim380"
+      }
     }
   ]
 }
