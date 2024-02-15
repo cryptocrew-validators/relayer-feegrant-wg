@@ -173,6 +173,22 @@
       "telegram": {
         "handle": "gh0stdotexe"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1ure9g8re7h3qpk7d976e6t8yf4l9lz2etv3dh2"
+      },
+      "chain_2": {
+        "address": "osmo18xrruhq5r246mwk0yj9elnn3mte8xa9ugwga6w"
+      },
+      "memo": "Relayed with \\ud83d\\udc9c by Lavender.Five Nodes \\ud83d\\udc1d",
+      "name": "Lavender.Five Nodes",
+      "discord": {
+        "handle": "dylanschultzie"
+      },
+      "telegram": {
+        "handle": "dylanschultzie"
+      }
     }
   ]
 }
