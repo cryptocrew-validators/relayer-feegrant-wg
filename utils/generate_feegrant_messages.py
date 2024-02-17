@@ -3,6 +3,7 @@ import json
 import os
 import requests
 import subprocess
+from pathlib import Path
 from datetime import datetime
 
 # Load environment
@@ -194,10 +195,32 @@ def main():
             "signatures": last_tx_fields['signatures']
         }
 
-    # Output the final transaction
+    base_dir = Path(__file__).resolve().parent.parent 
+    todays_date = datetime.now().strftime("%d%m%Y")
+    new_dir_path = base_dir / f"multisig/{todays_date}"
+    new_dir_path.mkdir(parents=True, exist_ok=True)
+    tx_file_path = new_dir_path / "tx.json"
+
+    try:
+        new_dir_path.mkdir(parents=True, exist_ok=True)
+    except PermissionError as e:
+        print(f"Permission denied: Unable to create directory at {new_dir_path}.")
+        print("Please ensure you have the necessary permissions to write to this location.")
+        return
+
+    tx_file_path = new_dir_path / "tx.json"
+
     if final_tx:
         print("Batched tx messages:")
         print(json.dumps(final_tx, indent=2))
+        
+        try:
+            with open(tx_file_path, 'w') as tx_file:
+                json.dump(final_tx, tx_file, indent=2)
+            print(f"Batched transaction message saved to {tx_file_path}")
+        except PermissionError as e:
+            print(f"Permission denied: Unable to write to {tx_file_path}.")
+            print("Please ensure you have the necessary permissions to write to this location.")
     else:
         print("No final transaction generated.")
 
