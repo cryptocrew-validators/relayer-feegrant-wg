@@ -401,7 +401,7 @@
     "telegram": "pfc_validator",
     "feegrant": {
       "enabled": false,
-      "period_spend_limit": 50000000,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -420,7 +420,7 @@
     "telegram": "@freak12techno",
     "feegrant": {
       "enabled": false,
-      "period_spend_limit": 50000000,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -435,7 +435,7 @@
     "telegram": "remiibs",
     "feegrant": {
       "enabled": false,
-      "period_spend_limit": 50000000,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -454,7 +454,7 @@
     "telegram": "remiibs",
     "feegrant": {
       "enabled": false,
-      "period_spend_limit": 50000000,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -471,7 +471,7 @@
     "telegram": "remiibs",
     "feegrant": {
       "enabled": false,
-      "period_spend_limit": 50000000,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -486,7 +486,7 @@
     "telegram": "jim380",
     "feegrant": {
       "enabled": false,
-      "period_spend_limit": 50000000,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -503,12 +503,87 @@
     "telegram": "remiibs",
     "feegrant": {
       "enabled": false,
-      "period_spend_limit": 50000000,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
       "cosmoshub-quicksilver",
       "axelar-cosmoshub"
+    ]
+  },
+  {
+    "name": "Lavender.Five Nodes",
+    "memo": "Relayed with \\ud83d\\udc9c by Lavender.Five Nodes \\ud83d\\udc1d",
+    "address": "cosmos1ure9g8re7h3qpk7d976e6t8yf4l9lz2etv3dh2",
+    "discord": "dylanschultzie",
+    "telegram": "dylanschultzie",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-osmosis"
+    ]
+  },
+  {
+    "name": "Lavender.Five Nodes",
+    "memo": "Relayed with \\ud83d\\udc9c by Lavender.Five Nodes \\ud83d\\udc1d",
+    "address": "cosmos159rufrfkf5g8qld5zqlsejesr4mlnfx0jkhj2f",
+    "discord": "dylanschultzie",
+    "telegram": "dylanschultzie",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-osmosis"
+    ]
+  },
+  {
+    "name": "Lavender.Five Nodes",
+    "memo": "Relayed with \\ud83d\\udc9c by Lavender.Five Nodes \\ud83d\\udc1d",
+    "address": "cosmos1j6swju2q7zywxmpcttcw4k98j7fphx5n5wrgyk",
+    "discord": "dylanschultzie",
+    "telegram": "dylanschultzie",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-osmosis"
+    ]
+  },
+  {
+    "name": "Lavender.Five Nodes",
+    "memo": "Relayed with \\ud83d\\udc9c by Lavender.Five Nodes \\ud83d\\udc1d",
+    "address": "cosmos1aypuqvaaq54jn3zleqd6lamnxruun5neplwq20",
+    "discord": "dylanschultzie",
+    "telegram": "dylanschultzie",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-osmosis"
+    ]
+  },
+  {
+    "name": "Lavender.Five Nodes",
+    "memo": "Relayed with \\ud83d\\udc9c by Lavender.Five Nodes \\ud83d\\udc1d",
+    "address": "cosmos1nzjcsulyfxh0evmajk3ruawh407h5x8fse7tcy",
+    "discord": "dylanschultzie",
+    "telegram": "dylanschultzie",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-osmosis"
     ]
   }
 ]

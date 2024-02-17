@@ -108,6 +108,11 @@ list = [
 | Cosmonaut Stakes | `cosmos1ujwsewqwndsyyzt0ujevhr4uxrsd574m8f7l78` | 1 | [`danoly`](https://discordapp.com/users/danoly) | [`CosmonautStakes`](https://t.me/CosmonautStakes) | 50.0 | 50.0 |
 | 🐹 Quokka Stake | `cosmos17ndx5qfku28ymxgmq6zq4a6d02dvpfjj5yu8j9` | 1 | [`@freak12techno`](https://discordapp.com/users/@freak12techno) | [`@freak12techno`](https://t.me/@freak12techno) | 0.0 | 0.0 |
 | Inter Blockchain Services | `cosmos156vfr4kpaa0f07y673awf3u87eeemygldsjwu5` | 1 | [`remiinterblockchainservices`](https://discordapp.com/users/remiinterblockchainservices) | [`remiibs`](https://t.me/remiibs) | 0.0 | 0.0 |
+| Lavender.Five Nodes | `cosmos1ure9g8re7h3qpk7d976e6t8yf4l9lz2etv3dh2` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 0.0 | 0.0 |
+| Lavender.Five Nodes | `cosmos159rufrfkf5g8qld5zqlsejesr4mlnfx0jkhj2f` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 0.0 | 0.0 |
+| Lavender.Five Nodes | `cosmos1j6swju2q7zywxmpcttcw4k98j7fphx5n5wrgyk` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 0.0 | 0.0 |
+| Lavender.Five Nodes | `cosmos1aypuqvaaq54jn3zleqd6lamnxruun5neplwq20` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 0.0 | 0.0 |
+| Lavender.Five Nodes | `cosmos1nzjcsulyfxh0evmajk3ruawh407h5x8fse7tcy` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 0.0 | 0.0 |
 
 ## Paths
 
@@ -349,6 +354,11 @@ list = [
 | Inter Blockchain Services | `cosmos156vfr4kpaa0f07y673awf3u87eeemygldsjwu5` | `osmo156vfr4kpaa0f07y673awf3u87eeemygl9tp72x` | 0.0 | 0.0 |
 | Cypher Core | `cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf` | `osmo1clpawdm0dkyjsz5ed48ch3cv5z7d40gu09jta3` | 0.0 | 0.0 |
 | 🐹 Quokka Stake | `cosmos17ndx5qfku28ymxgmq6zq4a6d02dvpfjj5yu8j9` | `osmo17ndx5qfku28ymxgmq6zq4a6d02dvpfjjul0hyh` | 0.0 | 0.0 |
+| Lavender.Five Nodes | `cosmos1ure9g8re7h3qpk7d976e6t8yf4l9lz2etv3dh2` | `osmo18xrruhq5r246mwk0yj9elnn3mte8xa9ugwga6w` | 0.0 | 0.0 |
+| Lavender.Five Nodes | `cosmos159rufrfkf5g8qld5zqlsejesr4mlnfx0jkhj2f` | `osmo18xrruhq5r246mwk0yj9elnn3mte8xa9ugwga6w` | 0.0 | 0.0 |
+| Lavender.Five Nodes | `cosmos1j6swju2q7zywxmpcttcw4k98j7fphx5n5wrgyk` | `osmo18xrruhq5r246mwk0yj9elnn3mte8xa9ugwga6w` | 0.0 | 0.0 |
+| Lavender.Five Nodes | `cosmos1aypuqvaaq54jn3zleqd6lamnxruun5neplwq20` | `osmo18xrruhq5r246mwk0yj9elnn3mte8xa9ugwga6w` | 0.0 | 0.0 |
+| Lavender.Five Nodes | `cosmos1nzjcsulyfxh0evmajk3ruawh407h5x8fse7tcy` | `osmo18xrruhq5r246mwk0yj9elnn3mte8xa9ugwga6w` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-persistence</summary>
