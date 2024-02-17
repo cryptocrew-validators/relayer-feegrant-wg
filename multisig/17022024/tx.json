@@ -1,0 +1,337 @@
+{
+  "body": {
+    "messages": [
+      {
+        "@type": "/cosmos.feegrant.v1beta1.MsgGrantAllowance",
+        "granter": "cosmos14r8ff03jkyac2fukjtfrfgaj8ehjlhds5ec2zp",
+        "grantee": "cosmos1wqp8yslqh2mdvxzgljsde8wu6nyjp4qyk5ccwh",
+        "allowance": {
+          "@type": "/cosmos.feegrant.v1beta1.PeriodicAllowance",
+          "basic": {
+            "spend_limit": [],
+            "expiration": null
+          },
+          "period": "86400s",
+          "period_spend_limit": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_can_spend": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_reset": "2024-02-18T16:30:32.118371695Z"
+        }
+      },
+      {
+        "@type": "/cosmos.feegrant.v1beta1.MsgGrantAllowance",
+        "granter": "cosmos14r8ff03jkyac2fukjtfrfgaj8ehjlhds5ec2zp",
+        "grantee": "cosmos17ndx5qfku28ymxgmq6zq4a6d02dvpfjj5yu8j9",
+        "allowance": {
+          "@type": "/cosmos.feegrant.v1beta1.PeriodicAllowance",
+          "basic": {
+            "spend_limit": [],
+            "expiration": null
+          },
+          "period": "86400s",
+          "period_spend_limit": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_can_spend": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_reset": "2024-02-18T16:30:32.141547886Z"
+        }
+      },
+      {
+        "@type": "/cosmos.feegrant.v1beta1.MsgGrantAllowance",
+        "granter": "cosmos14r8ff03jkyac2fukjtfrfgaj8ehjlhds5ec2zp",
+        "grantee": "cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq",
+        "allowance": {
+          "@type": "/cosmos.feegrant.v1beta1.PeriodicAllowance",
+          "basic": {
+            "spend_limit": [],
+            "expiration": null
+          },
+          "period": "86400s",
+          "period_spend_limit": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_can_spend": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_reset": "2024-02-18T16:30:32.166290271Z"
+        }
+      },
+      {
+        "@type": "/cosmos.feegrant.v1beta1.MsgGrantAllowance",
+        "granter": "cosmos14r8ff03jkyac2fukjtfrfgaj8ehjlhds5ec2zp",
+        "grantee": "cosmos1evdjzy3w9t2yu54w4dhc2cvrlc2fvnpts7qstc",
+        "allowance": {
+          "@type": "/cosmos.feegrant.v1beta1.PeriodicAllowance",
+          "basic": {
+            "spend_limit": [],
+            "expiration": null
+          },
+          "period": "86400s",
+          "period_spend_limit": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_can_spend": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_reset": "2024-02-18T16:30:32.188884837Z"
+        }
+      },
+      {
+        "@type": "/cosmos.feegrant.v1beta1.MsgGrantAllowance",
+        "granter": "cosmos14r8ff03jkyac2fukjtfrfgaj8ehjlhds5ec2zp",
+        "grantee": "cosmos156vfr4kpaa0f07y673awf3u87eeemygldsjwu5",
+        "allowance": {
+          "@type": "/cosmos.feegrant.v1beta1.PeriodicAllowance",
+          "basic": {
+            "spend_limit": [],
+            "expiration": null
+          },
+          "period": "86400s",
+          "period_spend_limit": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_can_spend": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_reset": "2024-02-18T16:30:32.211195848Z"
+        }
+      },
+      {
+        "@type": "/cosmos.feegrant.v1beta1.MsgGrantAllowance",
+        "granter": "cosmos14r8ff03jkyac2fukjtfrfgaj8ehjlhds5ec2zp",
+        "grantee": "cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf",
+        "allowance": {
+          "@type": "/cosmos.feegrant.v1beta1.PeriodicAllowance",
+          "basic": {
+            "spend_limit": [],
+            "expiration": null
+          },
+          "period": "86400s",
+          "period_spend_limit": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_can_spend": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_reset": "2024-02-18T16:30:32.233378257Z"
+        }
+      },
+      {
+        "@type": "/cosmos.feegrant.v1beta1.MsgGrantAllowance",
+        "granter": "cosmos14r8ff03jkyac2fukjtfrfgaj8ehjlhds5ec2zp",
+        "grantee": "cosmos14uyfxlv00lj0qhcwt7vms2rsf7kxuld75qcj6u",
+        "allowance": {
+          "@type": "/cosmos.feegrant.v1beta1.PeriodicAllowance",
+          "basic": {
+            "spend_limit": [],
+            "expiration": null
+          },
+          "period": "86400s",
+          "period_spend_limit": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_can_spend": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_reset": "2024-02-18T16:30:32.255629633Z"
+        }
+      },
+      {
+        "@type": "/cosmos.feegrant.v1beta1.MsgGrantAllowance",
+        "granter": "cosmos14r8ff03jkyac2fukjtfrfgaj8ehjlhds5ec2zp",
+        "grantee": "cosmos1ure9g8re7h3qpk7d976e6t8yf4l9lz2etv3dh2",
+        "allowance": {
+          "@type": "/cosmos.feegrant.v1beta1.PeriodicAllowance",
+          "basic": {
+            "spend_limit": [],
+            "expiration": null
+          },
+          "period": "86400s",
+          "period_spend_limit": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_can_spend": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_reset": "2024-02-18T16:30:32.279441389Z"
+        }
+      },
+      {
+        "@type": "/cosmos.feegrant.v1beta1.MsgGrantAllowance",
+        "granter": "cosmos14r8ff03jkyac2fukjtfrfgaj8ehjlhds5ec2zp",
+        "grantee": "cosmos159rufrfkf5g8qld5zqlsejesr4mlnfx0jkhj2f",
+        "allowance": {
+          "@type": "/cosmos.feegrant.v1beta1.PeriodicAllowance",
+          "basic": {
+            "spend_limit": [],
+            "expiration": null
+          },
+          "period": "86400s",
+          "period_spend_limit": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_can_spend": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_reset": "2024-02-18T16:30:32.301933797Z"
+        }
+      },
+      {
+        "@type": "/cosmos.feegrant.v1beta1.MsgGrantAllowance",
+        "granter": "cosmos14r8ff03jkyac2fukjtfrfgaj8ehjlhds5ec2zp",
+        "grantee": "cosmos1j6swju2q7zywxmpcttcw4k98j7fphx5n5wrgyk",
+        "allowance": {
+          "@type": "/cosmos.feegrant.v1beta1.PeriodicAllowance",
+          "basic": {
+            "spend_limit": [],
+            "expiration": null
+          },
+          "period": "86400s",
+          "period_spend_limit": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_can_spend": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_reset": "2024-02-18T16:30:32.325067305Z"
+        }
+      },
+      {
+        "@type": "/cosmos.feegrant.v1beta1.MsgGrantAllowance",
+        "granter": "cosmos14r8ff03jkyac2fukjtfrfgaj8ehjlhds5ec2zp",
+        "grantee": "cosmos1aypuqvaaq54jn3zleqd6lamnxruun5neplwq20",
+        "allowance": {
+          "@type": "/cosmos.feegrant.v1beta1.PeriodicAllowance",
+          "basic": {
+            "spend_limit": [],
+            "expiration": null
+          },
+          "period": "86400s",
+          "period_spend_limit": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_can_spend": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_reset": "2024-02-18T16:30:32.348822687Z"
+        }
+      },
+      {
+        "@type": "/cosmos.feegrant.v1beta1.MsgGrantAllowance",
+        "granter": "cosmos14r8ff03jkyac2fukjtfrfgaj8ehjlhds5ec2zp",
+        "grantee": "cosmos1nzjcsulyfxh0evmajk3ruawh407h5x8fse7tcy",
+        "allowance": {
+          "@type": "/cosmos.feegrant.v1beta1.PeriodicAllowance",
+          "basic": {
+            "spend_limit": [],
+            "expiration": null
+          },
+          "period": "86400s",
+          "period_spend_limit": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_can_spend": [
+            {
+              "denom": "uatom",
+              "amount": "50000000"
+            }
+          ],
+          "period_reset": "2024-02-18T16:30:32.371759700Z"
+        }
+      }
+    ],
+    "memo": "",
+    "timeout_height": "0",
+    "extension_options": [],
+    "non_critical_extension_options": []
+  },
+  "auth_info": {
+    "signer_infos": [],
+    "fee": {
+      "amount": [
+        {
+          "denom": "uatom",
+          "amount": "3400"
+        }
+      ],
+      "gas_limit": "680000",
+      "payer": "",
+      "granter": ""
+    }
+  },
+  "signatures": []
+}
