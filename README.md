@@ -89,16 +89,16 @@ list = [
 | Architect Nodes | `cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv` | 7 | [`architectnodes`](https://discordapp.com/users/architectnodes) | [`social244305_Architect_Nodes`](https://t.me/social244305_Architect_Nodes) | 50.0 | 50.0 |
 | Crosnest | `cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y` | 6 | [`galadrin_crosnest`](https://discordapp.com/users/galadrin_crosnest) | [`crosnest_com`](https://t.me/crosnest_com) | 50.0 | 50.0 |
 | Crosnest | `cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff` | 5 | [`galadrin_crosnest`](https://discordapp.com/users/galadrin_crosnest) | [`crosnest_com`](https://t.me/crosnest_com) | 50.0 | 50.0 |
-| PFC | `cosmos1wqp8yslqh2mdvxzgljsde8wu6nyjp4qyk5ccwh` | 5 | [`.pfc`](https://discordapp.com/users/.pfc) | [`pfc_validator`](https://t.me/pfc_validator) | 0.0 | 0.0 |
-| Inter Blockchain Services | `cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq` | 5 | [`remiinterblockchainservices`](https://discordapp.com/users/remiinterblockchainservices) | [`remiibs`](https://t.me/remiibs) | 0.0 | 0.0 |
+| PFC | `cosmos1wqp8yslqh2mdvxzgljsde8wu6nyjp4qyk5ccwh` | 5 | [`.pfc`](https://discordapp.com/users/.pfc) | [`pfc_validator`](https://t.me/pfc_validator) | 50.0 | 50.0 |
+| Inter Blockchain Services | `cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq` | 5 | [`remiinterblockchainservices`](https://discordapp.com/users/remiinterblockchainservices) | [`remiibs`](https://t.me/remiibs) | 50.0 | 50.0 |
 | IcyCRO | `cosmos1nna7k5lywn99cd63elcfqm6p8c5c4qcug4aef5` | 4 | [`zanglang`](https://discordapp.com/users/zanglang) | [`zanglang`](https://t.me/zanglang) | 50.0 | 50.0 |
 | IcyCRO | `cosmos1p7d8mnjttcszv34pk2a5yyug3474mhffasa7tg` | 3 | [`zanglang`](https://discordapp.com/users/zanglang) | [`zanglang`](https://t.me/zanglang) | 50.0 | 50.0 |
 | Decentrio | `cosmos1w0f29w3hst8hzhr2cv30cfjvqp70yyp9wgr3pv` | 3 | [`dunguyen29`](https://discordapp.com/users/dunguyen29) | [`dunguyen_29`](https://t.me/dunguyen_29) | 50.0 | 50.0 |
-| Inter Blockchain Services | `cosmos1evdjzy3w9t2yu54w4dhc2cvrlc2fvnpts7qstc` | 3 | [`remiinterblockchainservices`](https://discordapp.com/users/remiinterblockchainservices) | [`remiibs`](https://t.me/remiibs) | 0.0 | 0.0 |
-| Cypher Core | `cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf` | 3 | [`pepeforlife`](https://discordapp.com/users/pepeforlife) | [`jim380`](https://t.me/jim380) | 0.0 | 0.0 |
+| Inter Blockchain Services | `cosmos1evdjzy3w9t2yu54w4dhc2cvrlc2fvnpts7qstc` | 3 | [`remiinterblockchainservices`](https://discordapp.com/users/remiinterblockchainservices) | [`remiibs`](https://t.me/remiibs) | 50.0 | 50.0 |
+| Cypher Core | `cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf` | 3 | [`pepeforlife`](https://discordapp.com/users/pepeforlife) | [`jim380`](https://t.me/jim380) | 50.0 | 50.0 |
 | Cosmos Spaces | `cosmos1558hpgzv2jt6rkuccaklxhgtj8mcleq0s2zcsl` | 2 | [`.tricky_.`](https://discordapp.com/users/.tricky_.) | [`Char1esBark1ey`](https://t.me/Char1esBark1ey) | 50.0 | 50.0 |
 | Architect Nodes | `cosmos1w8kzcqk25vr0fx0k7yxn2vjw49qerut2tfv8up` | 2 | [`architectnodes`](https://discordapp.com/users/architectnodes) | [`social244305_Architect_Nodes`](https://t.me/social244305_Architect_Nodes) | 50.0 | 50.0 |
-| Inter Blockchain Services | `cosmos14uyfxlv00lj0qhcwt7vms2rsf7kxuld75qcj6u` | 2 | [`remiinterblockchainservices`](https://discordapp.com/users/remiinterblockchainservices) | [`remiibs`](https://t.me/remiibs) | 0.0 | 0.0 |
+| Inter Blockchain Services | `cosmos14uyfxlv00lj0qhcwt7vms2rsf7kxuld75qcj6u` | 2 | [`remiinterblockchainservices`](https://discordapp.com/users/remiinterblockchainservices) | [`remiibs`](https://t.me/remiibs) | 50.0 | 50.0 |
 | CryptoCrew | `cosmos1f269n4mrg0s8tqveny9huulyamvdv97n094dgm` | 1 | [`ccclaimens`](https://discordapp.com/users/ccclaimens) | [`clemensg`](https://t.me/clemensg) | 50.0 | 50.0 |
 | Cosmos Spaces | `cosmos1kgs9ml9hc085k6pm36z6wlnjc3c8zv99myau2w` | 1 | [`.tricky_.`](https://discordapp.com/users/.tricky_.) | [`Char1esBark1ey`](https://t.me/Char1esBark1ey) | 50.0 | 50.0 |
 | Architect Nodes | `cosmos1ln3l6waaqdjcskt3ztzqlzkpvmzp7zw4ky2xgp` | 1 | [`architectnodes`](https://discordapp.com/users/architectnodes) | [`social244305_Architect_Nodes`](https://t.me/social244305_Architect_Nodes) | 50.0 | 50.0 |
@@ -106,13 +106,14 @@ list = [
 | Cosmos Spaces | `cosmos126pkrcvytfvsvrdm7x4wme5y780amvwwarzezc` | 1 | [`.tricky_.`](https://discordapp.com/users/.tricky_.) | [`Char1esBark1ey`](https://t.me/Char1esBark1ey) | 50.0 | 50.0 |
 | Decentrio | `cosmos1sk76c20mkypkm8mmrza09nnkq9vkqn4atn60qj` | 1 | [`dunguyen29`](https://discordapp.com/users/dunguyen29) | [`dunguyen_29`](https://t.me/dunguyen_29) | 50.0 | 50.0 |
 | Cosmonaut Stakes | `cosmos1ujwsewqwndsyyzt0ujevhr4uxrsd574m8f7l78` | 1 | [`danoly`](https://discordapp.com/users/danoly) | [`CosmonautStakes`](https://t.me/CosmonautStakes) | 50.0 | 50.0 |
-| 🐹 Quokka Stake | `cosmos17ndx5qfku28ymxgmq6zq4a6d02dvpfjj5yu8j9` | 1 | [`@freak12techno`](https://discordapp.com/users/@freak12techno) | [`@freak12techno`](https://t.me/@freak12techno) | 0.0 | 0.0 |
-| Inter Blockchain Services | `cosmos156vfr4kpaa0f07y673awf3u87eeemygldsjwu5` | 1 | [`remiinterblockchainservices`](https://discordapp.com/users/remiinterblockchainservices) | [`remiibs`](https://t.me/remiibs) | 0.0 | 0.0 |
-| Lavender.Five Nodes | `cosmos1ure9g8re7h3qpk7d976e6t8yf4l9lz2etv3dh2` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 0.0 | 0.0 |
-| Lavender.Five Nodes | `cosmos159rufrfkf5g8qld5zqlsejesr4mlnfx0jkhj2f` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 0.0 | 0.0 |
-| Lavender.Five Nodes | `cosmos1j6swju2q7zywxmpcttcw4k98j7fphx5n5wrgyk` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 0.0 | 0.0 |
-| Lavender.Five Nodes | `cosmos1aypuqvaaq54jn3zleqd6lamnxruun5neplwq20` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 0.0 | 0.0 |
-| Lavender.Five Nodes | `cosmos1nzjcsulyfxh0evmajk3ruawh407h5x8fse7tcy` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 0.0 | 0.0 |
+| 🐹 Quokka Stake | `cosmos17ndx5qfku28ymxgmq6zq4a6d02dvpfjj5yu8j9` | 1 | [`@freak12techno`](https://discordapp.com/users/@freak12techno) | [`@freak12techno`](https://t.me/@freak12techno) | 50.0 | 50.0 |
+| Inter Blockchain Services | `cosmos156vfr4kpaa0f07y673awf3u87eeemygldsjwu5` | 1 | [`remiinterblockchainservices`](https://discordapp.com/users/remiinterblockchainservices) | [`remiibs`](https://t.me/remiibs) | 50.0 | 50.0 |
+| Lavender.Five Nodes | `cosmos1ure9g8re7h3qpk7d976e6t8yf4l9lz2etv3dh2` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 50.0 | 50.0 |
+| Lavender.Five Nodes | `cosmos159rufrfkf5g8qld5zqlsejesr4mlnfx0jkhj2f` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 50.0 | 50.0 |
+| Lavender.Five Nodes | `cosmos1j6swju2q7zywxmpcttcw4k98j7fphx5n5wrgyk` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 50.0 | 50.0 |
+| Lavender.Five Nodes | `cosmos1aypuqvaaq54jn3zleqd6lamnxruun5neplwq20` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 50.0 | 50.0 |
+| Lavender.Five Nodes | `cosmos1nzjcsulyfxh0evmajk3ruawh407h5x8fse7tcy` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 50.0 | 50.0 |
+| ValiDAO | `cosmos16p6lrlxf7f03c0ka8cv4sznr29rym27up5d9kh` | 1 | [`murakamikaze`](https://discordapp.com/users/murakamikaze) | [`murakamikaze`](https://t.me/murakamikaze) | 0.0 | 0.0 |
 
 ## Paths
 
@@ -359,6 +360,7 @@ list = [
 | Lavender.Five Nodes | `cosmos1j6swju2q7zywxmpcttcw4k98j7fphx5n5wrgyk` | `osmo18xrruhq5r246mwk0yj9elnn3mte8xa9ugwga6w` | 0.0 | 0.0 |
 | Lavender.Five Nodes | `cosmos1aypuqvaaq54jn3zleqd6lamnxruun5neplwq20` | `osmo18xrruhq5r246mwk0yj9elnn3mte8xa9ugwga6w` | 0.0 | 0.0 |
 | Lavender.Five Nodes | `cosmos1nzjcsulyfxh0evmajk3ruawh407h5x8fse7tcy` | `osmo18xrruhq5r246mwk0yj9elnn3mte8xa9ugwga6w` | 0.0 | 0.0 |
+| ValiDAO | `cosmos16p6lrlxf7f03c0ka8cv4sznr29rym27up5d9kh` | `osmo16p6lrlxf7f03c0ka8cv4sznr29rym27uf074q9` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-persistence</summary>
