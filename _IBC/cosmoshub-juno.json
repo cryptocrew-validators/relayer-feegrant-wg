@@ -140,6 +140,22 @@
       "telegram": {
         "handle": "jim380"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c"
+      },
+      "chain_2": {
+        "address": "juno1kqmzy5gph45f57hqdlchqsktk82ntmsxlen2j6"
+      },
+      "memo": "Relayed by GATA HUB",
+      "name": "GATA HUB",
+      "discord": {
+        "handle": "jovegatadao"
+      },
+      "telegram": {
+        "handle": "jovecosmos"
+      }
     }
   ]
 }
