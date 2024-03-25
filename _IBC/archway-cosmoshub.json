@@ -75,6 +75,22 @@
       "telegram": {
         "handle": "gh0stdotexe"
       }
+    },
+    {
+      "chain_1": {
+        "address": "archway1k8kq4292fdl6n4v5nu6fh7zm9zak7ffv6r3qld"
+      },
+      "chain_2": {
+        "address": "cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c"
+      },
+      "memo": "Relayed by GATA HUB",
+      "name": "GATA HUB",
+      "discord": {
+        "handle": "jovegatadao"
+      },
+      "telegram": {
+        "handle": "jovecosmos"
+      }
     }
   ]
 }

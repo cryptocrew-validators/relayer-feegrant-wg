@@ -60,6 +60,22 @@
       "telegram": {
         "handle": "remiibs"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c"
+      },
+      "chain_2": {
+        "address": "tori1hghqe5k6jj5ll0fl3wg3prandw07q2h2r30xnk"
+      },
+      "memo": "Relayed by GATA HUB",
+      "name": "GATA HUB",
+      "discord": {
+        "handle": "jovegatadao"
+      },
+      "telegram": {
+        "handle": "jovecosmos"
+      }
     }
   ]
 }

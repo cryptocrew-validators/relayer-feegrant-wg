@@ -76,6 +76,22 @@
       "telegram": {
         "handle": "dylanschultzie"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c"
+      },
+      "chain_2": {
+        "address": "omniflix1tfa6axplvpt0ucsur4zv56a5gq8x6x0nr5z3qa"
+      },
+      "memo": "Relayed by GATA HUB",
+      "name": "GATA HUB",
+      "discord": {
+        "handle": "jovegatadao"
+      },
+      "telegram": {
+        "handle": "jovecosmos"
+      }
     }
   ]
 }
