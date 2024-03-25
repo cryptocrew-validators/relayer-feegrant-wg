@@ -85,6 +85,7 @@ list = [
 | WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | 13 | [`ghostdotexe`](https://discordapp.com/users/ghostdotexe) | [`gh0stdotexe`](https://t.me/gh0stdotexe) | 50.0 | 50.0 |
 | Cosmos Spaces | `cosmos1ks0qeq9vyt9l7vgasaajd49ff0k8klure6ez4n` | 11 | [`.tricky_.`](https://discordapp.com/users/.tricky_.) | [`Char1esBark1ey`](https://t.me/Char1esBark1ey) | 50.0 | 50.0 |
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | 11 | [`subzero0057`](https://discordapp.com/users/subzero0057) | [`alagiz`](https://t.me/alagiz) | 50.0 | 50.0 |
+| GATA HUB | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | 8 | [`jovegatadao`](https://discordapp.com/users/jovegatadao) | [`jovecosmos`](https://t.me/jovecosmos) | 0.0 | 0.0 |
 | Crosnest | `cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt` | 7 | [`galadrin_crosnest`](https://discordapp.com/users/galadrin_crosnest) | [`crosnest_com`](https://t.me/crosnest_com) | 50.0 | 50.0 |
 | Architect Nodes | `cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv` | 7 | [`architectnodes`](https://discordapp.com/users/architectnodes) | [`social244305_Architect_Nodes`](https://t.me/social244305_Architect_Nodes) | 50.0 | 50.0 |
 | Crosnest | `cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y` | 6 | [`galadrin_crosnest`](https://discordapp.com/users/galadrin_crosnest) | [`crosnest_com`](https://t.me/crosnest_com) | 50.0 | 50.0 |
@@ -126,6 +127,7 @@ list = [
 | cosmosrescue | `akash1p4557mdpc2qk8vcemeqgrcg55gs2uyznfd6276` | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | 0.0 | 0.0 |
 | Cosmonaut Stakes | `akash12396w3rxfpe349h7vdhs4e35y4xqq7rxjfnznt` | `cosmos1ujwsewqwndsyyzt0ujevhr4uxrsd574m8f7l78` | 0.0 | 0.0 |
 | WhisperNode | `akash1ryq6zncdxpdnnwhn9h24ar48ap9zkqgl5xpdnk` | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | 0.0 | 0.0 |
+| GATA HUB | `akash182ydqc6grkqyuxqmte4dh40jw4sw32jx2x7dyz` | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | 0.0 | 0.0 |
 </details>
 
 <details><summary>archway-cosmoshub</summary>
@@ -135,6 +137,7 @@ list = [
 | Crosnest | `archway1l267dmlmprhu4p5aqslf50f495vjqlg3glkqcu` | `cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt` | 0.0 | 0.0 |
 | Lavender.Five Nodes | `archway18xrruhq5r246mwk0yj9elnn3mte8xa9u478fxt` | `cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu` | 0.0 | 0.0 |
 | WhisperNode | `archway1ryq6zncdxpdnnwhn9h24ar48ap9zkqglvkswqm` | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | 0.0 | 0.0 |
+| GATA HUB | `archway1k8kq4292fdl6n4v5nu6fh7zm9zak7ffv6r3qld` | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | 0.0 | 0.0 |
 </details>
 
 <details><summary>aura-cosmoshub</summary>
@@ -270,6 +273,7 @@ list = [
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `juno1p4557mdpc2qk8vcemeqgrcg55gs2uyznjy5kqu` | 0.0 | 0.0 |
 | WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `juno1ryq6zncdxpdnnwhn9h24ar48ap9zkqgl0003ds` | 0.0 | 0.0 |
 | Cypher Core | `cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf` | `juno1yv2myphganx8evm3z6s8rstwnd468c8cf36mg4` | 0.0 | 0.0 |
+| GATA HUB | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | `juno1kqmzy5gph45f57hqdlchqsktk82ntmsxlen2j6` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-kava</summary>
@@ -319,6 +323,7 @@ list = [
 | CryptoCrew | `cosmos1yghndrffay859ma2ue4pa2cltw640vtayerdla` | `neutron1yghndrffay859ma2ue4pa2cltw640vtaqx2096` | 0.0 | 0.0 |
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `neutron1p4557mdpc2qk8vcemeqgrcg55gs2uyznqf70a8` | 0.0 | 0.0 |
 | WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `neutron1ryq6zncdxpdnnwhn9h24ar48ap9zkqglaz9gst` | 0.0 | 0.0 |
+| GATA HUB | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | `neutron1uyv59p94h6g9ta2xucrphpu2l5ydce0h5lt7z0` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-noble</summary>
@@ -337,6 +342,7 @@ list = [
 | Crosnest | `cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y` | `omniflix19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqmk5qa6` | 0.0 | 0.0 |
 | Architect Nodes | `cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv` | `omniflix1cx82d7pm4dgffy7a93rl6ul5g84vjgxk6ch6yj` | 0.0 | 0.0 |
 | Lavender.Five Nodes | `cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu` | `omniflix18xrruhq5r246mwk0yj9elnn3mte8xa9uat25mz` | 0.0 | 0.0 |
+| GATA HUB | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | `omniflix1tfa6axplvpt0ucsur4zv56a5gq8x6x0nr5z3qa` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-osmosis</summary>
@@ -361,6 +367,7 @@ list = [
 | Lavender.Five Nodes | `cosmos1aypuqvaaq54jn3zleqd6lamnxruun5neplwq20` | `osmo18xrruhq5r246mwk0yj9elnn3mte8xa9ugwga6w` | 0.0 | 0.0 |
 | Lavender.Five Nodes | `cosmos1nzjcsulyfxh0evmajk3ruawh407h5x8fse7tcy` | `osmo18xrruhq5r246mwk0yj9elnn3mte8xa9ugwga6w` | 0.0 | 0.0 |
 | ValiDAO | `cosmos16p6lrlxf7f03c0ka8cv4sznr29rym27up5d9kh` | `osmo16p6lrlxf7f03c0ka8cv4sznr29rym27uf074q9` | 0.0 | 0.0 |
+| GATA HUB | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | `osmo129k9pj8yk58278q8l6j00azdxfjvz93kp37pak` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-persistence</summary>
@@ -420,6 +427,7 @@ list = [
 | WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `stride1ryq6zncdxpdnnwhn9h24ar48ap9zkqgl6kvk7q` | 0.0 | 0.0 |
 | PFC | `cosmos1wqp8yslqh2mdvxzgljsde8wu6nyjp4qyk5ccwh` | `stride1wqp8yslqh2mdvxzgljsde8wu6nyjp4qy4lcy6m` | 0.0 | 0.0 |
 | Cypher Core | `cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf` | `stride1yv2myphganx8evm3z6s8rstwnd468c8cugeum9` | 0.0 | 0.0 |
+| GATA HUB | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | `stride1texfv73p49gv69rl8wehtn9tnvkt9676564tyh` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-teritori</summary>
@@ -428,6 +436,7 @@ list = [
 |------|-----------------|-----------------|--------------------|---------------------------|
 | Crosnest | `cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt` | `tori1l267dmlmprhu4p5aqslf50f495vjqlg3lqadfm` | 0.0 | 0.0 |
 | Inter Blockchain Services | `cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq` | `tori14uyfxlv00lj0qhcwt7vms2rsf7kxuld7k50mpv` | 0.0 | 0.0 |
+| GATA HUB | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | `tori1hghqe5k6jj5ll0fl3wg3prandw07q2h2r30xnk` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-terra2</summary>

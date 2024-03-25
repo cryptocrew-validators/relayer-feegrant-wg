@@ -612,5 +612,27 @@
     "paths": [
       "cosmoshub-osmosis"
     ]
+  },
+  {
+    "name": "GATA HUB",
+    "memo": "Relayed by GATA HUB",
+    "address": "cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c",
+    "discord": "jovegatadao",
+    "telegram": "jovecosmos",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-juno",
+      "cosmoshub-osmosis",
+      "akash-cosmoshub",
+      "archway-cosmoshub",
+      "cosmoshub-neutron",
+      "cosmoshub-teritori",
+      "cosmoshub-stride",
+      "cosmoshub-omniflixhub"
+    ]
   }
 ]
