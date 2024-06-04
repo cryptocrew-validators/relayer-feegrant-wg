@@ -156,6 +156,22 @@
       "telegram": {
         "handle": "remiibs"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1n6j7gnld9yxfyh6tflxhjjmt404zruuaf73t08"
+      },
+      "chain_2": {
+        "address": "kujira1n6j7gnld9yxfyh6tflxhjjmt404zruuacknnzd"
+      },
+      "memo": "Relayed By Golden Ratio Staking",
+      "name": "Golden Ratio Staking",
+      "discord": {
+        "handle": "goldenstaking"
+      },
+      "telegram": {
+        "handle": "fibstaking"
+      }
     }
   ]
 }
