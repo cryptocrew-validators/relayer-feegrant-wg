@@ -1,7 +1,7 @@
 ## RELAYER FEEGRANT WG - Report 1/2024
 
 Date: 2024/06/21  
-Data: [flipside](https://flipsidecrypto.xyz)
+Data: [flipside](https://flipsidecrypto.xyz)  
 Public Dashboard: https://flipsidecrypto.xyz/zanglang/relayer-dao-6OJ04V  
 
 - Total transactions using the feegrant: 2,356,157
