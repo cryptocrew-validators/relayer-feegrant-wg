@@ -634,5 +634,26 @@
       "cosmoshub-stride",
       "cosmoshub-omniflixhub"
     ]
+  },
+  {
+    "name": "Golden Ratio Staking",
+    "memo": "Relayed By Golden Ratio Staking",
+    "address": "cosmos1n6j7gnld9yxfyh6tflxhjjmt404zruuaf73t08",
+    "discord": "goldenstaking",
+    "telegram": "fibstaking",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-noble",
+      "cosmoshub-neutron",
+      "cosmoshub-kujira",
+      "cosmoshub-osmosis",
+      "cosmoshub-injective",
+      "cosmoshub-juno",
+      "cosmoshub-stride"
+    ]
   }
 ]

@@ -88,6 +88,7 @@ list = [
 | GATA HUB | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | 8 | [`jovegatadao`](https://discordapp.com/users/jovegatadao) | [`jovecosmos`](https://t.me/jovecosmos) | 0.0 | 0.0 |
 | Crosnest | `cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt` | 7 | [`galadrin_crosnest`](https://discordapp.com/users/galadrin_crosnest) | [`crosnest_com`](https://t.me/crosnest_com) | 50.0 | 50.0 |
 | Architect Nodes | `cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv` | 7 | [`architectnodes`](https://discordapp.com/users/architectnodes) | [`social244305_Architect_Nodes`](https://t.me/social244305_Architect_Nodes) | 50.0 | 50.0 |
+| Golden Ratio Staking | `cosmos1n6j7gnld9yxfyh6tflxhjjmt404zruuaf73t08` | 7 | [`goldenstaking`](https://discordapp.com/users/goldenstaking) | [`fibstaking`](https://t.me/fibstaking) | 0.0 | 0.0 |
 | Crosnest | `cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y` | 6 | [`galadrin_crosnest`](https://discordapp.com/users/galadrin_crosnest) | [`crosnest_com`](https://t.me/crosnest_com) | 50.0 | 50.0 |
 | Crosnest | `cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff` | 5 | [`galadrin_crosnest`](https://discordapp.com/users/galadrin_crosnest) | [`crosnest_com`](https://t.me/crosnest_com) | 50.0 | 50.0 |
 | PFC | `cosmos1wqp8yslqh2mdvxzgljsde8wu6nyjp4qyk5ccwh` | 5 | [`.pfc`](https://discordapp.com/users/.pfc) | [`pfc_validator`](https://t.me/pfc_validator) | 50.0 | 50.0 |
@@ -260,6 +261,7 @@ list = [
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `inj1w29rwsjjpcmen347qdugjfusun4xshq6zfc6gj` | 0.0 | 0.0 |
 | WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `inj1jszj9xyh2eh8lx25u88rsv7hmsytvwsvr6cne0` | 0.0 | 0.0 |
 | PFC | `cosmos1wqp8yslqh2mdvxzgljsde8wu6nyjp4qyk5ccwh` | `inj12qsz2ks3c88knmdg70naeu8xap6reeex9vyjg6` | 0.0 | 0.0 |
+| Golden Ratio Staking | `cosmos1n6j7gnld9yxfyh6tflxhjjmt404zruuaf73t08` | `inj15wvxn0lvg7zf942h8rt3zqw2qgm3h3g0lm9rnp` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-juno</summary>
@@ -274,6 +276,7 @@ list = [
 | WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `juno1ryq6zncdxpdnnwhn9h24ar48ap9zkqgl0003ds` | 0.0 | 0.0 |
 | Cypher Core | `cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf` | `juno1yv2myphganx8evm3z6s8rstwnd468c8cf36mg4` | 0.0 | 0.0 |
 | GATA HUB | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | `juno1kqmzy5gph45f57hqdlchqsktk82ntmsxlen2j6` | 0.0 | 0.0 |
+| Golden Ratio Staking | `cosmos1n6j7gnld9yxfyh6tflxhjjmt404zruuaf73t08` | `juno1n6j7gnld9yxfyh6tflxhjjmt404zruualvjsgm` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-kava</summary>
@@ -305,6 +308,7 @@ list = [
 | WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `kujira1ryq6zncdxpdnnwhn9h24ar48ap9zkqglg4wj8x` | 0.0 | 0.0 |
 | PFC | `cosmos1wqp8yslqh2mdvxzgljsde8wu6nyjp4qyk5ccwh` | `kujira1wqp8yslqh2mdvxzgljsde8wu6nyjp4qy8u6qra` | 0.0 | 0.0 |
 | Inter Blockchain Services | `cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq` | `kujira1evdjzy3w9t2yu54w4dhc2cvrlc2fvnptpkzgxj` | 0.0 | 0.0 |
+| Golden Ratio Staking | `cosmos1n6j7gnld9yxfyh6tflxhjjmt404zruuaf73t08` | `kujira1n6j7gnld9yxfyh6tflxhjjmt404zruuacknnzd` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-lumnetwork</summary>
@@ -324,6 +328,7 @@ list = [
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `neutron1p4557mdpc2qk8vcemeqgrcg55gs2uyznqf70a8` | 0.0 | 0.0 |
 | WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `neutron1ryq6zncdxpdnnwhn9h24ar48ap9zkqglaz9gst` | 0.0 | 0.0 |
 | GATA HUB | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | `neutron1uyv59p94h6g9ta2xucrphpu2l5ydce0h5lt7z0` | 0.0 | 0.0 |
+| Golden Ratio Staking | `cosmos1n6j7gnld9yxfyh6tflxhjjmt404zruuaf73t08` | `neutron1n6j7gnld9yxfyh6tflxhjjmt404zruuadpcf4q` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-noble</summary>
@@ -333,6 +338,7 @@ list = [
 | Cosmos Spaces | `cosmos1ks0qeq9vyt9l7vgasaajd49ff0k8klure6ez4n` | `noble1ks0qeq9vyt9l7vgasaajd49ff0k8klur3ev2da` | 0.0 | 0.0 |
 | Lavender.Five Nodes | `cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu` | `noble18xrruhq5r246mwk0yj9elnn3mte8xa9ugkw95j` | 0.0 | 0.0 |
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `noble1p4557mdpc2qk8vcemeqgrcg55gs2uyznv4z9lw` | 0.0 | 0.0 |
+| Golden Ratio Staking | `cosmos1n6j7gnld9yxfyh6tflxhjjmt404zruuaf73t08` | `noble1n6j7gnld9yxfyh6tflxhjjmt404zruuapayrhf` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-omniflixhub</summary>
@@ -368,6 +374,7 @@ list = [
 | Lavender.Five Nodes | `cosmos1nzjcsulyfxh0evmajk3ruawh407h5x8fse7tcy` | `osmo18xrruhq5r246mwk0yj9elnn3mte8xa9ugwga6w` | 0.0 | 0.0 |
 | ValiDAO | `cosmos16p6lrlxf7f03c0ka8cv4sznr29rym27up5d9kh` | `osmo16p6lrlxf7f03c0ka8cv4sznr29rym27uf074q9` | 0.0 | 0.0 |
 | GATA HUB | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | `osmo129k9pj8yk58278q8l6j00azdxfjvz93kp37pak` | 0.0 | 0.0 |
+| Golden Ratio Staking | `cosmos1n6j7gnld9yxfyh6tflxhjjmt404zruuaf73t08` | `osmo1n6j7gnld9yxfyh6tflxhjjmt404zruuap9zme4` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-persistence</summary>
@@ -428,6 +435,7 @@ list = [
 | PFC | `cosmos1wqp8yslqh2mdvxzgljsde8wu6nyjp4qyk5ccwh` | `stride1wqp8yslqh2mdvxzgljsde8wu6nyjp4qy4lcy6m` | 0.0 | 0.0 |
 | Cypher Core | `cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf` | `stride1yv2myphganx8evm3z6s8rstwnd468c8cugeum9` | 0.0 | 0.0 |
 | GATA HUB | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | `stride1texfv73p49gv69rl8wehtn9tnvkt9676564tyh` | 0.0 | 0.0 |
+| Golden Ratio Staking | `cosmos1n6j7gnld9yxfyh6tflxhjjmt404zruuaf73t08` | `stride1n6j7gnld9yxfyh6tflxhjjmt404zruua243hmt` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-teritori</summary>
