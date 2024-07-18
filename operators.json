@@ -655,5 +655,25 @@
       "cosmoshub-juno",
       "cosmoshub-stride"
     ]
+  },
+  {
+    "name": "BlueStake",
+    "memo": "Relayed by BlueStake \ud83d\ude80",
+    "address": "cosmos1x8xujz36hgmg27c6x87vxy4pzs5s45ecjl2t86",
+    "discord": "stan_bluestake",
+    "telegram": "",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-noble",
+      "cosmoshub-persistence",
+      "cosmoshub-osmosis",
+      "cosmoshub-umee",
+      "cosmoshub-juno",
+      "cosmoshub-stargaze"
+    ]
   }
 ]

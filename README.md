@@ -90,6 +90,7 @@ list = [
 | Architect Nodes | `cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv` | 7 | [`architectnodes`](https://discordapp.com/users/architectnodes) | [`social244305_Architect_Nodes`](https://t.me/social244305_Architect_Nodes) | 50.0 | 50.0 |
 | Golden Ratio Staking | `cosmos1n6j7gnld9yxfyh6tflxhjjmt404zruuaf73t08` | 7 | [`goldenstaking`](https://discordapp.com/users/goldenstaking) | [`fibstaking`](https://t.me/fibstaking) | 0.0 | 0.0 |
 | Crosnest | `cosmos19kzuzfmmy9wjr3cl0ss8wjzjup9g49hqxg9e2y` | 6 | [`galadrin_crosnest`](https://discordapp.com/users/galadrin_crosnest) | [`crosnest_com`](https://t.me/crosnest_com) | 50.0 | 50.0 |
+| BlueStake | `cosmos1x8xujz36hgmg27c6x87vxy4pzs5s45ecjl2t86` | 6 | [`stan_bluestake`](https://discordapp.com/users/stan_bluestake) | [``](https://t.me/) | 0.0 | 0.0 |
 | Crosnest | `cosmos19pjtx7dah2fquf7udyxjv94h0eraha789k37ff` | 5 | [`galadrin_crosnest`](https://discordapp.com/users/galadrin_crosnest) | [`crosnest_com`](https://t.me/crosnest_com) | 50.0 | 50.0 |
 | PFC | `cosmos1wqp8yslqh2mdvxzgljsde8wu6nyjp4qyk5ccwh` | 5 | [`.pfc`](https://discordapp.com/users/.pfc) | [`pfc_validator`](https://t.me/pfc_validator) | 50.0 | 50.0 |
 | Inter Blockchain Services | `cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq` | 5 | [`remiinterblockchainservices`](https://discordapp.com/users/remiinterblockchainservices) | [`remiibs`](https://t.me/remiibs) | 50.0 | 50.0 |
@@ -277,6 +278,7 @@ list = [
 | Cypher Core | `cosmos12alkl0egcpjnacj7kcx7svuy4u9nvf0s5sx8nf` | `juno1yv2myphganx8evm3z6s8rstwnd468c8cf36mg4` | 0.0 | 0.0 |
 | GATA HUB | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | `juno1kqmzy5gph45f57hqdlchqsktk82ntmsxlen2j6` | 0.0 | 0.0 |
 | Golden Ratio Staking | `cosmos1n6j7gnld9yxfyh6tflxhjjmt404zruuaf73t08` | `juno1n6j7gnld9yxfyh6tflxhjjmt404zruualvjsgm` | 0.0 | 0.0 |
+| BlueStake | `cosmos1x8xujz36hgmg27c6x87vxy4pzs5s45ecjl2t86` | `juno1x8xujz36hgmg27c6x87vxy4pzs5s45ecydfsqx` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-kava</summary>
@@ -339,6 +341,7 @@ list = [
 | Lavender.Five Nodes | `cosmos18xrruhq5r246mwk0yj9elnn3mte8xa9uq4mdvu` | `noble18xrruhq5r246mwk0yj9elnn3mte8xa9ugkw95j` | 0.0 | 0.0 |
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `noble1p4557mdpc2qk8vcemeqgrcg55gs2uyznv4z9lw` | 0.0 | 0.0 |
 | Golden Ratio Staking | `cosmos1n6j7gnld9yxfyh6tflxhjjmt404zruuaf73t08` | `noble1n6j7gnld9yxfyh6tflxhjjmt404zruuapayrhf` | 0.0 | 0.0 |
+| BlueStake | `cosmos1x8xujz36hgmg27c6x87vxy4pzs5s45ecjl2t86` | `noble1x8xujz36hgmg27c6x87vxy4pzs5s45ec6ulrl5` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-omniflixhub</summary>
@@ -375,6 +378,7 @@ list = [
 | ValiDAO | `cosmos16p6lrlxf7f03c0ka8cv4sznr29rym27up5d9kh` | `osmo16p6lrlxf7f03c0ka8cv4sznr29rym27uf074q9` | 0.0 | 0.0 |
 | GATA HUB | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | `osmo129k9pj8yk58278q8l6j00azdxfjvz93kp37pak` | 0.0 | 0.0 |
 | Golden Ratio Staking | `cosmos1n6j7gnld9yxfyh6tflxhjjmt404zruuaf73t08` | `osmo1n6j7gnld9yxfyh6tflxhjjmt404zruuap9zme4` | 0.0 | 0.0 |
+| BlueStake | `cosmos1x8xujz36hgmg27c6x87vxy4pzs5s45ecjl2t86` | `osmo1x8xujz36hgmg27c6x87vxy4pzs5s45ec6yem3g` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-persistence</summary>
@@ -383,6 +387,7 @@ list = [
 |------|-----------------|-----------------|--------------------|---------------------------|
 | Crosnest | `cosmos1l267dmlmprhu4p5aqslf50f495vjqlg3a52yjt` | `persistence1l267dmlmprhu4p5aqslf50f495vjqlg3ncvhu0` | 0.0 | 0.0 |
 | Architect Nodes | `cosmos1cx82d7pm4dgffy7a93rl6ul5g84vjgxk8xxrnv` | `persistence1cx82d7pm4dgffy7a93rl6ul5g84vjgxkf2qsag` | 0.0 | 0.0 |
+| BlueStake | `cosmos1x8xujz36hgmg27c6x87vxy4pzs5s45ecjl2t86` | `persistence1x8xujz36hgmg27c6x87vxy4pzs5s45ecunvcf7` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-quicksilver</summary>
@@ -417,6 +422,13 @@ list = [
 | Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
 |------|-----------------|-----------------|--------------------|---------------------------|
 | WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `sent1ryq6zncdxpdnnwhn9h24ar48ap9zkqglzx6nwr` | 0.0 | 0.0 |
+</details>
+
+<details><summary>cosmoshub-stargaze</summary>
+
+| Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
+|------|-----------------|-----------------|--------------------|---------------------------|
+| BlueStake | `cosmos1x8xujz36hgmg27c6x87vxy4pzs5s45ecjl2t86` | `stars1x8xujz36hgmg27c6x87vxy4pzs5s45ecxrakvt` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-stride</summary>
@@ -463,4 +475,5 @@ list = [
 | Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
 |------|-----------------|-----------------|--------------------|---------------------------|
 | Architect Nodes | `cosmos1ln3l6waaqdjcskt3ztzqlzkpvmzp7zw4ky2xgp` | `umee1cx82d7pm4dgffy7a93rl6ul5g84vjgxk4smuh7` | 0.0 | 0.0 |
+| BlueStake | `cosmos1x8xujz36hgmg27c6x87vxy4pzs5s45ecjl2t86` | `umee1x8xujz36hgmg27c6x87vxy4pzs5s45ecqfh5rg` | 0.0 | 0.0 |
 </details>
