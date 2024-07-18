@@ -349,6 +349,19 @@
       "telegram": {
         "handle": "fibstaking"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1x8xujz36hgmg27c6x87vxy4pzs5s45ecjl2t86"
+      },
+      "chain_2": {
+        "address": "osmo1x8xujz36hgmg27c6x87vxy4pzs5s45ec6yem3g"
+      },
+      "memo": "Relayed by BlueStake \ud83d\ude80",
+      "name": "BlueStake",
+      "discord": {
+        "handle": "stan_bluestake"
+      }
     }
   ]
 }
