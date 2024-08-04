@@ -127,6 +127,22 @@
     },
     {
       "chain_1": {
+        "address": "cosmos1h36h57805m7eann0xs2mrv72p8wnyypm50uqce"
+      },
+      "chain_2": {
+        "address": "neutron1h36h57805m7eann0xs2mrv72p8wnyypmss4zz7"
+      },
+      "memo": "Relayed by R93ax",
+      "name": "R93ax",
+      "discord": {
+        "handle": "r93axcosmosspaces"
+      },
+      "telegram": {
+        "handle": "r93ax"
+      }
+    },
+    {
+      "chain_1": {
         "address": "cosmos1n6j7gnld9yxfyh6tflxhjjmt404zruuaf73t08"
       },
       "chain_2": {
