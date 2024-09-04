@@ -362,6 +362,22 @@
       "discord": {
         "handle": "stan_bluestake"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1ek7y9jex32ljxz7sgsjkrwrhsa4evyn0wsfnsl"
+      },
+      "chain_2": {
+        "address": "osmo1ek7y9jex32ljxz7sgsjkrwrhsa4evyn0xt6rxd"
+      },
+      "memo": "genznodes relayer",
+      "name": "genznodes",
+      "discord": {
+        "handle": "genznodes"
+      },
+      "telegram": {
+        "handle": "Genzbit"
+      }
     }
   ]
 }
