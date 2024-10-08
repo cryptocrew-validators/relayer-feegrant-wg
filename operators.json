@@ -605,8 +605,8 @@
     "discord": "murakamikaze",
     "telegram": "murakamikaze",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -620,8 +620,8 @@
     "discord": "jovegatadao",
     "telegram": "jovecosmos",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -642,8 +642,8 @@
     "discord": "goldenstaking",
     "telegram": "fibstaking",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -663,8 +663,8 @@
     "discord": "stan_bluestake",
     "telegram": "",
     "feegrant": {
-      "enabled": true,
-      "period_spend_limit": 50000000,
+      "enabled": false,
+      "period_spend_limit": 0,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -674,6 +674,36 @@
       "cosmoshub-umee",
       "cosmoshub-juno",
       "cosmoshub-stargaze"
+    ]
+  },
+  {
+    "name": "CroutonDigital",
+    "memo": "Relayed by CroutonDigital",
+    "address": "cosmos1m7t70kzzmnax04jwcdu38rjljtaj8cl4clz6zq",
+    "discord": "ak32821",
+    "telegram": "toxa3333",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "coreum-cosmoshub"
+    ]
+  },
+  {
+    "name": "R93ax",
+    "memo": "Relayed by R93ax",
+    "address": "cosmos1h36h57805m7eann0xs2mrv72p8wnyypm50uqce",
+    "discord": "r93axcosmosspaces",
+    "telegram": "r93ax",
+    "feegrant": {
+      "enabled": false,
+      "period_spend_limit": 0,
+      "active_period_spend_limit": 0
+    },
+    "paths": [
+      "cosmoshub-neutron"
     ]
   }
 ]

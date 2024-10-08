@@ -117,6 +117,8 @@ list = [
 | Lavender.Five Nodes | `cosmos1aypuqvaaq54jn3zleqd6lamnxruun5neplwq20` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 50.0 | 50.0 |
 | Lavender.Five Nodes | `cosmos1nzjcsulyfxh0evmajk3ruawh407h5x8fse7tcy` | 1 | [`dylanschultzie`](https://discordapp.com/users/dylanschultzie) | [`dylanschultzie`](https://t.me/dylanschultzie) | 50.0 | 50.0 |
 | ValiDAO | `cosmos16p6lrlxf7f03c0ka8cv4sznr29rym27up5d9kh` | 1 | [`murakamikaze`](https://discordapp.com/users/murakamikaze) | [`murakamikaze`](https://t.me/murakamikaze) | 0.0 | 0.0 |
+| CroutonDigital | `cosmos1m7t70kzzmnax04jwcdu38rjljtaj8cl4clz6zq` | 1 | [`ak32821`](https://discordapp.com/users/ak32821) | [`toxa3333`](https://t.me/toxa3333) | 0.0 | 0.0 |
+| R93ax | `cosmos1h36h57805m7eann0xs2mrv72p8wnyypm50uqce` | 1 | [`r93axcosmosspaces`](https://discordapp.com/users/r93axcosmosspaces) | [`r93ax`](https://t.me/r93ax) | 0.0 | 0.0 |
 
 ## Paths
 
@@ -196,6 +198,7 @@ list = [
 | Name | Chain 1 Address | Chain 2 Address | Period Spend Limit | Active Period Spend Limit |
 |------|-----------------|-----------------|--------------------|---------------------------|
 | Inter Blockchain Services | `core14uyfxlv00lj0qhcwt7vms2rsf7kxuld78wqfa8` | `cosmos16vmp7sz28pnvgz6f3zm6q93y39jsd33a5v9dcq` | 0.0 | 0.0 |
+| CroutonDigital | `core1yzwae8sy5pxe3pkdwh9prnj0ump90yg4x2eyfk` | `cosmos1m7t70kzzmnax04jwcdu38rjljtaj8cl4clz6zq` | 0.0 | 0.0 |
 </details>
 
 <details><summary>cosmoshub-crescent</summary>
@@ -330,6 +333,7 @@ list = [
 | cosmosrescue | `cosmos13rw0xgyu0fqgdsjsrwlrf49j74us9l5n3erxhz` | `neutron1p4557mdpc2qk8vcemeqgrcg55gs2uyznqf70a8` | 0.0 | 0.0 |
 | WhisperNode | `cosmos1ryq6zncdxpdnnwhn9h24ar48ap9zkqgleav22v` | `neutron1ryq6zncdxpdnnwhn9h24ar48ap9zkqglaz9gst` | 0.0 | 0.0 |
 | GATA HUB | `cosmos1zy7xyypdwje7w56rdz67pjxtjyk2t4ms5ak23c` | `neutron1uyv59p94h6g9ta2xucrphpu2l5ydce0h5lt7z0` | 0.0 | 0.0 |
+| R93ax | `cosmos1h36h57805m7eann0xs2mrv72p8wnyypm50uqce` | `neutron1h36h57805m7eann0xs2mrv72p8wnyypmss4zz7` | 0.0 | 0.0 |
 | Golden Ratio Staking | `cosmos1n6j7gnld9yxfyh6tflxhjjmt404zruuaf73t08` | `neutron1n6j7gnld9yxfyh6tflxhjjmt404zruuadpcf4q` | 0.0 | 0.0 |
 </details>
 
