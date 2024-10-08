@@ -27,5 +27,20 @@
         "preferred": true
       }
     }
+  ],
+  "operators": [
+    {
+      "chain_1": {
+        "address": "cosmos1cg5rydw8y5t6xsgq9q3yc3x2dq7zlnuc3vg37k"
+      },
+      "chain_2": {
+        "address": "lava@1cg5rydw8y5t6xsgq9q3yc3x2dq7zlnucf5l5em"
+      },
+      "memo": "Relayed by r93AX Nodes",
+      "name": "r93AX Nodes",
+      "telegra,": {
+        "handle": "r93ax"
+      }
+    }
   ]
 }
