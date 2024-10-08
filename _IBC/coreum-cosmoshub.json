@@ -44,6 +44,22 @@
       "telegram": {
         "handle": "remiibs"
       }
+    },
+    {
+      "chain_1": {
+        "address": "core1yzwae8sy5pxe3pkdwh9prnj0ump90yg4x2eyfk"
+      },
+      "chain_2": {
+        "address": "cosmos1m7t70kzzmnax04jwcdu38rjljtaj8cl4clz6zq"
+      },
+      "memo": "Relayed by CroutonDigital",
+      "name": "CroutonDigital",
+      "discord": {
+        "handle": "ak32821"
+      },
+      "telegram": {
+        "handle": "toxa3333"
+      }
     }
   ]
 }
