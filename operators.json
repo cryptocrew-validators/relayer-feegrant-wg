@@ -605,8 +605,8 @@
     "discord": "murakamikaze",
     "telegram": "murakamikaze",
     "feegrant": {
-      "enabled": false,
-      "period_spend_limit": 0,
+      "enabled": true,
+      "period_spend_limit": 50000000,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -620,8 +620,8 @@
     "discord": "jovegatadao",
     "telegram": "jovecosmos",
     "feegrant": {
-      "enabled": false,
-      "period_spend_limit": 0,
+      "enabled": true,
+      "period_spend_limit": 50000000,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -642,8 +642,8 @@
     "discord": "goldenstaking",
     "telegram": "fibstaking",
     "feegrant": {
-      "enabled": false,
-      "period_spend_limit": 0,
+      "enabled": true,
+      "period_spend_limit": 50000000,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -663,8 +663,8 @@
     "discord": "stan_bluestake",
     "telegram": "",
     "feegrant": {
-      "enabled": false,
-      "period_spend_limit": 0,
+      "enabled": true,
+      "period_spend_limit": 50000000,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -683,8 +683,8 @@
     "discord": "ak32821",
     "telegram": "toxa3333",
     "feegrant": {
-      "enabled": false,
-      "period_spend_limit": 0,
+      "enabled": true,
+      "period_spend_limit": 50000000,
       "active_period_spend_limit": 0
     },
     "paths": [
@@ -698,8 +698,8 @@
     "discord": "r93axcosmosspaces",
     "telegram": "r93ax",
     "feegrant": {
-      "enabled": false,
-      "period_spend_limit": 0,
+      "enabled": true,
+      "period_spend_limit": 50000000,
       "active_period_spend_limit": 0
     },
     "paths": [
