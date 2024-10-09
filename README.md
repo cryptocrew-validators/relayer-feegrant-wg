@@ -1,3 +1,7 @@
+## Multisign Issue
+
+**⚠️ The Feegrant multisig is currently investigating issues with signing batched `feegrant` messages. Please note that onboarding is therefore currently paused, or progressing very slowly. We're working on it and will update as new insights surface.**
+
 # IBC Relayer Feegrant Working Group
 
 This repository is the implementation of [Cosmoshub Proposal #862](https://www.mintscan.io/cosmos/proposals/862): Cosmos Hub IBC Relayer gas cost restitution using FeeGrants
