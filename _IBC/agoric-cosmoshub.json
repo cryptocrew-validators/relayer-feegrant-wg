@@ -27,5 +27,23 @@
         "preferred": true
       }
     }
+  ],
+  "operators": [
+    {
+      "chain_1": {
+        "address": "agoric1twmgaeug7ymjq8c53ttstpl7rny43q8zh4rnh3"
+      },
+      "chain_2": {
+        "address": "cosmos1twmgaeug7ymjq8c53ttstpl7rny43q8z9gpv88"
+      },
+      "memo": "Relayed by kjnodes",
+      "name": "kjnodes",
+      "discord": {
+        "handle": "kjnodes"
+      },
+      "telegram": {
+        "handle": "kjnodes"
+      }
+    }
   ]
 }
