@@ -363,6 +363,22 @@
       "discord": {
         "handle": "stan_bluestake"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1twmgaeug7ymjq8c53ttstpl7rny43q8z9gpv88"
+      },
+      "chain_2": {
+        "address": "osmo1twmgaeug7ymjq8c53ttstpl7rny43q8zdnju34"
+      },
+      "memo": "Relayed by kjnodes",
+      "name": "kjnodes",
+      "discord": {
+        "handle": "kjnodes"
+      },
+      "telegram": {
+        "handle": "kjnodes"
+      }
     }
   ]
 }
