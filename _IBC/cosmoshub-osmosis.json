@@ -363,6 +363,19 @@
       "discord": {
         "handle": "stan_bluestake"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos16jhqz038fwyuurm898lr5v20shu0dpkdq0dm0n"
+      },
+      "chain_2": {
+        "address": "osmo1nms20r7jzaa4ms9exv90ckl2xfn0rd3rxsc277"
+      },
+      "memo": "'Relayed by NodeStake",
+      "name": "NodeStake",
+      "discord": {
+        "handle": "alan_nodestake"
+      }
     }
   ]
 }
