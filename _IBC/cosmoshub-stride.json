@@ -238,6 +238,22 @@
       "telegram": {
         "handle": "fibstaking"
       }
+    },
+    {
+      "chain_1": {
+        "address": "cosmos1twmgaeug7ymjq8c53ttstpl7rny43q8z9gpv88"
+      },
+      "chain_2": {
+        "address": "stride1twmgaeug7ymjq8c53ttstpl7rny43q8zxrpsnt"
+      },
+      "memo": "Relayed by kjnodes",
+      "name": "kjnodes",
+      "discord": {
+        "handle": "kjnodes"
+      },
+      "telegram": {
+        "handle": "kjnodes"
+      }
     }
   ]
 }
